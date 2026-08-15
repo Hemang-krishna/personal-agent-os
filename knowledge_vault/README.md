@@ -2,8 +2,9 @@
 
 Knowledge base of processed video transcriptions, timestamps, summaries, and action points.
 
-## Master Blueprints & Business Strategies
+## Master Blueprints & Deep Philosophy
 
+- [The Universal Code: Mathematics from Ancient Origins to Nature, Quant Markets & A Greater Tomorrow](./2026-08-15_universal_code_mathematics_nature_quant_tomorrow.md)
 - [Master Blueprint: Quant AI + Forex/Crypto Trading Content & $0-Infra Business Engine](./2026-08-15_master_blueprint_quant_ai_trading_business.md)
 
 ## Transcripts Directory
