@@ -17,6 +17,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Transcripts & Carousel Breakdowns Directory
 
+- [6 YouTube Videos to Learn 6 AI Skills (aiwithunnati / Unnati Tripathi)](./2026-08-15_instagram_6_skills_6_youtube_channels_aiwithunnati.md)
 - [How to Make $143,000 From Open-Source Repos (buildercult / Adi)](./2026-08-15_instagram_how_to_make_143k_opensource_repos_buildercult.md)
 - [20 AI Concepts Explained in 40 Minutes (Gaurav Sen)](./2026-08-15_youtube_20_ai_concepts_gaurav_sen.md)
 - [6 GitHub Repos So Good They Should Not Be Free (Shruti Mishra)](./2026-08-15_instagram_6_free_github_repos_heyshrutimishra.md)
