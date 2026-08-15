@@ -1,11 +1,15 @@
-# Video Transcripts & Research Vault
+# Video Transcripts, Blueprints & Tooling Vault
 
-Knowledge base of processed video transcriptions, timestamps, summaries, and action points.
+Knowledge base of processed video transcriptions, timestamps, summaries, business strategies, and agency tools.
 
 ## Master Blueprints & Deep Philosophy
 
 - [The Universal Code: Mathematics from Ancient Origins to Nature, Quant Markets & A Greater Tomorrow](./2026-08-15_universal_code_mathematics_nature_quant_tomorrow.md)
 - [Master Blueprint: Quant AI + Forex/Crypto Trading Content & $0-Infra Business Engine](./2026-08-15_master_blueprint_quant_ai_trading_business.md)
+
+## Agency Integrations & Tooling
+
+- [Firecrawl AnyDoc Integration & Agency PDF Engine](./2026-08-15_firecrawl_anydoc_integration.md)
 
 ## Transcripts Directory
 
