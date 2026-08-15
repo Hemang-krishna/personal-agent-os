@@ -9,13 +9,15 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 - [qnt. Universal Quant & Mathematical Codex (Full Citations & Production Scripts)](./2026-08-15_qnt_universal_mathematics_quant_codex.md)
 - [The Universal Code: Mathematics from Ancient Origins to Nature, Quant Markets & A Greater Tomorrow](./2026-08-15_universal_code_mathematics_nature_quant_tomorrow.md)
 - [Master Blueprint: Quant AI + Forex/Crypto Trading Content & $0-Infra Business Engine](./2026-08-15_master_blueprint_quant_ai_trading_business.md)
+- [Ad Creation & AI Creative Direction Monetization Master Blueprint](./2026-08-15_ad_monetization_master_blueprint.md)
 
 ## Agency Integrations & Tooling
 
 - [Firecrawl AnyDoc Integration & Agency PDF Engine](./2026-08-15_firecrawl_anydoc_integration.md)
 
-## Transcripts Directory
+## Transcripts & Carousel Breakdowns Directory
 
+- [How to Make $143,000 From Open-Source Repos (buildercult / Adi)](./2026-08-15_instagram_how_to_make_143k_opensource_repos_buildercult.md)
 - [20 AI Concepts Explained in 40 Minutes (Gaurav Sen)](./2026-08-15_youtube_20_ai_concepts_gaurav_sen.md)
 - [6 GitHub Repos So Good They Should Not Be Free (Shruti Mishra)](./2026-08-15_instagram_6_free_github_repos_heyshrutimishra.md)
 - [15 AI & Smart Job Search Tools (TechTalk UK)](./2026-08-15_instagram_15_job_search_tools_techtalkuk.md)
