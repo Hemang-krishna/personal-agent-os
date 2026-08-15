@@ -2,6 +2,10 @@
 
 Knowledge base of processed video transcriptions, timestamps, summaries, and action points.
 
+## Master Blueprints & Business Strategies
+
+- [Master Blueprint: Quant AI + Forex/Crypto Trading Content & $0-Infra Business Engine](./2026-08-15_master_blueprint_quant_ai_trading_business.md)
+
 ## Transcripts Directory
 
 - [20 AI Concepts Explained in 40 Minutes (Gaurav Sen)](./2026-08-15_youtube_20_ai_concepts_gaurav_sen.md)
