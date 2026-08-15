@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Blueprints & Deep Philosophy
 
+- [qnt. Universal Quant & Mathematical Codex (Full Citations & Production Scripts)](./2026-08-15_qnt_universal_mathematics_quant_codex.md)
 - [The Universal Code: Mathematics from Ancient Origins to Nature, Quant Markets & A Greater Tomorrow](./2026-08-15_universal_code_mathematics_nature_quant_tomorrow.md)
 - [Master Blueprint: Quant AI + Forex/Crypto Trading Content & $0-Infra Business Engine](./2026-08-15_master_blueprint_quant_ai_trading_business.md)
 
