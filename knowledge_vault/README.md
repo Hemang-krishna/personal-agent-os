@@ -2,8 +2,10 @@
 
 Knowledge base of processed video transcriptions, timestamps, summaries, business strategies, and agency tools.
 
-## Master Blueprints & Deep Philosophy
+## Master Monograph Blueprints & Quant Compendiums
 
+- [qnt. 210 Universal Quant Concepts & Monetization Master Monograph (24 Pages)](./2026-08-15_qnt_210_universal_quant_monograph.md)
+- [qnt. Master Research Monograph (110 Concepts Edition)](./2026-08-15_qnt_master_monograph_edition.md)
 - [qnt. Universal Quant & Mathematical Codex (Full Citations & Production Scripts)](./2026-08-15_qnt_universal_mathematics_quant_codex.md)
 - [The Universal Code: Mathematics from Ancient Origins to Nature, Quant Markets & A Greater Tomorrow](./2026-08-15_universal_code_mathematics_nature_quant_tomorrow.md)
 - [Master Blueprint: Quant AI + Forex/Crypto Trading Content & $0-Infra Business Engine](./2026-08-15_master_blueprint_quant_ai_trading_business.md)
