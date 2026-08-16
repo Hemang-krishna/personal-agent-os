@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [Claude Code: 7 AI Employees Content Team Master Monograph](./2026-08-15_claude_code_7_ai_content_team_ibraviz.md)
 - [qnt. 210 Universal Quant Concepts & Monetization Master Monograph (24 Pages)](./2026-08-15_qnt_210_universal_quant_monograph.md)
 - [qnt. Master Research Monograph (110 Concepts Edition)](./2026-08-15_qnt_master_monograph_edition.md)
 - [qnt. Universal Quant & Mathematical Codex (Full Citations & Production Scripts)](./2026-08-15_qnt_universal_mathematics_quant_codex.md)
@@ -17,6 +18,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Transcripts & Carousel Breakdowns Directory
 
+- [Claude Code: 7 AI Employees Content Team (ibraviz.ai / Ibra AI)](./2026-08-15_claude_code_7_ai_content_team_ibraviz.md)
 - [0-8 Levels To Make You an AI Engineer in 2026 (aiwithunnati / Unnati Tripathi)](./2026-08-15_instagram_0_to_8_levels_ai_engineer_roadmap_aiwithunnati.md)
 - [Graph Engineering vs. Loop Engineering (aiwithunnati / Unnati Tripathi)](./2026-08-15_instagram_graph_engineering_vs_loop_engineering_aiwithunnati.md)
 - [5 GitHub Repos That Blew Up This Week (noevarner.ai / Noe Varner)](./2026-08-15_instagram_5_github_repos_blew_up_noevarner.md)
