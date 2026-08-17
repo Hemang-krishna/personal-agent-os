@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [qnt. 200-Module Universal Financial Freedom Master Codex (Ultra-Deep Analytical Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_200module_ultra_analytical.md)
 - [qnt. 200-Module Universal Financial Freedom Master Codex (Definitive Visual Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_200module_definitive_master.md)
 - [qnt. Universal Financial Freedom Master Codex (Visual Analytics & Mandatory Front-Matter Disclaimer Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_master_codex_visual_analytics.md)
 - [qnt. 200-Module Enterprise Master Wealth Codex (Live Public Trust & Statutory Verification Edition PDF)](./2026-08-15_qnt_universal_wealth_and_investment_codex_public_trust.md)
