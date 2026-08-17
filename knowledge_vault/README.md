@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [qnt. The Definitive Grand Opus (Institutional Ratings & Tier Architecture PDF)](./2026-08-15_qnt_universal_financial_freedom_grand_opus_ratings.md)
 - [qnt. Universal Financial Freedom Master Codex (Definitive 10-Volume 200-Module Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_definitive_10volume.md)
 - [qnt. Universal Financial Freedom Master Codex (Reconstructed 12-Book Cognitive Architecture & Perfect Page-Aligned PDF)](./2026-08-15_qnt_universal_financial_freedom_reconstructed_cognitive.md)
 - [qnt. The 12-Book Cognitive Architecture & Fincept Master Codex (PDF)](./2026-08-15_qnt_universal_financial_freedom_12book_cognitive.md)
