@@ -18,6 +18,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Transcripts & Carousel Breakdowns Directory
 
+- [3 Ways to Open a Post Office Savings Scheme (iamnehanagar / Neha Nagar)](./2026-08-15_instagram_3_ways_open_post_office_savings_scheme_iamnehanagar.md)
 - [11 Free AI Websites That Feel Illegal to Know (vivekkcreates / Vivek)](./2026-08-15_instagram_11_free_ai_websites_vivekkcreates.md)
 - [Claude Code: 7 AI Employees Content Team (ibraviz.ai / Ibra AI)](./2026-08-15_claude_code_7_ai_content_team_ibraviz.md)
 - [0-8 Levels To Make You an AI Engineer in 2026 (aiwithunnati / Unnati Tripathi)](./2026-08-15_instagram_0_to_8_levels_ai_engineer_roadmap_aiwithunnati.md)
