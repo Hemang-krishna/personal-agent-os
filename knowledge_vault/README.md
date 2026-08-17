@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [qnt. Deep Quantitative & Analytical Systems Master Codex (Fincept 5-Lab Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_deep_quant_fincept.md)
 - [qnt. Fincept Terminal Institutional Master Codex (Page-Annotated Index PDF)](./2026-08-15_qnt_universal_financial_freedom_fincept_annotated.md)
 - [qnt. Fincept Terminal Institutional Global Master Codex (PDF)](./2026-08-15_qnt_universal_financial_freedom_fincept_terminal.md)
 - [qnt. 200-Module Universal Financial Freedom Master Codex (In-Situ Jargon Decoder Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_200module_insitu_jargon_decoder.md)
