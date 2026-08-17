@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [qnt. Enterprise Master Wealth Codex (Bespoke Real-Money Growth & Access Edition PDF)](./2026-08-15_qnt_universal_wealth_and_investment_codex_enterprise_bespoke.md)
 - [qnt. Universal Wealth & Sovereign Investment Codex (Cream & Black Master Edition PDF)](./2026-08-15_qnt_universal_wealth_and_investment_codex_cream_and_black.md)
 - [qnt. Universal Wealth & Sovereign Investment Codex (Actionable Direct-Access & Execution Master Edition PDF)](./2026-08-15_qnt_universal_wealth_and_investment_codex_actionable_access.md)
 - [qnt. Universal Wealth & Sovereign Investment Codex (200-Module Continuous Gapless Master PDF)](./2026-08-15_qnt_universal_wealth_and_investment_codex_continuous_seamless.md)
