@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [qnt. Universal Financial Freedom Master Encyclopedia (Deep Quantitative Research Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_definitive_encyclopedia.md)
 - [qnt. Universal Financial Freedom Master Codex (Dedicated Tier Class & Capabilities Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_tier_capabilities.md)
 - [qnt. The Definitive Grand Opus (Institutional Ratings & Tier Architecture PDF)](./2026-08-15_qnt_universal_financial_freedom_grand_opus_ratings.md)
 - [qnt. Universal Financial Freedom Master Codex (Definitive 10-Volume 200-Module Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_definitive_10volume.md)
