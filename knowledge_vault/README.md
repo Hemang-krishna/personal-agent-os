@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [qnt. Universal Wealth & Sovereign Investment Encyclopedia (Exact 20-Page Master Edition PDF)](./2026-08-15_qnt_universal_wealth_and_investment_encyclopedia_exact20page.md)
 - [qnt. Universal Wealth & Investment Codex (Final Dense Zero-Void Master PDF)](./2026-08-15_qnt_universal_wealth_and_investment_codex_final_dense.md)
 - [qnt. Universal Wealth & Sovereign Investment Encyclopedia (20-Page Master Monograph PDF)](./2026-08-15_qnt_universal_wealth_and_investment_encyclopedia_20page.md)
 - [qnt. Universal Wealth & Investment Codex (Zero-Void Dense Master PDF)](./2026-08-15_qnt_universal_wealth_and_investment_codex_zerovoid.md)
