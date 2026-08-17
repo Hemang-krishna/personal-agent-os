@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [qnt. The 12-Book Cognitive Architecture & Fincept Master Codex (PDF)](./2026-08-15_qnt_universal_financial_freedom_12book_cognitive.md)
 - [qnt. Deep Quantitative & Analytical Systems Master Codex (Fincept 5-Lab Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_deep_quant_fincept.md)
 - [qnt. Fincept Terminal Institutional Master Codex (Page-Annotated Index PDF)](./2026-08-15_qnt_universal_financial_freedom_fincept_annotated.md)
 - [qnt. Fincept Terminal Institutional Global Master Codex (PDF)](./2026-08-15_qnt_universal_financial_freedom_fincept_terminal.md)
