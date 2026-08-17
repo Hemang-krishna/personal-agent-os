@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [qnt. Universal Wealth & Investment Bible (Encyclopedic 7-Page Monograph PDF)](./2026-08-15_qnt_universal_wealth_and_investment_bible.md)
 - [qnt. The Master Wealth & Investment Bible (Illustrated 6-Page Monograph PDF)](./2026-08-15_qnt_master_wealth_and_investment_bible.md)
 - [qnt. Master Wealth & Sovereign Savings Compendium Monograph (PDF)](./2026-08-15_qnt_master_wealth_and_savings_compendium.md)
 - [Claude Code: 7 AI Employees Content Team Master Monograph](./2026-08-15_claude_code_7_ai_content_team_ibraviz.md)
