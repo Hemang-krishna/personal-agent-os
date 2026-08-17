@@ -18,6 +18,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Transcripts & Carousel Breakdowns Directory
 
+- [Smart Salaried Wealth Creation Below 35 (profinance_vishal / Vishal Aggarwal)](./2026-08-15_instagram_smart_salaried_wealth_below_35_profinance_vishal.md)
 - [5 Post Office Schemes That Can Beat Fixed Deposits (financewithyu / Yugandhar)](./2026-08-15_instagram_5_post_office_schemes_beat_fds_financewithyu.md)
 - [3 Ways to Open a Post Office Savings Scheme (iamnehanagar / Neha Nagar)](./2026-08-15_instagram_3_ways_open_post_office_savings_scheme_iamnehanagar.md)
 - [11 Free AI Websites That Feel Illegal to Know (vivekkcreates / Vivek)](./2026-08-15_instagram_11_free_ai_websites_vivekkcreates.md)
