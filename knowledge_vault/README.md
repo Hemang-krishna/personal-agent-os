@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [qnt. 200-Module Universal Financial Freedom Master Codex (The Definitive Grand Opus PDF)](./2026-08-15_qnt_universal_financial_freedom_200module_definitive_grand_opus.md)
 - [qnt. 200-Module Universal Financial Freedom Master Codex (Permanent Zero-Triangle Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_200module_zero_triangle.md)
 - [qnt. 200-Module Universal Financial Freedom Master Codex (Volume-Level Vector Analytics & Fixed Pyramid PDF)](./2026-08-15_qnt_universal_financial_freedom_200module_volume_analytics.md)
 - [qnt. 200-Module Universal Financial Freedom Master Codex (Global Standards & Institutional Metrics Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_200module_global_standards.md)
