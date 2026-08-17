@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [qnt. 200-Module Universal Financial Freedom Master Codex (Artistic UI Application & Real-Time Cashflow Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_200module_artistic_ui.md)
 - [qnt. 200-Module Universal Financial Freedom Master Codex (Definitive All-Volume Visual Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_200module_all_volume_visual.md)
 - [qnt. 200-Module Universal Financial Freedom Master Codex (The Definitive Grand Opus PDF)](./2026-08-15_qnt_universal_financial_freedom_200module_definitive_grand_opus.md)
 - [qnt. 200-Module Universal Financial Freedom Master Codex (Permanent Zero-Triangle Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_200module_zero_triangle.md)
