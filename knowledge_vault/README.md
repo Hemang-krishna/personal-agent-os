@@ -18,6 +18,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Transcripts & Carousel Breakdowns Directory
 
+- [5 Post Office Schemes That Can Beat Fixed Deposits (financewithyu / Yugandhar)](./2026-08-15_instagram_5_post_office_schemes_beat_fds_financewithyu.md)
 - [3 Ways to Open a Post Office Savings Scheme (iamnehanagar / Neha Nagar)](./2026-08-15_instagram_3_ways_open_post_office_savings_scheme_iamnehanagar.md)
 - [11 Free AI Websites That Feel Illegal to Know (vivekkcreates / Vivek)](./2026-08-15_instagram_11_free_ai_websites_vivekkcreates.md)
 - [Claude Code: 7 AI Employees Content Team (ibraviz.ai / Ibra AI)](./2026-08-15_claude_code_7_ai_content_team_ibraviz.md)
