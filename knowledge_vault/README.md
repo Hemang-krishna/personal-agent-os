@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [Project Agent Apply: Agent Ghost-Delivery & Global Payout Pipelines Monograph (PDF)](./2026-08-15_agent_freelancing_global_payout_pipelines.md)
 - [Project Agent Apply: AI Operations, Customer Support & Real-Time Payout Gigs Monograph (PDF)](./2026-08-15_agent_apply_ai_operations_realtime_gigs.md)
 - [Project Agent Apply: Autonomous Stealth Job Application Architecture & Monograph (PDF)](./2026-08-15_agent_apply_autonomous_stealth_job_architecture.md)
 - [qnt. Universal Financial Freedom Master Compendium (Definitive Institutional Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_institutional_compendium.md)
