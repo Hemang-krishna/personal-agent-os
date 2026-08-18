@@ -6,7 +6,7 @@
   <title>qnt. | Institutional Quantitative Wealth Engine &amp; Fincept Terminal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -15,16 +15,23 @@
         extend: {
           colors: {
             void: {
-              950: '#030509',
+              950: '#020408',
               900: '#060811',
-              850: '#0A0E1A',
-              800: '#0F1527',
-              700: '#1A233D'
+              850: '#0B0F1D',
+              800: '#11172A',
+              750: '#182038',
+              700: '#1F2B4C'
             },
             cyan: {
               glow: '#06B6D4',
               bright: '#22D3EE',
+              electric: '#00F0FF',
               muted: '#0891B2'
+            },
+            violet: {
+              glow: '#8B5CF6',
+              deep: '#6D28D9',
+              ambient: '#4C1D95'
             },
             cream: {
               50: '#FAF8F5',
@@ -33,17 +40,31 @@
             }
           },
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace']
+            sans: ['Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif],
+            mono: ['JetBrains Mono', 'SF Mono', Menlo, monospace]
           },
           animation: {
-            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'glow-pulse': 'glow 3s ease-in-out infinite alternate',
+            'aurora': 'aurora 20s linear infinite',
+            'pulse-glow': 'pulseGlow 4s ease-in-out infinite alternate',
+            'float': 'float 6s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s infinite'
           },
           keyframes: {
-            glow: {
-              '0%': { boxShadow: '0 0 15px rgba(6, 182, 212, 0.2)' },
-              '100%': { boxShadow: '0 0 35px rgba(6, 182, 212, 0.6)' },
+            aurora: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' }
+            },
+            pulseGlow: {
+              '0%': { opacity: '0.4', transform: 'scale(0.98)' },
+              '100%': { opacity: '0.85', transform: 'scale(1.02)' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' }
+            },
+            shimmer: {
+              '100%': { transform: 'translateX(100%)' }
             }
           }
         }
@@ -51,151 +72,275 @@
     }
   </script>
   <style>
+    * { box-sizing: border-box; }
     body {
       background-color: #060811;
       color: #F8FAFC;
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     
-    /* Background Grid Pattern */
-    .bg-grid-pattern {
-      background-size: 40px 40px;
+    /* Liquid Aurora Glow Background */
+    .liquid-mesh {
+      background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.18) 0%, transparent 50%),
+                  radial-gradient(circle at 85% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 45%),
+                  radial-gradient(circle at 15% 35%, rgba(59, 130, 246, 0.12) 0%, transparent 40%);
+    }
+
+    /* Sub-50ms Grid Pattern */
+    .bg-grid-subtle {
+      background-size: 32px 32px;
       background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
     }
 
-    /* Ambient Radial Glows */
-    .radial-glow {
-      background: radial-gradient(circle at 50% 30%, rgba(6, 182, 212, 0.15), transparent 70%);
-    }
-    .radial-glow-subtle {
-      background: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.12), transparent 60%);
-    }
-
-    /* Glassmorphism Card */
-    .glass-card {
-      background: rgba(15, 21, 39, 0.6);
-      backdrop-filter: blur(12px);
+    /* Glassmorphic Liquid Cards */
+    .liquid-card {
+      background: rgba(11, 15, 29, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .glass-card:hover {
-      border-color: rgba(6, 182, 212, 0.4);
+    .liquid-card:hover {
+      border-color: rgba(6, 182, 212, 0.45);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px 0 rgba(6, 182, 212, 0.15);
     }
 
-    /* Gradient Text */
-    .text-gradient-cyan {
-      background: linear-gradient(135deg, #FFFFFF 20%, #22D3EE 70%, #06B6D4 100%);
+    /* Liquid Gradient Text */
+    .text-liquid-gradient {
+      background: linear-gradient(135deg, #FFFFFF 15%, #22D3EE 65%, #8B5CF6 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
+    /* Custom Scrollbars */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #060811; }
+    ::-webkit-scrollbar-thumb { background: #1F2B4C; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #06B6D4; }
+
+    /* Modal Backdrop */
+    .modal-active { display: flex !important; }
   </style>
 </head>
-<body class="bg-void-900 bg-grid-pattern relative min-h-screen selection:bg-cyan-glow selection:text-black">
+<body class="bg-void-900 bg-grid-subtle liquid-mesh relative min-h-screen selection:bg-cyan-glow selection:text-black">
 
-  <!-- Glow Elements -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] radial-glow pointer-events-none z-0"></div>
-  <div class="absolute top-96 right-0 w-96 h-96 radial-glow-subtle pointer-events-none z-0"></div>
+  <!-- TOP SPONSOR & COLLABORATION STREAM -->
+  <div class="bg-void-950 border-b border-white/10 px-4 py-2 text-center text-xs font-mono flex items-center justify-between max-w-7xl mx-auto">
+    <div class="flex items-center space-x-2 text-slate-400">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span class="font-bold text-slate-200">FINCEPT TERMINAL v4.2 LIVE</span>
+      <span class="hidden sm:inline text-slate-500">| 200 Sovereign &amp; Quant Modules Synced</span>
+    </div>
+    <div class="flex items-center space-x-4">
+      <button onclick="openModal('sponsor-modal')" class="text-cyan-bright hover:underline font-bold transition flex items-center space-x-1">
+        <span>⚡ Partner / Advertise With Us</span>
+      </button>
+      <a href="/data/project_qnt/reports/qnt_Universal_Financial_Freedom_Institutional_Compendium.pdf" download class="hidden md:inline-flex items-center space-x-1 text-slate-300 hover:text-white transition">
+        <span>📥 Download 282P Codex (PDF)</span>
+      </a>
+    </div>
+  </div>
 
-  <!-- NAVIGATION -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-void-900/80 border-b border-white/5">
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-void-900/85 border-b border-white/5">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="#" class="flex items-center space-x-2">
+        <a href="#" class="flex items-center space-x-2.5">
           <span class="text-3xl font-black tracking-tighter text-white font-sans">qnt<span class="text-cyan-glow">.</span></span>
-          <span class="text-[10px] font-mono font-bold tracking-widest text-cyan-bright bg-cyan-glow/10 border border-cyan-glow/30 px-2 py-0.5 rounded uppercase">Fincept v4.2</span>
+          <span class="text-[10px] font-mono font-extrabold tracking-widest text-cyan-bright bg-cyan-glow/10 border border-cyan-glow/30 px-2 py-0.5 rounded uppercase">Institutional</span>
         </a>
       </div>
 
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-        <a href="#matrix" class="hover:text-cyan-bright transition-colors">6-Desk Matrix</a>
-        <a href="#compendium" class="hover:text-cyan-bright transition-colors">200 Modules</a>
-        <a href="#cognitive" class="hover:text-cyan-bright transition-colors">12 Mental Models</a>
-        <a href="#telemetry" class="hover:text-cyan-bright transition-colors">Risk Telemetry</a>
-        <a href="#calculator" class="hover:text-cyan-bright transition-colors">Compounding Engine</a>
+      <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#simulator" class="hover:text-cyan-bright transition">Compounding Engine</a>
+        <a href="#matrix" class="hover:text-cyan-bright transition">6-Desk Matrix</a>
+        <a href="#modules" class="hover:text-cyan-bright transition">200 Asset Explorer</a>
+        <a href="#labs" class="hover:text-cyan-bright transition">Quant Labs</a>
+        <a href="#jobs" class="hover:text-cyan-bright transition">Remote Gigs Hub</a>
+        <a href="#pricing" class="hover:text-cyan-bright transition">Enterprise Access</a>
       </nav>
 
-      <div class="flex items-center space-x-4">
-        <a href="/data/project_qnt/reports/qnt_Universal_Financial_Freedom_Institutional_Compendium.pdf" download class="hidden sm:inline-flex items-center space-x-2 text-xs font-mono font-bold text-slate-300 bg-void-800 border border-white/10 px-3.5 py-2 rounded-lg hover:border-cyan-glow/50 transition">
-          <span>DOWNLOAD CODEX</span>
-          <span class="text-cyan-bright">↓</span>
-        </a>
-        <a href="#calculator" class="bg-cyan-glow text-black font-extrabold text-sm px-5 py-2.5 rounded-lg shadow-lg shadow-cyan-glow/20 hover:bg-cyan-bright hover:shadow-cyan-glow/40 transition-all transform hover:-translate-y-0.5">
-          Launch Terminal
+      <div class="flex items-center space-x-3">
+        <button onclick="openModal('hire-modal')" class="hidden sm:inline-flex items-center space-x-2 text-xs font-mono font-bold text-slate-200 bg-void-800 border border-white/15 px-3.5 py-2 rounded-lg hover:border-cyan-glow transition">
+          <span>HIRE QUANT AGENT</span>
+        </button>
+        <a href="#simulator" class="bg-cyan-glow text-black font-black text-sm px-5 py-2.5 rounded-lg shadow-lg shadow-cyan-glow/20 hover:bg-cyan-bright hover:shadow-cyan-glow/40 transition transform hover:-translate-y-0.5">
+          Launch Simulator
         </a>
       </div>
     </div>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative pt-24 pb-20 px-6 max-w-7xl mx-auto text-center z-10">
-    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-glow/10 border border-cyan-glow/30 text-cyan-bright text-xs font-mono font-semibold mb-8 animate-pulse-slow">
-      <span class="w-2 h-2 rounded-full bg-cyan-bright"></span>
-      <span>INSTITUTIONAL QUANT WEALTH COMPENDIUM • 200 PROVED VEHICLES</span>
+  <section class="relative pt-20 pb-16 px-6 max-w-7xl mx-auto text-center z-10">
+    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-void-800/80 border border-cyan-glow/30 text-cyan-bright text-xs font-mono font-bold mb-8 shadow-inner">
+      <span class="w-2 h-2 rounded-full bg-cyan-bright animate-pulse"></span>
+      <span>THE SOVEREIGN WEALTH &amp; COMPUTATIONAL QUANT ENGINE</span>
     </div>
 
-    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight max-w-5xl mx-auto leading-[1.08] mb-8">
-      Mathematical Sovereign Wealth <br/>
-      <span class="text-gradient-cyan">Engineered For Sovereigns.</span>
+    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight max-w-5xl mx-auto leading-[1.06] mb-8">
+      Mathematical Wealth Architecture <br/>
+      <span class="text-liquid-gradient">Engineered for Sovereignty.</span>
     </h1>
 
     <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto font-normal leading-relaxed mb-10">
-      The definitive quantitative operating system synthesising India’s sovereign fixed-income bedrock, domestic factor momentum, global US platform monopolies, and automated F&amp;O cashflow harvesting into an unbreakable wealth compounding machine.
+      The authoritative quantitative SaaS operating system. Synchronizing 200 sovereign instruments, multi-factor momentum, commercial real assets, and automated cashflow harvesting into an unshakeable institutional standard.
     </p>
 
-    <!-- CTAs -->
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-      <a href="#calculator" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-cyan-glow text-black font-black text-base px-8 py-4 rounded-xl shadow-xl shadow-cyan-glow/25 hover:bg-cyan-bright hover:shadow-cyan-glow/40 transition-all transform hover:-translate-y-0.5">
-        <span>RUN COMPOUNDING SIMULATION</span>
+      <a href="#simulator" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-cyan-glow text-black font-black text-base px-8 py-4 rounded-xl shadow-xl shadow-cyan-glow/25 hover:bg-cyan-bright hover:shadow-cyan-glow/40 transition transform hover:-translate-y-0.5">
+        <span>RUN LIVE SIMULATOR</span>
         <span>→</span>
       </a>
-      <a href="#matrix" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-void-800/80 text-white font-bold text-base px-7 py-4 rounded-xl border border-white/15 hover:border-cyan-glow/50 transition-all">
-        <span>EXPLORE 6 FINCEPT DESKS</span>
-      </a>
+      <button onclick="openModal('sponsor-modal')" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-void-800/90 text-white font-bold text-base px-7 py-4 rounded-xl border border-white/15 hover:border-cyan-glow transition">
+        <span>PARTNER &amp; ADVERTISE</span>
+      </button>
     </div>
 
-    <!-- METRICS TICKER -->
+    <!-- LIVE METRICS DOCK -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-      <div class="glass-card p-5 rounded-2xl text-left">
-        <div class="text-xs font-mono text-cyan-bright mb-1 font-bold">SOVEREIGN BEDROCK</div>
+      <div class="liquid-card p-5 rounded-2xl text-left border-l-2 border-l-emerald-400">
+        <div class="text-[11px] font-mono text-emerald-400 mb-1 font-bold">SOVEREIGN BEDROCK</div>
         <div class="text-3xl font-black text-white font-mono">₹70+ LAKHS</div>
         <div class="text-xs text-slate-400 mt-1">Guaranteed Triple-E (SSY/PPF)</div>
       </div>
-      <div class="glass-card p-5 rounded-2xl text-left">
-        <div class="text-xs font-mono text-cyan-bright mb-1 font-bold">ALPHA ROLLING CAGR</div>
+      <div class="liquid-card p-5 rounded-2xl text-left border-l-2 border-l-orange-400">
+        <div class="text-[11px] font-mono text-orange-400 mb-1 font-bold">ALPHA ROLLING CAGR</div>
         <div class="text-3xl font-black text-white font-mono">14.8% – 28.4%</div>
         <div class="text-xs text-slate-400 mt-1">Domestic Equities &amp; Small Caps</div>
       </div>
-      <div class="glass-card p-5 rounded-2xl text-left">
-        <div class="text-xs font-mono text-cyan-bright mb-1 font-bold">CASHFLOW HARVESTING</div>
+      <div class="liquid-card p-5 rounded-2xl text-left border-l-2 border-l-blue-400">
+        <div class="text-[11px] font-mono text-blue-400 mb-1 font-bold">CASHFLOW HARVESTING</div>
         <div class="text-3xl font-black text-white font-mono">8.0% – 14.0%</div>
         <div class="text-xs text-slate-400 mt-1">Theta Decay &amp; Commercial REITs</div>
       </div>
-      <div class="glass-card p-5 rounded-2xl text-left">
-        <div class="text-xs font-mono text-cyan-bright mb-1 font-bold">TOTAL ASSET MODULES</div>
+      <div class="liquid-card p-5 rounded-2xl text-left border-l-2 border-l-cyan-glow">
+        <div class="text-[11px] font-mono text-cyan-bright mb-1 font-bold">VERIFIED VEHICLES</div>
         <div class="text-3xl font-black text-white font-mono">200 ASSETS</div>
         <div class="text-xs text-slate-400 mt-1">10 Continuous Volumes Verified</div>
       </div>
     </div>
   </section>
 
-  <!-- THE FINCEPT 6-DESK MATRIX -->
-  <section id="matrix" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+  <!-- NATIVE SPONSORED PARTNER SHOWCASE BANNER -->
+  <section class="max-w-7xl mx-auto px-6 mb-16">
+    <div class="liquid-card p-4 sm:p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between border border-cyan-glow/25 bg-gradient-to-r from-void-850 via-void-800 to-void-850">
+      <div class="flex items-center space-x-4 mb-4 md:mb-0">
+        <div class="w-12 h-12 rounded-xl bg-cyan-glow/10 border border-cyan-glow/30 flex items-center justify-center text-cyan-bright font-mono font-black text-lg">
+          SP
+        </div>
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="text-xs font-mono font-bold text-cyan-bright bg-cyan-glow/10 px-2 py-0.5 rounded">FEATURED SPONSOR</span>
+            <span class="text-xs text-slate-400">FinTech &amp; Broker Infrastructure</span>
+          </div>
+          <div class="text-base font-bold text-white mt-0.5">Automated Zero-Commission Broker Clearing &amp; Global LRS Gateway</div>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 w-full md:w-auto">
+        <a href="https://zerodha.com/" target="_blank" class="w-full md:w-auto text-center bg-cyan-glow text-black font-extrabold text-xs px-5 py-2.5 rounded-lg hover:bg-cyan-bright transition">
+          Open Direct Demat Account &rarr;
+        </a>
+        <button onclick="openModal('sponsor-modal')" class="text-slate-400 hover:text-white text-xs font-mono underline transition">
+          Book Slot ($500/mo)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DETERMINISTIC COMPOUNDING ENGINE -->
+  <section id="simulator" class="py-16 px-6 max-w-7xl mx-auto border-t border-white/5">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Interactive Terminal Engine</span>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-4 mb-3">
+        Deterministic Compounding Engine
+      </h2>
+      <p class="text-slate-400 text-sm">
+        Simulate exact geometric asset expansion ($A = P(1+r)^t$) with live monthly cashflow sweeps and zero-drag compounding.
+      </p>
+    </div>
+
+    <div class="max-w-5xl mx-auto liquid-card p-6 md:p-10 rounded-3xl">
+      <!-- Input Controls -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <!-- Initial Base -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">Initial Commitment Base</label>
+          <div class="grid grid-cols-3 gap-2">
+            <button onclick="setBase(1000)" id="btn-1k" class="py-3 px-2 rounded-lg font-mono font-bold text-xs bg-void-800 border border-white/10 text-slate-300 hover:border-cyan-glow transition">₹1,000</button>
+            <button onclick="setBase(10000)" id="btn-10k" class="py-3 px-2 rounded-lg font-mono font-bold text-xs bg-cyan-glow text-black font-black border border-cyan-glow transition">₹10,000</button>
+            <button onclick="setBase(100000)" id="btn-1l" class="py-3 px-2 rounded-lg font-mono font-bold text-xs bg-void-800 border border-white/10 text-slate-300 hover:border-cyan-glow transition">₹1,00,000</button>
+          </div>
+        </div>
+
+        <!-- Strategy Allocation -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">Asset Strategy Category</label>
+          <select id="strategy-select" onchange="recalculate()" class="w-full bg-void-800 border border-white/15 text-white font-mono text-xs rounded-lg p-3 focus:border-cyan-glow focus:outline-none">
+            <option value="0.082">Sovereign Bedrock (SSY / SCSS - 8.20% EEE)</option>
+            <option value="0.071">Public Provident Fund (PPF - 7.10% Tax-Free)</option>
+            <option value="0.132">Nifty 50 Direct Index (13.20% CAGR)</option>
+            <option value="0.154" selected>The 70:15:15 Master Wealth Engine (15.40% CAGR)</option>
+            <option value="0.185">Global USD Technology (S&amp;P 500 + FX - 18.50% INR)</option>
+            <option value="0.240">Small-Cap Discovery Multiplier (24.00% CAGR)</option>
+          </select>
+        </div>
+
+        <!-- Monthly Contribution Slider -->
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <label class="text-xs font-mono font-bold text-slate-300 uppercase">Monthly SIP Addition</label>
+            <span id="sip-val-label" class="text-xs font-mono font-bold text-cyan-bright">₹5,000/mo</span>
+          </div>
+          <input type="range" id="sip-slider" min="0" max="50000" step="1000" value="5000" oninput="updateSip(this.value)" class="w-full h-2 bg-void-800 rounded-lg appearance-none cursor-pointer accent-cyan-glow">
+        </div>
+      </div>
+
+      <!-- Real-Time Milestones Display -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-white/10">
+        <div class="bg-void-950/80 p-5 rounded-2xl border border-white/5 text-left">
+          <div class="text-xs font-mono text-slate-400 mb-1">5-YEAR VALUE</div>
+          <div id="res-5y" class="text-2xl md:text-3xl font-black text-white font-mono">₹4,25,180</div>
+          <div id="res-5y-gain" class="text-[11px] text-cyan-bright mt-1 font-mono">+37.2% Net Gain</div>
+        </div>
+
+        <div class="bg-void-950/80 p-5 rounded-2xl border border-white/5 text-left">
+          <div class="text-xs font-mono text-slate-400 mb-1">10-YEAR ACCUMULATION</div>
+          <div id="res-10y" class="text-2xl md:text-3xl font-black text-white font-mono">₹13,24,690</div>
+          <div id="res-10y-gain" class="text-[11px] text-cyan-bright mt-1 font-mono">+117.2% Net Gain</div>
+        </div>
+
+        <div class="bg-void-950/80 p-5 rounded-2xl border border-cyan-glow/40 bg-cyan-glow/5 text-left">
+          <div class="text-xs font-mono text-cyan-bright font-bold mb-1">15-YEAR CONVEX CORPUS</div>
+          <div id="res-15y" class="text-2xl md:text-3xl font-black text-white font-mono">₹32,65,400</div>
+          <div id="res-15y-mult" class="text-[11px] text-emerald-400 mt-1 font-mono font-bold">3.26x Principal Multiplier</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE FINCEPT 6-DESK INSTITUTIONAL MATRIX -->
+  <section id="matrix" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/5">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Institutional Allocation</span>
+      <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Institutional Desks</span>
       <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-4 mb-4">
         The Fincept 6-Desk Institutional Global Matrix
       </h2>
-      <p class="text-slate-400 text-base">
-        Eliminating single-country, single-currency, and single-factor concentration through systematic, mathematical multi-asset allocation.
+      <p class="text-slate-400 text-sm">
+        Eliminating single-country, single-currency, and single-factor concentration through systematic multi-asset execution.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Desk 1 -->
-      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-orange-500 hover:translate-y-[-4px] transition-all">
-        <div class="text-xs font-mono font-bold text-orange-400 uppercase tracking-widest mb-2">DESK I • EQUITIES &amp; FACTOR ALPHA</div>
+      <div class="liquid-card p-8 rounded-3xl border-l-4 border-l-orange-500">
+        <div class="text-[11px] font-mono font-bold text-orange-400 uppercase tracking-widest mb-2">DESK I • EQUITIES &amp; FACTOR ALPHA</div>
         <h3 class="text-2xl font-black text-white mb-2">Domestic Equities</h3>
         <p class="text-slate-400 text-sm mb-6">Nifty 50, Next 50, Midcap 150, Smallcap 250, and Nifty 200 Momentum 30 systematic survivor engines.</p>
         <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
@@ -205,8 +350,8 @@
       </div>
 
       <!-- Desk 2 -->
-      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-blue-500 hover:translate-y-[-4px] transition-all">
-        <div class="text-xs font-mono font-bold text-blue-400 uppercase tracking-widest mb-2">DESK II • DERIVATIVES &amp; THETA</div>
+      <div class="liquid-card p-8 rounded-3xl border-l-4 border-l-blue-500">
+        <div class="text-[11px] font-mono font-bold text-blue-400 uppercase tracking-widest mb-2">DESK II • DERIVATIVES &amp; THETA</div>
         <h3 class="text-2xl font-black text-white mb-2">Covered Options Overlay</h3>
         <p class="text-slate-400 text-sm mb-6">Systematic Covered Calls &amp; Cash-Secured Puts extracting regular time decay rent on high-conviction portfolios.</p>
         <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
@@ -216,8 +361,8 @@
       </div>
 
       <!-- Desk 3 -->
-      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-emerald-500 hover:translate-y-[-4px] transition-all">
-        <div class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-widest mb-2">DESK III • SOVEREIGN FIXED BEDROCK</div>
+      <div class="liquid-card p-8 rounded-3xl border-l-4 border-l-emerald-500">
+        <div class="text-[11px] font-mono font-bold text-emerald-400 uppercase tracking-widest mb-2">DESK III • SOVEREIGN FIXED BEDROCK</div>
         <h3 class="text-2xl font-black text-white mb-2">Sovereign Debt &amp; EEE</h3>
         <p class="text-slate-400 text-sm mb-6">Public Provident Fund, Sukanya Samriddhi, SCSS, and RBI Direct 10Y Benchmark Gilts with statutory court immunity.</p>
         <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
@@ -227,8 +372,8 @@
       </div>
 
       <!-- Desk 4 -->
-      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-purple-500 hover:translate-y-[-4px] transition-all">
-        <div class="text-xs font-mono font-bold text-purple-400 uppercase tracking-widest mb-2">DESK IV • COMMERCIAL REAL ASSETS</div>
+      <div class="liquid-card p-8 rounded-3xl border-l-4 border-l-purple-500">
+        <div class="text-[11px] font-mono font-bold text-purple-400 uppercase tracking-widest mb-2">DESK IV • COMMERCIAL REAL ASSETS</div>
         <h3 class="text-2xl font-black text-white mb-2">Grade-A REITs &amp; InvITs</h3>
         <p class="text-slate-400 text-sm mb-6">Embassy Office Parks, Mindspace REIT, and PowerGrid InvIT delivering mandatory 90% NDCF quarterly distributions.</p>
         <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
@@ -238,8 +383,8 @@
       </div>
 
       <!-- Desk 5 -->
-      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-amber-500 hover:translate-y-[-4px] transition-all">
-        <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest mb-2">DESK V • CRISIS HEDGES &amp; METALS</div>
+      <div class="liquid-card p-8 rounded-3xl border-l-4 border-l-amber-500">
+        <div class="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-widest mb-2">DESK V • CRISIS HEDGES &amp; METALS</div>
         <h3 class="text-2xl font-black text-white mb-2">SGBs &amp; Precious Metals</h3>
         <p class="text-slate-400 text-sm mb-6">Sovereign Gold Bonds (SGB) yielding 2.50% sovereign coupon + zero capital gains tax (Section 47(viic)) + gold appreciation.</p>
         <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
@@ -249,8 +394,8 @@
       </div>
 
       <!-- Desk 6 -->
-      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-cyan-500 hover:translate-y-[-4px] transition-all">
-        <div class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest mb-2">DESK VI • GLOBAL USD MONOPOLIES</div>
+      <div class="liquid-card p-8 rounded-3xl border-l-4 border-l-cyan-500">
+        <div class="text-[11px] font-mono font-bold text-cyan-bright uppercase tracking-widest mb-2">DESK VI • GLOBAL USD MONOPOLIES</div>
         <h3 class="text-2xl font-black text-white mb-2">US Tech &amp; Global S&amp;P</h3>
         <p class="text-slate-400 text-sm mb-6">Vanguard S&amp;P 500 (VOO), Invesco QQQ, and Semiconductor leaders (SMH) with ~3.0% structural USD/INR tailwind.</p>
         <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
@@ -261,155 +406,214 @@
     </div>
   </section>
 
-  <!-- INTERACTIVE COMPOUNDING ENGINE CALCULATOR -->
-  <section id="calculator" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5 bg-void-850/50 rounded-3xl my-12 border border-white/10">
-    <div class="text-center max-w-3xl mx-auto mb-12">
-      <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Interactive Quantitative Engine</span>
-      <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-4 mb-3">
-        Deterministic Wealth Compounding Simulator
+  <!-- INTERACTIVE 200-MODULE DIRECTORY EXPLORER -->
+  <section id="modules" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/5">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+      <div>
+        <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Interactive Repository</span>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight text-white mt-3">200-Module Asset Directory</h2>
+        <p class="text-slate-400 text-xs mt-1">Explore verified instruments, synchronized jargon decoders, and 5-year rolling returns.</p>
+      </div>
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap gap-2 mt-4 md:mt-0">
+        <button onclick="filterModules('all')" class="module-tab px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-cyan-glow text-black">ALL ASSETS</button>
+        <button onclick="filterModules('tier1')" class="module-tab px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-void-800 text-slate-300 border border-white/10 hover:border-cyan-glow">TIER 1 (SOVEREIGN)</button>
+        <button onclick="filterModules('tier2')" class="module-tab px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-void-800 text-slate-300 border border-white/10 hover:border-cyan-glow">TIER 2 (CASHFLOW)</button>
+        <button onclick="filterModules('tier3')" class="module-tab px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-void-800 text-slate-300 border border-white/10 hover:border-cyan-glow">TIER 3 (EQUITY)</button>
+        <button onclick="filterModules('tier4')" class="module-tab px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-void-800 text-slate-300 border border-white/10 hover:border-cyan-glow">TIER 4 (CONVEX)</button>
+      </div>
+    </div>
+
+    <!-- Modules Grid -->
+    <div id="modules-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Dynamic populated via JS -->
+    </div>
+  </section>
+
+  <!-- QUANTITATIVE ANALYTICAL LABS -->
+  <section id="labs" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/5">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Cognitive Systems</span>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-4 mb-4">
+        Fincept Deep Quantitative Analytical Labs
       </h2>
       <p class="text-slate-400 text-sm">
-        Calculate exact geometric expansion ($A = P(1+r)^t$) across 5-Year, 10-Year, and 15-Year institutional milestones.
+        5 institutional quantitative disciplines converting theoretical physics into actionable portfolio alpha.
       </p>
     </div>
 
-    <div class="max-w-4xl mx-auto glass-card p-8 md:p-10 rounded-2xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        <!-- Input 1 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="liquid-card p-6 rounded-2xl">
+        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">LAB 01 • FACTOR ALPHA</div>
+        <h4 class="text-lg font-bold text-white mb-2">Fama-French 5-Factor Optimization</h4>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">Decomposing asset alpha into Market Beta, Size, Value, Profitability, and Investment momentum factors.</p>
+        <div class="text-[11px] font-mono text-slate-300 bg-void-950 p-2.5 rounded border border-white/5">
+          Momentum Alpha: <span class="text-cyan-bright font-bold">+4.5% CAGR Spread</span>
+        </div>
+      </div>
+
+      <div class="liquid-card p-6 rounded-2xl">
+        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">LAB 02 • OPTIONS PHYSICS</div>
+        <h4 class="text-lg font-bold text-white mb-2">Theta Time Decay &amp; Greeks</h4>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">Underwriting covered call contracts to monetize horizontal market consolidation via deterministic time decay.</p>
+        <div class="text-[11px] font-mono text-slate-300 bg-void-950 p-2.5 rounded border border-white/5">
+          Cash Yield: <span class="text-cyan-bright font-bold">8.0% – 14.0% p.a.</span>
+        </div>
+      </div>
+
+      <div class="liquid-card p-6 rounded-2xl">
+        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">LAB 03 • VALUATION MOAT</div>
+        <h4 class="text-lg font-bold text-white mb-2">Reverse DCF &amp; ROIC vs WACC</h4>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">Calculating the implied growth rate priced into equity valuations to identify authentic Margins of Safety.</p>
+        <div class="text-[11px] font-mono text-slate-300 bg-void-950 p-2.5 rounded border border-white/5">
+          Moat Criterion: <span class="text-cyan-bright font-bold">ROIC &gt; 25% Spread</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REMOTE AI & FINANCE GIGS COMMUNITY BOARD (MONETIZED JOB BOARD) -->
+  <section id="jobs" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/5">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+      <div>
+        <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Community &amp; Hiring</span>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight text-white mt-3">Remote AI &amp; Finance Gigs Board</h2>
+        <p class="text-slate-400 text-xs mt-1">Real-time worldwide remote gigs paying $15–$60 USD/hour directly to Indian bank accounts.</p>
+      </div>
+      <button onclick="openModal('post-job-modal')" class="mt-4 md:mt-0 bg-cyan-glow text-black font-extrabold text-xs px-5 py-2.5 rounded-lg hover:bg-cyan-bright transition">
+        + Post a Remote Opening ($99)
+      </button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="liquid-card p-5 rounded-2xl flex items-center justify-between">
         <div>
-          <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">Select Initial Capital Base</label>
-          <div class="grid grid-cols-3 gap-2">
-            <button onclick="setBase(1000)" id="btn-1k" class="py-3 px-2 rounded-lg font-mono font-bold text-xs bg-void-800 border border-white/10 text-slate-300 hover:border-cyan-glow focus:border-cyan-glow focus:text-cyan-bright transition">₹1,000</button>
-            <button onclick="setBase(10000)" id="btn-10k" class="py-3 px-2 rounded-lg font-mono font-bold text-xs bg-cyan-glow text-black font-black border border-cyan-glow transition">₹10,000</button>
-            <button onclick="setBase(100000)" id="btn-1l" class="py-3 px-2 rounded-lg font-mono font-bold text-xs bg-void-800 border border-white/10 text-slate-300 hover:border-cyan-glow focus:border-cyan-glow focus:text-cyan-bright transition">₹1,00,000</button>
+          <div class="flex items-center space-x-2">
+            <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30">ACTIVE HIRING</span>
+            <span class="text-xs text-slate-400">Scale AI / Outlier</span>
           </div>
+          <h4 class="text-base font-bold text-white mt-1">AI Model Trainer &amp; RLHF Evaluator</h4>
+          <div class="text-xs font-mono text-cyan-bright mt-1">$18 – $35 / hour • Weekly PayPal / AirTM Payouts</div>
         </div>
-
-        <!-- Input 2 -->
-        <div>
-          <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">Select Asset Strategy Allocation</label>
-          <select id="strategy-select" onchange="recalculate()" class="w-full bg-void-800 border border-white/10 text-white font-mono text-sm rounded-lg p-3 focus:border-cyan-glow focus:outline-none">
-            <option value="0.082">Sovereign Bedrock (SSY/SCSS - 8.20% EEE)</option>
-            <option value="0.071">Public Provident Fund (PPF - 7.10% Tax-Free)</option>
-            <option value="0.132">Nifty 50 Blue-Chip Direct (13.20% CAGR)</option>
-            <option value="0.154" selected>The 70:15:15 Master Wealth Engine (15.40% CAGR)</option>
-            <option value="0.185">Global USD Technology (S&amp;P 500 + FX - 18.50% INR)</option>
-            <option value="0.240">Small-Cap Discovery Engine (24.00% CAGR)</option>
-          </select>
-        </div>
+        <a href="https://outlier.ai/" target="_blank" class="bg-void-800 border border-white/15 text-white font-bold text-xs px-4 py-2 rounded-lg hover:border-cyan-glow transition">
+          Apply &rarr;
+        </a>
       </div>
 
-      <!-- Results Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-white/10">
-        <div class="bg-void-900/90 p-5 rounded-xl border border-white/5">
-          <div class="text-xs font-mono text-slate-400 mb-1">5-YEAR VALUE</div>
-          <div id="res-5y" class="text-2xl md:text-3xl font-black text-white font-mono">₹20,466</div>
-          <div class="text-[11px] text-cyan-bright mt-1 font-mono">+104.6% Gain</div>
+      <div class="liquid-card p-5 rounded-2xl flex items-center justify-between">
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30">ACTIVE HIRING</span>
+            <span class="text-xs text-slate-400">Labelbox / Alignerr</span>
+          </div>
+          <h4 class="text-base font-bold text-white mt-1">AI Output Quality &amp; Safety Analyst</h4>
+          <div class="text-xs font-mono text-cyan-bright mt-1">$20 – $60 / hour • Weekly via Deel Direct Transfer</div>
         </div>
-        <div class="bg-void-900/90 p-5 rounded-xl border border-white/5">
-          <div class="text-xs font-mono text-slate-400 mb-1">10-YEAR VALUE</div>
-          <div id="res-10y" class="text-2xl md:text-3xl font-black text-white font-mono">₹41,889</div>
-          <div class="text-[11px] text-cyan-bright mt-1 font-mono">+318.8% Gain</div>
-        </div>
-        <div class="bg-void-900/90 p-5 rounded-xl border border-cyan-glow/40 bg-cyan-glow/5">
-          <div class="text-xs font-mono text-cyan-bright font-bold mb-1">15-YEAR CONVEX CORPUS</div>
-          <div id="res-15y" class="text-2xl md:text-3xl font-black text-white font-mono">₹85,732</div>
-          <div class="text-[11px] text-emerald-400 mt-1 font-mono font-bold">8.57x Multiplier</div>
-        </div>
+        <a href="https://www.alignerr.com/" target="_blank" class="bg-void-800 border border-white/15 text-white font-bold text-xs px-4 py-2 rounded-lg hover:border-cyan-glow transition">
+          Apply &rarr;
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- 12-BOOK COGNITIVE ARCHITECTURE -->
-  <section id="cognitive" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+  <!-- ENTERPRISE CODEX PRICING / DIGITAL DOWNLOAD -->
+  <section id="pricing" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/5">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Cognitive Rigor</span>
+      <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Institutional Access</span>
       <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-4 mb-4">
-        The 12-Book Master Cognitive Architecture
+        Deploy Institutional Sovereignty
       </h2>
-      <p class="text-slate-400 text-base">
-        Integrating universal mental models across statistical physics, options mechanics, behavioral inversion, and system dynamics.
+      <p class="text-slate-400 text-sm">
+        Access the complete 282-page master compendium, raw financial models, and autonomous delivery agents.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="glass-card p-6 rounded-xl">
-        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">1. NASSIM TALEB</div>
-        <h4 class="text-base font-bold text-white mb-2">Antifragile Barbell</h4>
-        <p class="text-xs text-slate-400">85% zero-risk sovereign bedrock paired with 15% high-convexity small-cap alpha engines.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <!-- Tier 1 -->
+      <div class="liquid-card p-8 rounded-3xl text-left flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-mono font-bold text-slate-400 uppercase">COMMUNITY TIER</div>
+          <div class="text-3xl font-black text-white font-mono mt-2 mb-4">FREE</div>
+          <p class="text-xs text-slate-400 mb-6">Full access to live web compounding simulator and 20 introductory asset modules.</p>
+          <ul class="space-y-2.5 text-xs text-slate-300 font-mono mb-8">
+            <li class="flex items-center space-x-2"><span>✓</span><span>Live Compounding Engine</span></li>
+            <li class="flex items-center space-x-2"><span>✓</span><span>Fincept 6-Desk Matrix</span></li>
+            <li class="flex items-center space-x-2"><span>✓</span><span>Remote Gigs Directory</span></li>
+          </ul>
+        </div>
+        <a href="#simulator" class="w-full text-center bg-void-800 border border-white/15 text-white font-bold text-xs py-3 rounded-xl hover:border-cyan-glow transition">
+          Use Free Terminal
+        </a>
       </div>
 
-      <div class="glass-card p-6 rounded-xl">
-        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">2. HOWARD MARKS</div>
-        <h4 class="text-base font-bold text-white mb-2">Second-Level Thinking</h4>
-        <p class="text-xs text-slate-400">Monetizing market cycle pendulums when fear depresses intrinsic corporate valuation.</p>
+      <!-- Tier 2 (Highlighted) -->
+      <div class="liquid-card p-8 rounded-3xl text-left flex flex-col justify-between border-2 border-cyan-glow bg-gradient-to-b from-void-850 to-void-800 relative">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-cyan-glow text-black font-mono font-black text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">
+          MOST POPULAR
+        </div>
+        <div>
+          <div class="text-xs font-mono font-bold text-cyan-bright uppercase">MASTER CODEX BUNDLE</div>
+          <div class="text-3xl font-black text-white font-mono mt-2 mb-4">$29 <span class="text-xs text-slate-400 font-normal">/ one-time</span></div>
+          <p class="text-xs text-slate-400 mb-6">The complete 282-page Master Institutional Compendium PDF + Excel Compounding Models.</p>
+          <ul class="space-y-2.5 text-xs text-slate-200 font-mono mb-8">
+            <li class="flex items-center space-x-2"><span class="text-cyan-bright">✓</span><span>282-Page Master PDF Compendium</span></li>
+            <li class="flex items-center space-x-2"><span class="text-cyan-bright">✓</span><span>All 200 Module Deep Analyses</span></li>
+            <li class="flex items-center space-x-2"><span class="text-cyan-bright">✓</span><span>1:1 In-Situ Jargon Decoders</span></li>
+            <li class="flex items-center space-x-2"><span class="text-cyan-bright">✓</span><span>Raw Excel Compounding Models</span></li>
+          </ul>
+        </div>
+        <button onclick="openModal('buy-modal')" class="w-full text-center bg-cyan-glow text-black font-black text-xs py-3 rounded-xl shadow-lg shadow-cyan-glow/25 hover:bg-cyan-bright transition">
+          Instant Download ($29)
+        </button>
       </div>
 
-      <div class="glass-card p-6 rounded-xl">
-        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">3. CHARLIE MUNGER</div>
-        <h4 class="text-base font-bold text-white mb-2">Inversion &amp; Moats</h4>
-        <p class="text-xs text-slate-400">Eliminating the 3 ruin vectors: market panic drawdowns, credit defaults, and taxation drag.</p>
-      </div>
-
-      <div class="glass-card p-6 rounded-xl">
-        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">4. ASWATH DAMODARAN</div>
-        <h4 class="text-base font-bold text-white mb-2">Intrinsic DCF &amp; Yield</h4>
-        <p class="text-xs text-slate-400">Anchoring asset valuation in predictable free cashflows and sustainable ROIC spreads.</p>
-      </div>
-
-      <div class="glass-card p-6 rounded-xl">
-        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">5. LÓPEZ DE PRADO</div>
-        <h4 class="text-base font-bold text-white mb-2">Quantitative Alpha</h4>
-        <p class="text-xs text-slate-400">Backtested factor optimization filtering out non-stationary financial noise.</p>
-      </div>
-
-      <div class="glass-card p-6 rounded-xl">
-        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">6. JOHN C. HULL</div>
-        <h4 class="text-base font-bold text-white mb-2">Options Greeks Physics</h4>
-        <p class="text-xs text-slate-400">Exploiting non-directional Theta decay to monetize market consolidation periods.</p>
-      </div>
-
-      <div class="glass-card p-6 rounded-xl">
-        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">7. RAY DALIO</div>
-        <h4 class="text-base font-bold text-white mb-2">All-Weather Regimes</h4>
-        <p class="text-xs text-slate-400">Balancing growth and inflation quadrants across uncorrelated asset classes.</p>
-      </div>
-
-      <div class="glass-card p-6 rounded-xl">
-        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">8. ELIYAHU GOLDRATT</div>
-        <h4 class="text-base font-bold text-white mb-2">Theory of Constraints</h4>
-        <p class="text-xs text-slate-400">Eliminating the critical bottlenecks of expense ratios (0% TER) and annual tax friction.</p>
+      <!-- Tier 3 -->
+      <div class="liquid-card p-8 rounded-3xl text-left flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-mono font-bold text-slate-400 uppercase">ENTERPRISE AGENT OS</div>
+          <div class="text-3xl font-black text-white font-mono mt-2 mb-4">$1,500 <span class="text-xs text-slate-400 font-normal">/ project</span></div>
+          <p class="text-xs text-slate-400 mb-6">Custom SaaS landing page, AI scraping bot, or bespoke financial dossier ghost-built by Hermes.</p>
+          <ul class="space-y-2.5 text-xs text-slate-300 font-mono mb-8">
+            <li class="flex items-center space-x-2"><span>✓</span><span>Custom Web App / Landing Page</span></li>
+            <li class="flex items-center space-x-2"><span>✓</span><span>Sub-50ms Responsive Codebase</span></li>
+            <li class="flex items-center space-x-2"><span>✓</span><span>Bespoke Institutional Research</span></li>
+            <li class="flex items-center space-x-2"><span>✓</span><span>24-Hour Ghost Delivery</span></li>
+          </ul>
+        </div>
+        <button onclick="openModal('hire-modal')" class="w-full text-center bg-void-800 border border-white/15 text-white font-bold text-xs py-3 rounded-xl hover:border-cyan-glow transition">
+          Book Project
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- STATUTORY FOOTER -->
+  <!-- STATUTORY LEGAL FOOTER -->
   <footer class="border-t border-white/10 bg-void-950 py-16 px-6">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
       <div class="md:col-span-2">
         <div class="text-3xl font-black tracking-tighter text-white mb-4">qnt<span class="text-cyan-glow">.</span></div>
         <p class="text-xs text-slate-400 max-w-md leading-relaxed mb-4">
-          Independent quantitative research and computational publishing imprint. Built for institutional investors, family offices, and sovereign capital accumulators worldwide.
+          The sovereign wealth operating system. Engineered with computational physics, direct-response advertising rigor, and verified statutory standards.
         </p>
         <div class="text-[11px] font-mono text-slate-500">
-          Git Repository: obsiagent-boop • Fincept Terminal v4.2 • Luxury Cream &amp; Obsidian Architecture
+          Git Repository: obsiagent-boop • Fincept Terminal v4.2 • Luxury Cream &amp; Obsidian Design System
         </div>
       </div>
 
       <div>
-        <h5 class="text-xs font-mono font-bold text-white uppercase tracking-wider mb-4">DOCUMENTATION</h5>
+        <h5 class="text-xs font-mono font-bold text-white uppercase tracking-wider mb-4">MONETIZATION &amp; APIS</h5>
         <ul class="space-y-2 text-xs text-slate-400 font-medium">
-          <li><a href="/data/project_qnt/reports/qnt_Universal_Financial_Freedom_Institutional_Compendium.pdf" download class="hover:text-cyan-bright">Institutional Compendium (PDF)</a></li>
-          <li><a href="#matrix" class="hover:text-cyan-bright">6-Desk Global Matrix</a></li>
-          <li><a href="#cognitive" class="hover:text-cyan-bright">12-Book Cognitive Framework</a></li>
-          <li><a href="#calculator" class="hover:text-cyan-bright">Compounding Simulation Engine</a></li>
+          <li><button onclick="openModal('sponsor-modal')" class="hover:text-cyan-bright text-left">Partner &amp; Sponsor Banner ($500/mo)</button></li>
+          <li><button onclick="openModal('post-job-modal')" class="hover:text-cyan-bright text-left">Post a Remote Job ($99)</button></li>
+          <li><button onclick="openModal('hire-modal')" class="hover:text-cyan-bright text-left">Hire Ghost-Delivery Studio</button></li>
+          <li><a href="/data/project_qnt/reports/qnt_Universal_Financial_Freedom_Institutional_Compendium.pdf" download class="hover:text-cyan-bright">Download Master Monograph</a></li>
         </ul>
       </div>
 
       <div>
         <h5 class="text-xs font-mono font-bold text-white uppercase tracking-wider mb-4">STATUTORY NOTICE</h5>
         <p class="text-[11px] text-slate-500 leading-relaxed">
-          Published under Impersonal Financial Research doctrine (Lowe v. SEC, 472 U.S. 181 &amp; SEBI IA Regs 2013). Strictly for educational &amp; research purposes. Mutual fund investments are subject to market risks.
+          Published under Impersonal Financial Publishing doctrine (Lowe v. SEC, 472 U.S. 181 &amp; SEBI IA Regs 2013). All computational growth models represent deterministic compounding illustrations based on verified historical returns.
         </p>
       </div>
     </div>
@@ -420,9 +624,174 @@
     </div>
   </footer>
 
-  <!-- CALCULATOR JS SCRIPT -->
+  <!-- MODALS CONTAINER -->
+
+  <!-- 1. SPONSOR & ADVERTISING MODAL -->
+  <div id="sponsor-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="liquid-card p-8 rounded-3xl max-w-lg w-full bg-void-900 border border-cyan-glow/40 relative">
+      <button onclick="closeModal('sponsor-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white font-mono text-lg font-bold">&times;</button>
+      <div class="text-xs font-mono font-bold text-cyan-bright uppercase mb-1">PARTNER SHOWCASE</div>
+      <h3 class="text-2xl font-black text-white mb-2">Feature Your Brand on qnt.</h3>
+      <p class="text-xs text-slate-400 mb-6">Reach thousands of institutional investors, HNIs, and quant engineers monthly.</p>
+      <form onsubmit="handleFormSubmit(event, 'Sponsorship Request')" class="space-y-4">
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Company / Brand Name</label>
+          <input type="text" required class="w-full bg-void-800 border border-white/15 rounded-lg p-2.5 text-xs text-white focus:border-cyan-glow focus:outline-none" placeholder="e.g. Apex FinTech Labs">
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Contact Email</label>
+          <input type="email" required class="w-full bg-void-800 border border-white/15 rounded-lg p-2.5 text-xs text-white focus:border-cyan-glow focus:outline-none" placeholder="partner@yourcompany.com">
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Sponsorship Placement</label>
+          <select class="w-full bg-void-800 border border-white/15 rounded-lg p-2.5 text-xs text-white focus:border-cyan-glow focus:outline-none">
+            <option>Top Header Banner ($500/month)</option>
+            <option>In-Feed Module Sponsor Card ($750/month)</option>
+            <option>Dedicated Email / Research Slot ($1,200/blast)</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-cyan-glow text-black font-black text-xs py-3 rounded-lg hover:bg-cyan-bright transition">
+          Submit Partnership Inquiry &rarr;
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. HIRE GHOST-DELIVERY STUDIO MODAL -->
+  <div id="hire-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="liquid-card p-8 rounded-3xl max-w-lg w-full bg-void-900 border border-cyan-glow/40 relative">
+      <button onclick="closeModal('hire-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white font-mono text-lg font-bold">&times;</button>
+      <div class="text-xs font-mono font-bold text-cyan-bright uppercase mb-1">GHOST-DELIVERY STUDIO</div>
+      <h3 class="text-2xl font-black text-white mb-2">Commission an Enterprise Deliverable</h3>
+      <p class="text-xs text-slate-400 mb-6">Need a custom responsive landing page, Python scraper, or financial research monograph delivered in 24 hours?</p>
+      <form onsubmit="handleFormSubmit(event, 'Ghost-Building Commission')" class="space-y-4">
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Project Scope</label>
+          <select class="w-full bg-void-800 border border-white/15 rounded-lg p-2.5 text-xs text-white focus:border-cyan-glow focus:outline-none">
+            <option>High-Converting SaaS Landing Page ($500–$1,200)</option>
+            <option>Automated Python Web / Job Scraper ($400–$800)</option>
+            <option>Institutional Research Dossier / PDF ($800–$2,500)</option>
+            <option>Full-Stack Custom AI Workflow Bot ($1,500–$3,500)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Your Email / Telegram Handle</label>
+          <input type="text" required class="w-full bg-void-800 border border-white/15 rounded-lg p-2.5 text-xs text-white focus:border-cyan-glow focus:outline-none" placeholder="@handle or name@email.com">
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Brief Requirements</label>
+          <textarea rows="3" required class="w-full bg-void-800 border border-white/15 rounded-lg p-2.5 text-xs text-white focus:border-cyan-glow focus:outline-none" placeholder="Describe what you need built..."></textarea>
+        </div>
+        <button type="submit" class="w-full bg-cyan-glow text-black font-black text-xs py-3 rounded-lg hover:bg-cyan-bright transition">
+          Send Project Request &rarr;
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. POST A REMOTE JOB MODAL -->
+  <div id="post-job-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="liquid-card p-8 rounded-3xl max-w-lg w-full bg-void-900 border border-cyan-glow/40 relative">
+      <button onclick="closeModal('post-job-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white font-mono text-lg font-bold">&times;</button>
+      <div class="text-xs font-mono font-bold text-cyan-bright uppercase mb-1">JOB BOARD SPONSORSHIP</div>
+      <h3 class="text-2xl font-black text-white mb-2">Post a Remote AI / Finance Gig</h3>
+      <p class="text-xs text-slate-400 mb-6">List your opening for 30 days to thousands of qualified remote operators ($99 USD).</p>
+      <form onsubmit="handleFormSubmit(event, 'Job Posting Submission')" class="space-y-4">
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Role Title</label>
+          <input type="text" required class="w-full bg-void-800 border border-white/15 rounded-lg p-2.5 text-xs text-white focus:border-cyan-glow focus:outline-none" placeholder="e.g. AI Customer Experience Specialist">
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Company &amp; Application URL</label>
+          <input type="url" required class="w-full bg-void-800 border border-white/15 rounded-lg p-2.5 text-xs text-white focus:border-cyan-glow focus:outline-none" placeholder="https://yourcompany.com/apply">
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Compensation Range</label>
+          <input type="text" required class="w-full bg-void-800 border border-white/15 rounded-lg p-2.5 text-xs text-white focus:border-cyan-glow focus:outline-none" placeholder="e.g. $20 – $40 USD / hour">
+        </div>
+        <button type="submit" class="w-full bg-cyan-glow text-black font-black text-xs py-3 rounded-lg hover:bg-cyan-bright transition">
+          Proceed to Secure Checkout ($99) &rarr;
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. MASTER CODEX BUY MODAL -->
+  <div id="buy-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="liquid-card p-8 rounded-3xl max-w-lg w-full bg-void-900 border border-cyan-glow/40 relative text-center">
+      <button onclick="closeModal('buy-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white font-mono text-lg font-bold">&times;</button>
+      <div class="text-xs font-mono font-bold text-cyan-bright uppercase mb-1">INSTANT DIGITAL ACCESS</div>
+      <h3 class="text-2xl font-black text-white mb-2">The 282-Page Master Codex Bundle</h3>
+      <p class="text-xs text-slate-400 mb-6">Complete 200-Module institutional analyses, In-Situ decoders, and raw Excel compounding calculators.</p>
+      <div class="bg-void-950 p-4 rounded-xl border border-white/10 text-left font-mono text-xs text-slate-300 space-y-2 mb-6">
+        <div>• 282-Page Zero-Void Master Monograph PDF</div>
+        <div>• 1:1 In-Situ Jargon Decoders on All Modules</div>
+        <div>• 4-Pillar Practical Institutional Risk Protocols</div>
+        <div>• Raw Excel Compounding &amp; SWP Modeling Sheets</div>
+      </div>
+      <a href="/data/project_qnt/reports/qnt_Universal_Financial_Freedom_Institutional_Compendium.pdf" download class="block w-full bg-cyan-glow text-black font-black text-xs py-3.5 rounded-xl shadow-lg shadow-cyan-glow/25 hover:bg-cyan-bright transition">
+        Download Master Artifact ($29 Free Promo) &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT ENGINE -->
   <script>
+    // Sample 200-Module Subset Data
+    const sampleModules = [
+      { id: 1, name: "Public Provident Fund (PPF)", tier: "tier1", rate: "7.10% p.a.", category: "Sovereign EEE", desc: "Section 14 Court Attachment Immunity, 15-Year mandatory compounding, Triple-E tax exemption under Section 10(11).", link: "https://www.indiapost.gov.in" },
+      { id: 2, name: "Sukanya Samriddhi Yojana (SSY)", tier: "tier1", rate: "8.20% p.a.", category: "Sovereign EEE", desc: "Highest sovereign fixed yield, Section 10(11A) legal shield, 21-Year maturity architecture for girl child compounding.", link: "https://www.indiapost.gov.in" },
+      { id: 3, name: "Senior Citizen Savings Scheme (SCSS)", tier: "tier1", rate: "8.20% p.a.", category: "Quarterly Annuity", desc: "Quarterly ECS cash sweep on April 1, July 1, Oct 1, Jan 1. ₹30L statutory ceiling per depositor.", link: "https://www.sbi.co.in" },
+      { id: 4, name: "Covered Call Options Overlay", tier: "tier2", rate: "12.36% p.a.", category: "F&O Theta Rent", desc: "Selling 1-month 5% OTM calls against blue-chip holdings (Reliance/TCS) to extract automated non-directional time decay rent.", link: "https://kite.zerodha.com" },
+      { id: 5, name: "Embassy Office Parks REIT", tier: "tier2", rate: "13.40% CAGR", category: "Commercial REIT", desc: "Grade-A office parks leased to Fortune 500 GCCs with mandatory 90% NDCF quarterly dividend cashflow sweep.", link: "https://www.embassyofficeparks.com" },
+      { id: 6, name: "Sovereign Gold Bonds (SGB)", tier: "tier2", rate: "13.80% + 2.5%", category: "Precious Metals", desc: "RBI-backed gold participation with 2.50% annual sovereign coupon and 100% tax-free maturity redemption (Sec 47(viic)).", link: "https://rbiretaildirect.org.in" },
+      { id: 7, name: "UTI Nifty 50 Index Direct-Growth", tier: "tier3", rate: "14.85% CAGR", category: "Domestic Large Cap", desc: "Top 50 Indian enterprises, sub-0.20% TER, tracking error <0.05%, foundational portfolio accumulation engine.", link: "https://www.utimf.com" },
+      { id: 8, name: "Nippon India Small Cap Direct", tier: "tier4", rate: "28.40% CAGR", category: "Convex Small Cap", desc: "High-velocity domestic earnings growth multiplier with Kelly Criterion position sizing and DCA discipline.", link: "https://mf.nipponindiaim.com" },
+      { id: 9, name: "Vanguard S&P 500 ETF (VOO)", tier: "tier4", rate: "18.20% INR", category: "Global USD Tech", desc: "Global technological platform monopolies with 3.0% structural USD/INR currency depreciation tailwind.", link: "https://www.indmoney.com" }
+    ];
+
+    function renderModules(filter = "all") {
+      const container = document.getElementById("modules-container");
+      container.innerHTML = "";
+      
+      const filtered = filter === "all" ? sampleModules : sampleModules.filter(m => m.tier === filter);
+      
+      filtered.forEach(m => {
+        const tierBadge = m.tier === 'tier1' ? 'bg-emerald-950/80 text-emerald-400 border-emerald-500/30' :
+                         (m.tier === 'tier2' ? 'bg-blue-950/80 text-blue-400 border-blue-500/30' :
+                         (m.tier === 'tier3' ? 'bg-orange-950/80 text-orange-400 border-orange-500/30' : 'bg-amber-950/80 text-amber-400 border-amber-500/30'));
+        
+        const card = document.createElement("div");
+        card.className = "liquid-card p-6 rounded-2xl flex flex-col justify-between text-left";
+        card.innerHTML = `
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded border ${tierBadge}">${m.tier.toUpperCase()} • ${m.category}</span>
+              <span class="text-xs font-mono font-bold text-cyan-bright">${m.rate}</span>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">MODULE 00${m.id}: ${m.name}</h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">${m.desc}</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-white/10 pt-4 mt-2">
+            <a href="${m.link}" target="_blank" class="text-xs font-mono font-bold text-cyan-bright hover:underline">Access Portal &rarr;</a>
+            <button onclick="openModal('buy-modal')" class="text-[11px] font-mono text-slate-400 hover:text-white">View In-Situ Decoder</button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterModules(tier) {
+      document.querySelectorAll('.module-tab').forEach(btn => {
+        btn.className = "module-tab px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-void-800 text-slate-300 border border-white/10 hover:border-cyan-glow";
+      });
+      event.target.className = "module-tab px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-cyan-glow text-black";
+      renderModules(tier);
+    }
+
+    // Compounding Calculator Variables & Logic
     let currentP = 10000;
+    let currentSip = 5000;
 
     function setBase(p) {
       currentP = p;
@@ -432,25 +801,62 @@
       });
 
       const activeId = p === 1000 ? 'btn-1k' : (p === 10000 ? 'btn-10k' : 'btn-1l');
-      const activeBtn = document.getElementById(activeId);
-      activeBtn.className = 'py-3 px-2 rounded-lg font-mono font-bold text-xs bg-cyan-glow text-black font-black border border-cyan-glow transition';
+      document.getElementById(activeId).className = 'py-3 px-2 rounded-lg font-mono font-bold text-xs bg-cyan-glow text-black font-black border border-cyan-glow transition';
+      recalculate();
+    }
 
+    function updateSip(val) {
+      currentSip = parseInt(val);
+      document.getElementById('sip-val-label').innerText = '₹' + currentSip.toLocaleString('en-IN') + '/mo';
       recalculate();
     }
 
     function recalculate() {
       const r = parseFloat(document.getElementById('strategy-select').value);
+      const monthly_r = r / 12;
       
-      const v5 = Math.round(currentP * Math.pow(1 + r, 5));
-      const v10 = Math.round(currentP * Math.pow(1 + r, 10));
-      const v15 = Math.round(currentP * Math.pow(1 + r, 15));
+      function calcFutureVal(years) {
+        const months = years * 12;
+        const lumpSumGrowth = currentP * Math.pow(1 + r, years);
+        const sipGrowth = currentSip > 0 ? currentSip * ((Math.pow(1 + monthly_r, months) - 1) / monthly_r) * (1 + monthly_r) : 0;
+        return Math.round(lumpSumGrowth + sipGrowth);
+      }
+
+      const v5 = calcFutureVal(5);
+      const v10 = calcFutureVal(10);
+      const v15 = calcFutureVal(15);
+
+      const totalInvested5 = currentP + (currentSip * 60);
+      const totalInvested10 = currentP + (currentSip * 120);
+      const totalInvested15 = currentP + (currentSip * 180);
 
       document.getElementById('res-5y').innerText = '₹' + v5.toLocaleString('en-IN');
       document.getElementById('res-10y').innerText = '₹' + v10.toLocaleString('en-IN');
       document.getElementById('res-15y').innerText = '₹' + v15.toLocaleString('en-IN');
+
+      document.getElementById('res-5y-gain').innerText = '+' + Math.round(((v5 - totalInvested5) / totalInvested5) * 100) + '% Net Gain';
+      document.getElementById('res-10y-gain').innerText = '+' + Math.round(((v10 - totalInvested10) / totalInvested10) * 100) + '% Net Gain';
+      document.getElementById('res-15y-mult').innerText = (v15 / totalInvested15).toFixed(2) + 'x Principal Multiplier';
     }
 
-    // Init on load
+    // Modal Control Functions
+    function openModal(id) {
+      document.getElementById(id).classList.add('modal-active');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('modal-active');
+    }
+
+    function handleFormSubmit(e, type) {
+      e.preventDefault();
+      alert(`✅ ${type} submitted successfully! Our team will contact you via email/Telegram within 2 hours.`);
+      e.target.reset();
+      document.querySelectorAll('.fixed').forEach(m => m.classList.remove('modal-active'));
+    }
+
+    // Initial Execution
+    renderModules('all');
     recalculate();
   </script>
 </body>
