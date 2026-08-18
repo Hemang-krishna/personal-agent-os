@@ -1,0 +1,9 @@
+{
+  "name": "qnt-saas-platform",
+  "version": "4.2.0",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 8080 --directory .",
+    "start": "python3 -m http.server 8080 --directory ."
+  }
+}
