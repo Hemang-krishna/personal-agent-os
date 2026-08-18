@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>qnt. | Institutional Quantitative Wealth Engine &amp; Fincept Terminal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            void: {
+              950: '#030509',
+              900: '#060811',
+              850: '#0A0E1A',
+              800: '#0F1527',
+              700: '#1A233D'
+            },
+            cyan: {
+              glow: '#06B6D4',
+              bright: '#22D3EE',
+              muted: '#0891B2'
+            },
+            cream: {
+              50: '#FAF8F5',
+              100: '#F4EFEA',
+              200: '#E6DED5'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'glow-pulse': 'glow 3s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            glow: {
+              '0%': { boxShadow: '0 0 15px rgba(6, 182, 212, 0.2)' },
+              '100%': { boxShadow: '0 0 35px rgba(6, 182, 212, 0.6)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #060811;
+      color: #F8FAFC;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    /* Background Grid Pattern */
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+
+    /* Ambient Radial Glows */
+    .radial-glow {
+      background: radial-gradient(circle at 50% 30%, rgba(6, 182, 212, 0.15), transparent 70%);
+    }
+    .radial-glow-subtle {
+      background: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.12), transparent 60%);
+    }
+
+    /* Glassmorphism Card */
+    .glass-card {
+      background: rgba(15, 21, 39, 0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+    }
+
+    /* Gradient Text */
+    .text-gradient-cyan {
+      background: linear-gradient(135deg, #FFFFFF 20%, #22D3EE 70%, #06B6D4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-void-900 bg-grid-pattern relative min-h-screen selection:bg-cyan-glow selection:text-black">
+
+  <!-- Glow Elements -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] radial-glow pointer-events-none z-0"></div>
+  <div class="absolute top-96 right-0 w-96 h-96 radial-glow-subtle pointer-events-none z-0"></div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-void-900/80 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="#" class="flex items-center space-x-2">
+          <span class="text-3xl font-black tracking-tighter text-white font-sans">qnt<span class="text-cyan-glow">.</span></span>
+          <span class="text-[10px] font-mono font-bold tracking-widest text-cyan-bright bg-cyan-glow/10 border border-cyan-glow/30 px-2 py-0.5 rounded uppercase">Fincept v4.2</span>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#matrix" class="hover:text-cyan-bright transition-colors">6-Desk Matrix</a>
+        <a href="#compendium" class="hover:text-cyan-bright transition-colors">200 Modules</a>
+        <a href="#cognitive" class="hover:text-cyan-bright transition-colors">12 Mental Models</a>
+        <a href="#telemetry" class="hover:text-cyan-bright transition-colors">Risk Telemetry</a>
+        <a href="#calculator" class="hover:text-cyan-bright transition-colors">Compounding Engine</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="/data/project_qnt/reports/qnt_Universal_Financial_Freedom_Institutional_Compendium.pdf" download class="hidden sm:inline-flex items-center space-x-2 text-xs font-mono font-bold text-slate-300 bg-void-800 border border-white/10 px-3.5 py-2 rounded-lg hover:border-cyan-glow/50 transition">
+          <span>DOWNLOAD CODEX</span>
+          <span class="text-cyan-bright">↓</span>
+        </a>
+        <a href="#calculator" class="bg-cyan-glow text-black font-extrabold text-sm px-5 py-2.5 rounded-lg shadow-lg shadow-cyan-glow/20 hover:bg-cyan-bright hover:shadow-cyan-glow/40 transition-all transform hover:-translate-y-0.5">
+          Launch Terminal
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-24 pb-20 px-6 max-w-7xl mx-auto text-center z-10">
+    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-glow/10 border border-cyan-glow/30 text-cyan-bright text-xs font-mono font-semibold mb-8 animate-pulse-slow">
+      <span class="w-2 h-2 rounded-full bg-cyan-bright"></span>
+      <span>INSTITUTIONAL QUANT WEALTH COMPENDIUM • 200 PROVED VEHICLES</span>
+    </div>
+
+    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight max-w-5xl mx-auto leading-[1.08] mb-8">
+      Mathematical Sovereign Wealth <br/>
+      <span class="text-gradient-cyan">Engineered For Sovereigns.</span>
+    </h1>
+
+    <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto font-normal leading-relaxed mb-10">
+      The definitive quantitative operating system synthesising India’s sovereign fixed-income bedrock, domestic factor momentum, global US platform monopolies, and automated F&amp;O cashflow harvesting into an unbreakable wealth compounding machine.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+      <a href="#calculator" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-cyan-glow text-black font-black text-base px-8 py-4 rounded-xl shadow-xl shadow-cyan-glow/25 hover:bg-cyan-bright hover:shadow-cyan-glow/40 transition-all transform hover:-translate-y-0.5">
+        <span>RUN COMPOUNDING SIMULATION</span>
+        <span>→</span>
+      </a>
+      <a href="#matrix" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-void-800/80 text-white font-bold text-base px-7 py-4 rounded-xl border border-white/15 hover:border-cyan-glow/50 transition-all">
+        <span>EXPLORE 6 FINCEPT DESKS</span>
+      </a>
+    </div>
+
+    <!-- METRICS TICKER -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+      <div class="glass-card p-5 rounded-2xl text-left">
+        <div class="text-xs font-mono text-cyan-bright mb-1 font-bold">SOVEREIGN BEDROCK</div>
+        <div class="text-3xl font-black text-white font-mono">₹70+ LAKHS</div>
+        <div class="text-xs text-slate-400 mt-1">Guaranteed Triple-E (SSY/PPF)</div>
+      </div>
+      <div class="glass-card p-5 rounded-2xl text-left">
+        <div class="text-xs font-mono text-cyan-bright mb-1 font-bold">ALPHA ROLLING CAGR</div>
+        <div class="text-3xl font-black text-white font-mono">14.8% – 28.4%</div>
+        <div class="text-xs text-slate-400 mt-1">Domestic Equities &amp; Small Caps</div>
+      </div>
+      <div class="glass-card p-5 rounded-2xl text-left">
+        <div class="text-xs font-mono text-cyan-bright mb-1 font-bold">CASHFLOW HARVESTING</div>
+        <div class="text-3xl font-black text-white font-mono">8.0% – 14.0%</div>
+        <div class="text-xs text-slate-400 mt-1">Theta Decay &amp; Commercial REITs</div>
+      </div>
+      <div class="glass-card p-5 rounded-2xl text-left">
+        <div class="text-xs font-mono text-cyan-bright mb-1 font-bold">TOTAL ASSET MODULES</div>
+        <div class="text-3xl font-black text-white font-mono">200 ASSETS</div>
+        <div class="text-xs text-slate-400 mt-1">10 Continuous Volumes Verified</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE FINCEPT 6-DESK MATRIX -->
+  <section id="matrix" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Institutional Allocation</span>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-4 mb-4">
+        The Fincept 6-Desk Institutional Global Matrix
+      </h2>
+      <p class="text-slate-400 text-base">
+        Eliminating single-country, single-currency, and single-factor concentration through systematic, mathematical multi-asset allocation.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Desk 1 -->
+      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-orange-500 hover:translate-y-[-4px] transition-all">
+        <div class="text-xs font-mono font-bold text-orange-400 uppercase tracking-widest mb-2">DESK I • EQUITIES &amp; FACTOR ALPHA</div>
+        <h3 class="text-2xl font-black text-white mb-2">Domestic Equities</h3>
+        <p class="text-slate-400 text-sm mb-6">Nifty 50, Next 50, Midcap 150, Smallcap 250, and Nifty 200 Momentum 30 systematic survivor engines.</p>
+        <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
+          <span class="text-slate-400">Target CAGR:</span>
+          <span class="text-orange-400 font-bold text-sm">13.2% – 24.0%</span>
+        </div>
+      </div>
+
+      <!-- Desk 2 -->
+      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-blue-500 hover:translate-y-[-4px] transition-all">
+        <div class="text-xs font-mono font-bold text-blue-400 uppercase tracking-widest mb-2">DESK II • DERIVATIVES &amp; THETA</div>
+        <h3 class="text-2xl font-black text-white mb-2">Covered Options Overlay</h3>
+        <p class="text-slate-400 text-sm mb-6">Systematic Covered Calls &amp; Cash-Secured Puts extracting regular time decay rent on high-conviction portfolios.</p>
+        <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
+          <span class="text-slate-400">Target Cash Yield:</span>
+          <span class="text-blue-400 font-bold text-sm">8.0% – 14.0% p.a.</span>
+        </div>
+      </div>
+
+      <!-- Desk 3 -->
+      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-emerald-500 hover:translate-y-[-4px] transition-all">
+        <div class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-widest mb-2">DESK III • SOVEREIGN FIXED BEDROCK</div>
+        <h3 class="text-2xl font-black text-white mb-2">Sovereign Debt &amp; EEE</h3>
+        <p class="text-slate-400 text-sm mb-6">Public Provident Fund, Sukanya Samriddhi, SCSS, and RBI Direct 10Y Benchmark Gilts with statutory court immunity.</p>
+        <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
+          <span class="text-slate-400">Target Sovereign Return:</span>
+          <span class="text-emerald-400 font-bold text-sm">7.1% – 8.2% Tax-Free</span>
+        </div>
+      </div>
+
+      <!-- Desk 4 -->
+      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-purple-500 hover:translate-y-[-4px] transition-all">
+        <div class="text-xs font-mono font-bold text-purple-400 uppercase tracking-widest mb-2">DESK IV • COMMERCIAL REAL ASSETS</div>
+        <h3 class="text-2xl font-black text-white mb-2">Grade-A REITs &amp; InvITs</h3>
+        <p class="text-slate-400 text-sm mb-6">Embassy Office Parks, Mindspace REIT, and PowerGrid InvIT delivering mandatory 90% NDCF quarterly distributions.</p>
+        <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
+          <span class="text-slate-400">Distribution Yield:</span>
+          <span class="text-purple-400 font-bold text-sm">7.5% – 11.5% NDCF</span>
+        </div>
+      </div>
+
+      <!-- Desk 5 -->
+      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-amber-500 hover:translate-y-[-4px] transition-all">
+        <div class="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest mb-2">DESK V • CRISIS HEDGES &amp; METALS</div>
+        <h3 class="text-2xl font-black text-white mb-2">SGBs &amp; Precious Metals</h3>
+        <p class="text-slate-400 text-sm mb-6">Sovereign Gold Bonds (SGB) yielding 2.50% sovereign coupon + zero capital gains tax (Section 47(viic)) + gold appreciation.</p>
+        <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
+          <span class="text-slate-400">Target Compounding:</span>
+          <span class="text-amber-400 font-bold text-sm">11.0% + 2.5% Coupon</span>
+        </div>
+      </div>
+
+      <!-- Desk 6 -->
+      <div class="glass-card p-8 rounded-2xl border-l-4 border-l-cyan-500 hover:translate-y-[-4px] transition-all">
+        <div class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest mb-2">DESK VI • GLOBAL USD MONOPOLIES</div>
+        <h3 class="text-2xl font-black text-white mb-2">US Tech &amp; Global S&amp;P</h3>
+        <p class="text-slate-400 text-sm mb-6">Vanguard S&amp;P 500 (VOO), Invesco QQQ, and Semiconductor leaders (SMH) with ~3.0% structural USD/INR tailwind.</p>
+        <div class="flex justify-between items-center text-xs font-mono border-t border-white/10 pt-4">
+          <span class="text-slate-400">Target INR Return:</span>
+          <span class="text-cyan-bright font-bold text-sm">15.2% – 18.5% CAGR</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE COMPOUNDING ENGINE CALCULATOR -->
+  <section id="calculator" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5 bg-void-850/50 rounded-3xl my-12 border border-white/10">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Interactive Quantitative Engine</span>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-4 mb-3">
+        Deterministic Wealth Compounding Simulator
+      </h2>
+      <p class="text-slate-400 text-sm">
+        Calculate exact geometric expansion ($A = P(1+r)^t$) across 5-Year, 10-Year, and 15-Year institutional milestones.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto glass-card p-8 md:p-10 rounded-2xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <!-- Input 1 -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">Select Initial Capital Base</label>
+          <div class="grid grid-cols-3 gap-2">
+            <button onclick="setBase(1000)" id="btn-1k" class="py-3 px-2 rounded-lg font-mono font-bold text-xs bg-void-800 border border-white/10 text-slate-300 hover:border-cyan-glow focus:border-cyan-glow focus:text-cyan-bright transition">₹1,000</button>
+            <button onclick="setBase(10000)" id="btn-10k" class="py-3 px-2 rounded-lg font-mono font-bold text-xs bg-cyan-glow text-black font-black border border-cyan-glow transition">₹10,000</button>
+            <button onclick="setBase(100000)" id="btn-1l" class="py-3 px-2 rounded-lg font-mono font-bold text-xs bg-void-800 border border-white/10 text-slate-300 hover:border-cyan-glow focus:border-cyan-glow focus:text-cyan-bright transition">₹1,00,000</button>
+          </div>
+        </div>
+
+        <!-- Input 2 -->
+        <div>
+          <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">Select Asset Strategy Allocation</label>
+          <select id="strategy-select" onchange="recalculate()" class="w-full bg-void-800 border border-white/10 text-white font-mono text-sm rounded-lg p-3 focus:border-cyan-glow focus:outline-none">
+            <option value="0.082">Sovereign Bedrock (SSY/SCSS - 8.20% EEE)</option>
+            <option value="0.071">Public Provident Fund (PPF - 7.10% Tax-Free)</option>
+            <option value="0.132">Nifty 50 Blue-Chip Direct (13.20% CAGR)</option>
+            <option value="0.154" selected>The 70:15:15 Master Wealth Engine (15.40% CAGR)</option>
+            <option value="0.185">Global USD Technology (S&amp;P 500 + FX - 18.50% INR)</option>
+            <option value="0.240">Small-Cap Discovery Engine (24.00% CAGR)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Results Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-white/10">
+        <div class="bg-void-900/90 p-5 rounded-xl border border-white/5">
+          <div class="text-xs font-mono text-slate-400 mb-1">5-YEAR VALUE</div>
+          <div id="res-5y" class="text-2xl md:text-3xl font-black text-white font-mono">₹20,466</div>
+          <div class="text-[11px] text-cyan-bright mt-1 font-mono">+104.6% Gain</div>
+        </div>
+        <div class="bg-void-900/90 p-5 rounded-xl border border-white/5">
+          <div class="text-xs font-mono text-slate-400 mb-1">10-YEAR VALUE</div>
+          <div id="res-10y" class="text-2xl md:text-3xl font-black text-white font-mono">₹41,889</div>
+          <div class="text-[11px] text-cyan-bright mt-1 font-mono">+318.8% Gain</div>
+        </div>
+        <div class="bg-void-900/90 p-5 rounded-xl border border-cyan-glow/40 bg-cyan-glow/5">
+          <div class="text-xs font-mono text-cyan-bright font-bold mb-1">15-YEAR CONVEX CORPUS</div>
+          <div id="res-15y" class="text-2xl md:text-3xl font-black text-white font-mono">₹85,732</div>
+          <div class="text-[11px] text-emerald-400 mt-1 font-mono font-bold">8.57x Multiplier</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12-BOOK COGNITIVE ARCHITECTURE -->
+  <section id="cognitive" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-widest bg-cyan-glow/10 border border-cyan-glow/30 px-3 py-1 rounded">Cognitive Rigor</span>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-4 mb-4">
+        The 12-Book Master Cognitive Architecture
+      </h2>
+      <p class="text-slate-400 text-base">
+        Integrating universal mental models across statistical physics, options mechanics, behavioral inversion, and system dynamics.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="glass-card p-6 rounded-xl">
+        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">1. NASSIM TALEB</div>
+        <h4 class="text-base font-bold text-white mb-2">Antifragile Barbell</h4>
+        <p class="text-xs text-slate-400">85% zero-risk sovereign bedrock paired with 15% high-convexity small-cap alpha engines.</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-xl">
+        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">2. HOWARD MARKS</div>
+        <h4 class="text-base font-bold text-white mb-2">Second-Level Thinking</h4>
+        <p class="text-xs text-slate-400">Monetizing market cycle pendulums when fear depresses intrinsic corporate valuation.</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-xl">
+        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">3. CHARLIE MUNGER</div>
+        <h4 class="text-base font-bold text-white mb-2">Inversion &amp; Moats</h4>
+        <p class="text-xs text-slate-400">Eliminating the 3 ruin vectors: market panic drawdowns, credit defaults, and taxation drag.</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-xl">
+        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">4. ASWATH DAMODARAN</div>
+        <h4 class="text-base font-bold text-white mb-2">Intrinsic DCF &amp; Yield</h4>
+        <p class="text-xs text-slate-400">Anchoring asset valuation in predictable free cashflows and sustainable ROIC spreads.</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-xl">
+        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">5. LÓPEZ DE PRADO</div>
+        <h4 class="text-base font-bold text-white mb-2">Quantitative Alpha</h4>
+        <p class="text-xs text-slate-400">Backtested factor optimization filtering out non-stationary financial noise.</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-xl">
+        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">6. JOHN C. HULL</div>
+        <h4 class="text-base font-bold text-white mb-2">Options Greeks Physics</h4>
+        <p class="text-xs text-slate-400">Exploiting non-directional Theta decay to monetize market consolidation periods.</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-xl">
+        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">7. RAY DALIO</div>
+        <h4 class="text-base font-bold text-white mb-2">All-Weather Regimes</h4>
+        <p class="text-xs text-slate-400">Balancing growth and inflation quadrants across uncorrelated asset classes.</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-xl">
+        <div class="text-xs font-mono text-cyan-bright font-bold mb-1">8. ELIYAHU GOLDRATT</div>
+        <h4 class="text-base font-bold text-white mb-2">Theory of Constraints</h4>
+        <p class="text-xs text-slate-400">Eliminating the critical bottlenecks of expense ratios (0% TER) and annual tax friction.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUTORY FOOTER -->
+  <footer class="border-t border-white/10 bg-void-950 py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <div class="text-3xl font-black tracking-tighter text-white mb-4">qnt<span class="text-cyan-glow">.</span></div>
+        <p class="text-xs text-slate-400 max-w-md leading-relaxed mb-4">
+          Independent quantitative research and computational publishing imprint. Built for institutional investors, family offices, and sovereign capital accumulators worldwide.
+        </p>
+        <div class="text-[11px] font-mono text-slate-500">
+          Git Repository: obsiagent-boop • Fincept Terminal v4.2 • Luxury Cream &amp; Obsidian Architecture
+        </div>
+      </div>
+
+      <div>
+        <h5 class="text-xs font-mono font-bold text-white uppercase tracking-wider mb-4">DOCUMENTATION</h5>
+        <ul class="space-y-2 text-xs text-slate-400 font-medium">
+          <li><a href="/data/project_qnt/reports/qnt_Universal_Financial_Freedom_Institutional_Compendium.pdf" download class="hover:text-cyan-bright">Institutional Compendium (PDF)</a></li>
+          <li><a href="#matrix" class="hover:text-cyan-bright">6-Desk Global Matrix</a></li>
+          <li><a href="#cognitive" class="hover:text-cyan-bright">12-Book Cognitive Framework</a></li>
+          <li><a href="#calculator" class="hover:text-cyan-bright">Compounding Simulation Engine</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-xs font-mono font-bold text-white uppercase tracking-wider mb-4">STATUTORY NOTICE</h5>
+        <p class="text-[11px] text-slate-500 leading-relaxed">
+          Published under Impersonal Financial Research doctrine (Lowe v. SEC, 472 U.S. 181 &amp; SEBI IA Regs 2013). Strictly for educational &amp; research purposes. Mutual fund investments are subject to market risks.
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+      <div>&copy; 2026 qnt. Quantitative Systems x Fincept Terminal. All Rights Reserved.</div>
+      <div class="mt-4 sm:mt-0 font-mono text-[11px]">Workspace Owner: Dxrk sky (8549729101)</div>
+    </div>
+  </footer>
+
+  <!-- CALCULATOR JS SCRIPT -->
+  <script>
+    let currentP = 10000;
+
+    function setBase(p) {
+      currentP = p;
+      ['btn-1k', 'btn-10k', 'btn-1l'].forEach(id => {
+        const btn = document.getElementById(id);
+        btn.className = 'py-3 px-2 rounded-lg font-mono font-bold text-xs bg-void-800 border border-white/10 text-slate-300 hover:border-cyan-glow transition';
+      });
+
+      const activeId = p === 1000 ? 'btn-1k' : (p === 10000 ? 'btn-10k' : 'btn-1l');
+      const activeBtn = document.getElementById(activeId);
+      activeBtn.className = 'py-3 px-2 rounded-lg font-mono font-bold text-xs bg-cyan-glow text-black font-black border border-cyan-glow transition';
+
+      recalculate();
+    }
+
+    function recalculate() {
+      const r = parseFloat(document.getElementById('strategy-select').value);
+      
+      const v5 = Math.round(currentP * Math.pow(1 + r, 5));
+      const v10 = Math.round(currentP * Math.pow(1 + r, 10));
+      const v15 = Math.round(currentP * Math.pow(1 + r, 15));
+
+      document.getElementById('res-5y').innerText = '₹' + v5.toLocaleString('en-IN');
+      document.getElementById('res-10y').innerText = '₹' + v10.toLocaleString('en-IN');
+      document.getElementById('res-15y').innerText = '₹' + v15.toLocaleString('en-IN');
+    }
+
+    // Init on load
+    recalculate();
+  </script>
+</body>
+</html>
