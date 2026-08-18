@@ -4,6 +4,7 @@ Knowledge base of processed video transcriptions, timestamps, summaries, busines
 
 ## Master Monograph Blueprints & Quant Compendiums
 
+- [Project Agent Apply: Autonomous Stealth Job Application Architecture & Monograph (PDF)](./2026-08-15_agent_apply_autonomous_stealth_job_architecture.md)
 - [qnt. Universal Financial Freedom Master Compendium (Definitive Institutional Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_institutional_compendium.md)
 - [qnt. Universal Financial Freedom Master Encyclopedia (Grand Magnum Opus Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_grand_magnum_opus.md)
 - [qnt. Universal Financial Freedom Master Encyclopedia (Deep Quantitative Research Edition PDF)](./2026-08-15_qnt_universal_financial_freedom_definitive_encyclopedia.md)
