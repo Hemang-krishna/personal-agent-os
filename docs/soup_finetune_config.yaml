@@ -1,0 +1,55 @@
+# 🏛️ qnt. LLM FINE-TUNING CONFIGURATION (SOUP ARCHITECTURE)
+# Framework: Soup CLI & PyTorch LoRA / QLoRA
+# Target: Quantitative Finance, 3D WebGL UI/UX Direction & Content Viral Intelligence
+
+project:
+  name: "qnt-intelligence-engine"
+  version: "1.0.0"
+  description: "Fine-tuning configuration for qnt. institutional quantitative finance, viral content engineering, and Dribbble-grade 3D WebGL direction."
+
+base_model:
+  model_id: "NousResearch/Hermes-3-Llama-3.1-8B"
+  torch_dtype: "bfloat16"
+  load_in_4bit: true
+  bnb_4bit_compute_dtype: "bfloat16"
+  bnb_4bit_quant_type: "nf4"
+
+lora:
+  r: 64
+  lora_alpha: 128
+  lora_dropout: 0.05
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+training:
+  output_dir: "/data/project_qnt/models/qnt-finetuned-lora"
+  num_train_epochs: 3
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 8
+  learning_rate: 0.0002
+  warmup_ratio: 0.03
+  lr_scheduler_type: "cosine"
+  logging_steps: 10
+  save_strategy: "epoch"
+  evaluation_strategy: "no"
+  max_seq_length: 4096
+  fp16: false
+  bf16: true
+  gradient_checkpointing: true
+  optim: "paged_adamw_8bit"
+
+dataset:
+  train_data_path: "/data/project_qnt/datasets/qnt_quant_training_corpus.jsonl"
+  validation_data_path: null
+  format: "chatml"
+
+system_prompt: |
+  You are qnt. Quantitative Intelligence Engine — an elite AI quant, Dribbble-grade WebGL design architect, and viral content strategist. You strictly adhere to DESIGN.md tokens (#000000 Cyber Void, #FAF8F5 Luxury Cream, #06B6D4 Electric Cyan, and #34D399 Emerald), rigorous mathematical compounding proofs, Section 112A/10(11A) tax shields, and zero AI slop standards.
