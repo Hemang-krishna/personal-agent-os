@@ -1,10 +1,181 @@
 [
   {
+    "job_title": "Team Manager (Gurugram)",
+    "company_name": "Agoda",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/team-manager-gurugram-at-agoda-4458172792?position=1&pageNum=0&refId=ElGbIY%2FV3qqHxZFSxbazbg%3D%3D&trackingId=REqVxUvGMjmdd8DwDZ04jw%3D%3D",
+    "posted_at": "10 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
     "job_title": "Quantaco - Support Team Lead",
     "company_name": "Talent Formula",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/quantaco-support-team-lead-at-talent-formula-4456870864?position=1&pageNum=0&refId=AeYrv0uXRMMwt7YEI8ab1w%3D%3D&trackingId=QbExPNJQOIduVs30FbdWnA%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/quantaco-support-team-lead-at-talent-formula-4456870864?position=2&pageNum=0&refId=ElGbIY%2FV3qqHxZFSxbazbg%3D%3D&trackingId=rIPOTXsOvkOlCcysQvNQeg%3D%3D",
     "posted_at": "7 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "CRM Lead/Manager (Real Estate)",
+    "company_name": "Credvest",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/crm-lead-manager-real-estate-at-credvest-4456866464?position=3&pageNum=0&refId=ElGbIY%2FV3qqHxZFSxbazbg%3D%3D&trackingId=jp2ubYIpSOhN0akfSoxgOQ%3D%3D",
+    "posted_at": "9 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Customer Success Manager - Healthcare & Patient Support",
+    "company_name": "Multiplier AI",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/customer-success-manager-healthcare-patient-support-at-multiplier-ai-4457331110?position=4&pageNum=0&refId=ElGbIY%2FV3qqHxZFSxbazbg%3D%3D&trackingId=MDXuRQp8%2FRIBthoeRuTnUw%3D%3D",
+    "posted_at": "6 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Delivery Manager",
+    "company_name": "Tata Consultancy Services",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/delivery-manager-at-tata-consultancy-services-4456889322?position=5&pageNum=0&refId=ElGbIY%2FV3qqHxZFSxbazbg%3D%3D&trackingId=G8%2FYPOTQwsSulwdn5fGWCQ%3D%3D",
+    "posted_at": "9 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Manager - Customer Service Transformation And AI",
+    "company_name": "EY",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/manager-customer-service-transformation-and-ai-at-ey-4434864369?position=6&pageNum=0&refId=ElGbIY%2FV3qqHxZFSxbazbg%3D%3D&trackingId=W5t37%2FlFvGvmKzeqyhSqfA%3D%3D",
+    "posted_at": "3 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Deputy Manager - Trade Promotion Management",
+    "company_name": "PepsiCo",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/deputy-manager-trade-promotion-management-at-pepsico-4455833789?position=7&pageNum=0&refId=ElGbIY%2FV3qqHxZFSxbazbg%3D%3D&trackingId=F9n86LflKvnKo6AySgohKQ%3D%3D",
+    "posted_at": "14 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Sales Asst Analyst",
+    "company_name": "PepsiCo",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/sales-asst-analyst-at-pepsico-4455857975?position=8&pageNum=0&refId=ElGbIY%2FV3qqHxZFSxbazbg%3D%3D&trackingId=XbFapIqkdRBcAOjqh2EnBg%3D%3D",
+    "posted_at": "8 hours ago",
+    "match_score": "75%",
+    "relevance": "Direct Customer Operations Match"
+  },
+  {
+    "job_title": "Senior MS Engineer- Network",
+    "company_name": "NTT DATA, Inc.",
+    "location": "Greater Hyderabad Area",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-ms-engineer-network-at-ntt-data-inc-4409273864?position=9&pageNum=0&refId=ElGbIY%2FV3qqHxZFSxbazbg%3D%3D&trackingId=STgqWng29%2BfwUnGvlb1fqw%3D%3D",
+    "posted_at": "9 hours ago",
+    "match_score": "75%",
+    "relevance": "Direct Customer Operations Match"
+  },
+  {
+    "job_title": "Supervisor - Middle Office Client Services",
+    "company_name": "Franklin Templeton India",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/supervisor-middle-office-client-services-at-franklin-templeton-india-4456812881?position=10&pageNum=0&refId=ElGbIY%2FV3qqHxZFSxbazbg%3D%3D&trackingId=xTVhoYqjjYcVK8bsbmd4jA%3D%3D",
+    "posted_at": "20 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Manager - Sales & Operations",
+    "company_name": "PepsiCo",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/manager-sales-operations-at-pepsico-4456501494?position=1&pageNum=0&refId=XyZyzjMYw2C09NQpE6lvhQ%3D%3D&trackingId=wBwa1OqTZuhYRS6nWo%2Bpiw%3D%3D",
+    "posted_at": "2 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Treasury Operations Specialist",
+    "company_name": "CES",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/treasury-operations-specialist-at-ces-4458216493?position=2&pageNum=0&refId=XyZyzjMYw2C09NQpE6lvhQ%3D%3D&trackingId=6UnN7pe9Le319IpKmJEaDg%3D%3D",
+    "posted_at": "6 hours ago",
+    "match_score": "90%",
+    "relevance": "Customer Operations Alignment"
+  },
+  {
+    "job_title": "IAM Operations Lead",
+    "company_name": "Lonza",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/iam-operations-lead-at-lonza-4439409915?position=3&pageNum=0&refId=XyZyzjMYw2C09NQpE6lvhQ%3D%3D&trackingId=YyJeCpxcjAbTmYgZ%2FymWTw%3D%3D",
+    "posted_at": "1 hour ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Vendor Manager, Strategic Partnership Enablement",
+    "company_name": "Google",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/vendor-manager-strategic-partnership-enablement-at-google-4456899761?position=4&pageNum=0&refId=XyZyzjMYw2C09NQpE6lvhQ%3D%3D&trackingId=AL1RK%2BWD9XhBoPPifCBeLA%3D%3D",
+    "posted_at": "3 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "CTL - AMZL , Supply Chain/Transportation Management",
+    "company_name": "Amazon",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/ctl-amzl-supply-chain-transportation-management-at-amazon-4458261421?position=5&pageNum=0&refId=XyZyzjMYw2C09NQpE6lvhQ%3D%3D&trackingId=xAhMajhU0Gsse71mhaZcoA%3D%3D",
+    "posted_at": "1 hour ago",
+    "match_score": "75%",
+    "relevance": "Direct Customer Operations Match"
+  },
+  {
+    "job_title": "Sales Asst Analyst",
+    "company_name": "PepsiCo",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/sales-asst-analyst-at-pepsico-4455857975?position=6&pageNum=0&refId=XyZyzjMYw2C09NQpE6lvhQ%3D%3D&trackingId=Y3ffNhWFq%2FKgvZaiOGRqsg%3D%3D",
+    "posted_at": "8 hours ago",
+    "match_score": "75%",
+    "relevance": "Direct Customer Operations Match"
+  },
+  {
+    "job_title": "Delivery Manager",
+    "company_name": "Tata Consultancy Services",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/delivery-manager-at-tata-consultancy-services-4456889322?position=7&pageNum=0&refId=XyZyzjMYw2C09NQpE6lvhQ%3D%3D&trackingId=1%2FFQRegHNvLCilWDBXhrZg%3D%3D",
+    "posted_at": "9 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Policy Enforcement Manager, Trust and Safety",
+    "company_name": "Google",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/policy-enforcement-manager-trust-and-safety-at-google-4447922182?position=8&pageNum=0&refId=XyZyzjMYw2C09NQpE6lvhQ%3D%3D&trackingId=xinFZmeWyIOzp%2Fe20ip8gQ%3D%3D",
+    "posted_at": "7 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Process Excellence Manager",
+    "company_name": "Aptita",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/process-excellence-manager-at-aptita-4456471065?position=9&pageNum=0&refId=XyZyzjMYw2C09NQpE6lvhQ%3D%3D&trackingId=U2i%2FYVRZq7AuqnmrnOZVTQ%3D%3D",
+    "posted_at": "15 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Quality/Risk Governance"
+  },
+  {
+    "job_title": "Supervisor - Middle Office Client Services",
+    "company_name": "Franklin Templeton India",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/supervisor-middle-office-client-services-at-franklin-templeton-india-4456812881?position=10&pageNum=0&refId=XyZyzjMYw2C09NQpE6lvhQ%3D%3D&trackingId=anNWR9t8Z5Mrx8XGTpg3Rg%3D%3D",
+    "posted_at": "20 hours ago",
     "match_score": "98%",
     "relevance": "Leadership/Management Tier, Customer Operations Alignment"
   },
@@ -12,34 +183,88 @@
     "job_title": "Customer Success Manager - Healthcare & Patient Support",
     "company_name": "Multiplier AI",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/customer-success-manager-healthcare-patient-support-at-multiplier-ai-4457331110?position=2&pageNum=0&refId=AeYrv0uXRMMwt7YEI8ab1w%3D%3D&trackingId=175nTpFhyneFS6k1tN5Zyw%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/customer-success-manager-healthcare-patient-support-at-multiplier-ai-4457331110?position=1&pageNum=0&refId=WMsV3Twy40AO%2Bwgi%2FNSGRQ%3D%3D&trackingId=6szWHzDuilyETgwyhFbY9Q%3D%3D",
     "posted_at": "6 hours ago",
     "match_score": "98%",
     "relevance": "Leadership/Management Tier, Customer Operations Alignment"
   },
   {
-    "job_title": "Team Manager (Gurugram)",
-    "company_name": "Agoda",
-    "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/team-manager-gurugram-at-agoda-4458172792?position=3&pageNum=0&refId=AeYrv0uXRMMwt7YEI8ab1w%3D%3D&trackingId=H%2BvPV3qNGa7pMgd6V3boEg%3D%3D",
-    "posted_at": "10 hours ago",
-    "match_score": "90%",
-    "relevance": "Leadership/Management Tier"
-  },
-  {
     "job_title": "Delivery Manager",
     "company_name": "Tata Consultancy Services",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/delivery-manager-at-tata-consultancy-services-4456889322?position=4&pageNum=0&refId=AeYrv0uXRMMwt7YEI8ab1w%3D%3D&trackingId=Gp6ZO%2Bsbb3tenKGCCVEr6Q%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/delivery-manager-at-tata-consultancy-services-4456889322?position=2&pageNum=0&refId=WMsV3Twy40AO%2Bwgi%2FNSGRQ%3D%3D&trackingId=fSSg%2BSdoG8A326gz9UzlLQ%3D%3D",
     "posted_at": "9 hours ago",
     "match_score": "90%",
     "relevance": "Leadership/Management Tier"
   },
   {
+    "job_title": "Team Manager (Gurugram)",
+    "company_name": "Agoda",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/team-manager-gurugram-at-agoda-4458172792?position=3&pageNum=0&refId=WMsV3Twy40AO%2Bwgi%2FNSGRQ%3D%3D&trackingId=86Qe%2FJLxZRdEuxLlV%2BXxpA%3D%3D",
+    "posted_at": "10 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Quantaco - Support Team Lead",
+    "company_name": "Talent Formula",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/quantaco-support-team-lead-at-talent-formula-4456870864?position=4&pageNum=0&refId=WMsV3Twy40AO%2Bwgi%2FNSGRQ%3D%3D&trackingId=YHCGO08A4Ked217PVJ3TEg%3D%3D",
+    "posted_at": "7 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Specialist Assistant Manager-Client Account Management- Hyderabad",
+    "company_name": "Deloitte",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/specialist-assistant-manager-client-account-management-hyderabad-at-deloitte-4456899619?position=5&pageNum=0&refId=WMsV3Twy40AO%2Bwgi%2FNSGRQ%3D%3D&trackingId=GfBYq8QgMt4viJ6tbaCrhA%3D%3D",
+    "posted_at": "4 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Manager - Customer Service Transformation And AI",
+    "company_name": "EY",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/manager-customer-service-transformation-and-ai-at-ey-4434864369?position=6&pageNum=0&refId=WMsV3Twy40AO%2Bwgi%2FNSGRQ%3D%3D&trackingId=1poMETnBf9jjX7dBJoqHxQ%3D%3D",
+    "posted_at": "3 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Sales Asst Analyst",
+    "company_name": "PepsiCo",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/sales-asst-analyst-at-pepsico-4455857975?position=7&pageNum=0&refId=WMsV3Twy40AO%2Bwgi%2FNSGRQ%3D%3D&trackingId=QvH0FCgs1tTSBDQjTxUu8w%3D%3D",
+    "posted_at": "8 hours ago",
+    "match_score": "75%",
+    "relevance": "Direct Customer Operations Match"
+  },
+  {
+    "job_title": "Deputy Manager - Trade Promotion Management",
+    "company_name": "PepsiCo",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/deputy-manager-trade-promotion-management-at-pepsico-4455833789?position=8&pageNum=0&refId=WMsV3Twy40AO%2Bwgi%2FNSGRQ%3D%3D&trackingId=UvsqIPvZWEEMw%2BF27bggiA%3D%3D",
+    "posted_at": "14 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Supervisor - Middle Office Client Services",
+    "company_name": "Franklin Templeton India",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/supervisor-middle-office-client-services-at-franklin-templeton-india-4456812881?position=9&pageNum=0&refId=WMsV3Twy40AO%2Bwgi%2FNSGRQ%3D%3D&trackingId=4GIAnv5NYXaYRFi30XPwsg%3D%3D",
+    "posted_at": "20 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
     "job_title": "\ud83c\udfae Gaming Support Specialist (Voice & Chat Support)",
     "company_name": "Infosys BPM",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/%F0%9F%8E%AE-gaming-support-specialist-voice-chat-support-at-infosys-bpm-4456851901?position=5&pageNum=0&refId=AeYrv0uXRMMwt7YEI8ab1w%3D%3D&trackingId=GvG2CNUES2r93%2BFLR9Mrhg%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/%F0%9F%8E%AE-gaming-support-specialist-voice-chat-support-at-infosys-bpm-4456851901?position=10&pageNum=0&refId=WMsV3Twy40AO%2Bwgi%2FNSGRQ%3D%3D&trackingId=2JZjWYJvUg6epUvQHJriuA%3D%3D",
     "posted_at": "12 hours ago",
     "match_score": "90%",
     "relevance": "Customer Operations Alignment"
@@ -48,53 +273,44 @@
     "job_title": "CRM Lead/Manager (Real Estate)",
     "company_name": "Credvest",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/crm-lead-manager-real-estate-at-credvest-4456866464?position=6&pageNum=0&refId=AeYrv0uXRMMwt7YEI8ab1w%3D%3D&trackingId=b0V2Ihu9WyGA0zI3R87SHw%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/crm-lead-manager-real-estate-at-credvest-4456866464?position=1&pageNum=0&refId=LNRdbp5Yw30kERLq5hUwuw%3D%3D&trackingId=qTfC5uWV6NSU0lm7kbrRLA%3D%3D",
     "posted_at": "9 hours ago",
     "match_score": "90%",
     "relevance": "Leadership/Management Tier"
   },
   {
-    "job_title": "Hiring Drive || Client Support Specialist || Hyderabad (Aug 25th, 26th & 27th))",
-    "company_name": "ADP",
+    "job_title": "Team Manager (Gurugram)",
+    "company_name": "Agoda",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/hiring-drive-client-support-specialist-hyderabad-aug-25th-26th-27th-at-adp-4456886909?position=7&pageNum=0&refId=AeYrv0uXRMMwt7YEI8ab1w%3D%3D&trackingId=KOEVx7VyS9eB0xUvApy2MA%3D%3D",
-    "posted_at": "6 hours ago",
+    "apply_url": "https://in.linkedin.com/jobs/view/team-manager-gurugram-at-agoda-4458172792?position=2&pageNum=0&refId=LNRdbp5Yw30kERLq5hUwuw%3D%3D&trackingId=%2FDp2cOobaphqj5IGzlPxVA%3D%3D",
+    "posted_at": "10 hours ago",
     "match_score": "90%",
-    "relevance": "Customer Operations Alignment"
+    "relevance": "Leadership/Management Tier"
   },
   {
-    "job_title": "Senior Application Support Engineer",
-    "company_name": "ZestIoT",
+    "job_title": "Customer Success Manager - Healthcare & Patient Support",
+    "company_name": "Multiplier AI",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/senior-application-support-engineer-at-zestiot-4456881851?position=8&pageNum=0&refId=AeYrv0uXRMMwt7YEI8ab1w%3D%3D&trackingId=h8WkcDnXr%2BxuZQ9nphGRcA%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/customer-success-manager-healthcare-patient-support-at-multiplier-ai-4457331110?position=3&pageNum=0&refId=LNRdbp5Yw30kERLq5hUwuw%3D%3D&trackingId=UPQZUFB8Kf0QjVmYpCOlGw%3D%3D",
     "posted_at": "6 hours ago",
-    "match_score": "90%",
-    "relevance": "Customer Operations Alignment"
-  },
-  {
-    "job_title": "Customer Support Executive",
-    "company_name": "JoinOneInfo",
-    "location": "Greater Hyderabad Area",
-    "apply_url": "https://in.linkedin.com/jobs/view/customer-support-executive-at-joinoneinfo-4455854528?position=9&pageNum=0&refId=AeYrv0uXRMMwt7YEI8ab1w%3D%3D&trackingId=gNfQ4%2FGVjEX5X%2FbH4nuRjA%3D%3D",
-    "posted_at": "8 hours ago",
-    "match_score": "90%",
-    "relevance": "Customer Operations Alignment"
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
   },
   {
     "job_title": "Manager - Customer Service Transformation And AI",
     "company_name": "EY",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/manager-customer-service-transformation-and-ai-at-ey-4434864369?position=10&pageNum=0&refId=AeYrv0uXRMMwt7YEI8ab1w%3D%3D&trackingId=ODSv%2B5QVihJplUDvdrlv%2BA%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/manager-customer-service-transformation-and-ai-at-ey-4434864369?position=4&pageNum=0&refId=LNRdbp5Yw30kERLq5hUwuw%3D%3D&trackingId=trdzK8lYuOwyEjn%2FRneP0Q%3D%3D",
     "posted_at": "3 hours ago",
     "match_score": "98%",
     "relevance": "Leadership/Management Tier, Customer Operations Alignment"
   },
   {
-    "job_title": "Supervisor - Middle Office Client Services",
-    "company_name": "Franklin Templeton India",
+    "job_title": "Quantaco - Support Team Lead",
+    "company_name": "Talent Formula",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/supervisor-middle-office-client-services-at-franklin-templeton-india-4456812881?position=1&pageNum=0&refId=Woyf3VC7lbOwVyB0Q5fD3Q%3D%3D&trackingId=dPvblmOsHmOY2bZPpC5sxg%3D%3D",
-    "posted_at": "20 hours ago",
+    "apply_url": "https://in.linkedin.com/jobs/view/quantaco-support-team-lead-at-talent-formula-4456870864?position=5&pageNum=0&refId=LNRdbp5Yw30kERLq5hUwuw%3D%3D&trackingId=ARnurWrh1yuK8w3C0gxdkQ%3D%3D",
+    "posted_at": "7 hours ago",
     "match_score": "98%",
     "relevance": "Leadership/Management Tier, Customer Operations Alignment"
   },
@@ -102,44 +318,35 @@
     "job_title": "Delivery Manager",
     "company_name": "Tata Consultancy Services",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/delivery-manager-at-tata-consultancy-services-4456889322?position=2&pageNum=0&refId=Woyf3VC7lbOwVyB0Q5fD3Q%3D%3D&trackingId=mfkwJ1sYVVQSMGEM2YRB6g%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/delivery-manager-at-tata-consultancy-services-4456889322?position=6&pageNum=0&refId=LNRdbp5Yw30kERLq5hUwuw%3D%3D&trackingId=%2BjVbOM7Nh09U0tTzQIUchw%3D%3D",
     "posted_at": "9 hours ago",
     "match_score": "90%",
     "relevance": "Leadership/Management Tier"
   },
   {
-    "job_title": "Operations Manager",
-    "company_name": "Bonito Designs",
+    "job_title": "Manager - Ecommerce transformation",
+    "company_name": "EY",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/operations-manager-at-bonito-designs-4456513878?position=3&pageNum=0&refId=Woyf3VC7lbOwVyB0Q5fD3Q%3D%3D&trackingId=%2B%2FCkL2gJ0elgue11IkunFA%3D%3D",
-    "posted_at": "8 minutes ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
-  },
-  {
-    "job_title": "CTL - AMZL , Supply Chain/Transportation Management",
-    "company_name": "Amazon",
-    "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/ctl-amzl-supply-chain-transportation-management-at-amazon-4458261421?position=4&pageNum=0&refId=Woyf3VC7lbOwVyB0Q5fD3Q%3D%3D&trackingId=y7ij5gTkdsOfF7nopfYJAg%3D%3D",
-    "posted_at": "1 hour ago",
-    "match_score": "75%",
-    "relevance": "Direct Customer Operations Match"
-  },
-  {
-    "job_title": "ECOMMERCE WAREHOUSE MANAGER (AMAZON/FLIPKART)",
-    "company_name": "Beyond Border Consultants",
-    "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/ecommerce-warehouse-manager-amazon-flipkart-at-beyond-border-consultants-4457160484?position=5&pageNum=0&refId=Woyf3VC7lbOwVyB0Q5fD3Q%3D%3D&trackingId=9BrJjSmhJJZzanX%2BEa0kyw%3D%3D",
-    "posted_at": "1 hour ago",
+    "apply_url": "https://in.linkedin.com/jobs/view/manager-ecommerce-transformation-at-ey-4434861357?position=7&pageNum=0&refId=LNRdbp5Yw30kERLq5hUwuw%3D%3D&trackingId=mEDIxyy2vks72myqqIC%2B3w%3D%3D",
+    "posted_at": "3 hours ago",
     "match_score": "90%",
     "relevance": "Leadership/Management Tier"
   },
   {
-    "job_title": "IAM Operations Lead",
-    "company_name": "Lonza",
+    "job_title": "CX Transformation Sales and Solutions \u2013 AGM \u2013 Pan India",
+    "company_name": "Golden Opportunities",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/iam-operations-lead-at-lonza-4439409915?position=6&pageNum=0&refId=Woyf3VC7lbOwVyB0Q5fD3Q%3D%3D&trackingId=DFinJky4SCnHKpiX50A4Bg%3D%3D",
-    "posted_at": "1 hour ago",
+    "apply_url": "https://in.linkedin.com/jobs/view/cx-transformation-sales-and-solutions-%E2%80%93-agm-%E2%80%93-pan-india-at-golden-opportunities-4456878066?position=8&pageNum=0&refId=LNRdbp5Yw30kERLq5hUwuw%3D%3D&trackingId=9QF5fksaymRseDg4a5qT9g%3D%3D",
+    "posted_at": "10 hours ago",
+    "match_score": "90%",
+    "relevance": "Customer Operations Alignment"
+  },
+  {
+    "job_title": "AI Digital Key Account Manager - Healthcare & Hospital Operations",
+    "company_name": "Multiplier AI",
+    "location": "Hyderabad, Telangana, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/ai-digital-key-account-manager-healthcare-hospital-operations-at-multiplier-ai-4458202856?position=9&pageNum=0&refId=LNRdbp5Yw30kERLq5hUwuw%3D%3D&trackingId=Z1In7cBjYU21JYGD2W0ewA%3D%3D",
+    "posted_at": "6 hours ago",
     "match_score": "98%",
     "relevance": "Leadership/Management Tier, Customer Operations Alignment"
   },
@@ -147,313 +354,106 @@
     "job_title": "Business Development Manager",
     "company_name": "upGrad",
     "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/business-development-manager-at-upgrad-4456893105?position=7&pageNum=0&refId=Woyf3VC7lbOwVyB0Q5fD3Q%3D%3D&trackingId=Z2%2BY3OS2ukLH9PlA%2F9DZzA%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/business-development-manager-at-upgrad-4456893105?position=10&pageNum=0&refId=LNRdbp5Yw30kERLq5hUwuw%3D%3D&trackingId=cclDV%2Fs4APv5lmWRLiTP2Q%3D%3D",
     "posted_at": "6 hours ago",
     "match_score": "90%",
     "relevance": "Leadership/Management Tier"
-  },
-  {
-    "job_title": "Deputy Manager - Trade Promotion Management",
-    "company_name": "PepsiCo",
-    "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/deputy-manager-trade-promotion-management-at-pepsico-4455833789?position=8&pageNum=0&refId=Woyf3VC7lbOwVyB0Q5fD3Q%3D%3D&trackingId=IpAc026NJZJYHsCaIA2WrA%3D%3D",
-    "posted_at": "14 hours ago",
-    "match_score": "90%",
-    "relevance": "Leadership/Management Tier"
-  },
-  {
-    "job_title": "Section Head Stores Flooring",
-    "company_name": "Welspun World",
-    "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/section-head-stores-flooring-at-welspun-world-4457114311?position=9&pageNum=0&refId=Woyf3VC7lbOwVyB0Q5fD3Q%3D%3D&trackingId=emfpNr4V5Rx%2Fo7IStkajnQ%3D%3D",
-    "posted_at": "5 hours ago",
-    "match_score": "90%",
-    "relevance": "Leadership/Management Tier"
-  },
-  {
-    "job_title": "Process Excellence Manager",
-    "company_name": "Aptita",
-    "location": "Hyderabad, Telangana, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/process-excellence-manager-at-aptita-4456471065?position=10&pageNum=0&refId=Woyf3VC7lbOwVyB0Q5fD3Q%3D%3D&trackingId=3m7JOxs%2FjpURCaEZNUN1hw%3D%3D",
-    "posted_at": "15 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Quality/Risk Governance"
-  },
-  {
-    "job_title": "Customer Experience - Team Lead - Skincare (Call/ Email/ Social media)",
-    "company_name": "PeopleGene",
-    "location": "Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/customer-experience-team-lead-skincare-call-email-social-media-at-peoplegene-4456875772?position=1&pageNum=0&refId=RB%2FspYT%2FQoVdhtWAMGR78A%3D%3D&trackingId=zuCFph1XI3HK94QA4CAZlg%3D%3D",
-    "posted_at": "7 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
-  },
-  {
-    "job_title": "Customer Service Manager",
-    "company_name": "Skyleaf Consultants LLP",
-    "location": "Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/customer-service-manager-at-skyleaf-consultants-llp-4458199684?position=2&pageNum=0&refId=RB%2FspYT%2FQoVdhtWAMGR78A%3D%3D&trackingId=CXSOGJzZUuOqmktTVdOhfg%3D%3D",
-    "posted_at": "7 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
-  },
-  {
-    "job_title": "Customer Experience Executive",
-    "company_name": "Servify",
-    "location": "Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/customer-experience-executive-at-servify-4380443067?position=3&pageNum=0&refId=RB%2FspYT%2FQoVdhtWAMGR78A%3D%3D&trackingId=nvKb0M1cu12PXidOWXKetA%3D%3D",
-    "posted_at": "12 hours ago",
-    "match_score": "90%",
-    "relevance": "Customer Operations Alignment"
-  },
-  {
-    "job_title": "Client Operations Support",
-    "company_name": "Fiserv",
-    "location": "Thane, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/client-operations-support-at-fiserv-4456822736?position=4&pageNum=0&refId=RB%2FspYT%2FQoVdhtWAMGR78A%3D%3D&trackingId=Dnb9DSGdAeerstStk%2BjAGg%3D%3D",
-    "posted_at": "22 hours ago",
-    "match_score": "90%",
-    "relevance": "Customer Operations Alignment"
-  },
-  {
-    "job_title": "Team Manager (Gurugram)",
-    "company_name": "Agoda",
-    "location": "Mumbai Metropolitan Region",
-    "apply_url": "https://in.linkedin.com/jobs/view/team-manager-gurugram-at-agoda-4458168870?position=5&pageNum=0&refId=RB%2FspYT%2FQoVdhtWAMGR78A%3D%3D&trackingId=YljGIq5UT7Q0xoV2CPoDcg%3D%3D",
-    "posted_at": "10 hours ago",
-    "match_score": "90%",
-    "relevance": "Leadership/Management Tier"
-  },
-  {
-    "job_title": "Technical Support Manager",
-    "company_name": "ASSA ABLOY Group",
-    "location": "Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/technical-support-manager-at-assa-abloy-group-4445849915?position=6&pageNum=0&refId=RB%2FspYT%2FQoVdhtWAMGR78A%3D%3D&trackingId=9vtDvATnv0zK0YPb%2BTICjA%3D%3D",
-    "posted_at": "8 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
-  },
-  {
-    "job_title": "Contact Centre Supervisor",
-    "company_name": "DATAMARK, Inc.",
-    "location": "Mumbai Metropolitan Region",
-    "apply_url": "https://in.linkedin.com/jobs/view/contact-centre-supervisor-at-datamark-inc-4458195091?position=7&pageNum=0&refId=RB%2FspYT%2FQoVdhtWAMGR78A%3D%3D&trackingId=17kkDl7cNYBb7Mb%2B07rzjg%3D%3D",
-    "posted_at": "9 hours ago",
-    "match_score": "90%",
-    "relevance": "Leadership/Management Tier"
-  },
-  {
-    "job_title": "Customer Service Representative",
-    "company_name": "Tata Consultancy Services",
-    "location": "Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/customer-service-representative-at-tata-consultancy-services-4456867463?position=8&pageNum=0&refId=RB%2FspYT%2FQoVdhtWAMGR78A%3D%3D&trackingId=9i9qFl7bioP3xcXqeJC2NQ%3D%3D",
-    "posted_at": "9 hours ago",
-    "match_score": "90%",
-    "relevance": "Customer Operations Alignment"
-  },
-  {
-    "job_title": "Team Leader -Chat",
-    "company_name": "Foundever",
-    "location": "Navi Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/team-leader-chat-at-foundever-4458272782?position=9&pageNum=0&refId=RB%2FspYT%2FQoVdhtWAMGR78A%3D%3D&trackingId=90MkL%2FJ4%2B1VbivHBrC2hGA%3D%3D",
-    "posted_at": "47 minutes ago",
-    "match_score": "90%",
-    "relevance": "Leadership/Management Tier"
-  },
-  {
-    "job_title": "Team Leader - Voice",
-    "company_name": "Foundever",
-    "location": "Navi Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/team-leader-voice-at-foundever-4458275800?position=10&pageNum=0&refId=RB%2FspYT%2FQoVdhtWAMGR78A%3D%3D&trackingId=ZnJ0QaBsiTeySxAY9vbRFA%3D%3D",
-    "posted_at": "47 minutes ago",
-    "match_score": "90%",
-    "relevance": "Leadership/Management Tier"
-  },
-  {
-    "job_title": "Customer Experience - Team Lead - Skincare (Call/ Email/ Social media)",
-    "company_name": "PeopleGene",
-    "location": "Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/customer-experience-team-lead-skincare-call-email-social-media-at-peoplegene-4456875772?position=1&pageNum=0&refId=PdujaFgN1Dk36H0SVwxALA%3D%3D&trackingId=kK8m0G2fwD60IxXL%2FGfCdQ%3D%3D",
-    "posted_at": "7 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
-  },
-  {
-    "job_title": "Customer Service Manager",
-    "company_name": "Skyleaf Consultants LLP",
-    "location": "Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/customer-service-manager-at-skyleaf-consultants-llp-4458199684?position=2&pageNum=0&refId=PdujaFgN1Dk36H0SVwxALA%3D%3D&trackingId=O%2F4kW%2FjCNfxDt5vhGiG6wA%3D%3D",
-    "posted_at": "7 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
-  },
-  {
-    "job_title": "Team Manager (Gurugram)",
-    "company_name": "Agoda",
-    "location": "Mumbai Metropolitan Region",
-    "apply_url": "https://in.linkedin.com/jobs/view/team-manager-gurugram-at-agoda-4458168870?position=3&pageNum=0&refId=PdujaFgN1Dk36H0SVwxALA%3D%3D&trackingId=7Yp3ZBOHXVPjp2j4OPsHbw%3D%3D",
-    "posted_at": "10 hours ago",
-    "match_score": "90%",
-    "relevance": "Leadership/Management Tier"
-  },
-  {
-    "job_title": "Contact Centre Supervisor",
-    "company_name": "DATAMARK, Inc.",
-    "location": "Mumbai Metropolitan Region",
-    "apply_url": "https://in.linkedin.com/jobs/view/contact-centre-supervisor-at-datamark-inc-4458195091?position=4&pageNum=0&refId=PdujaFgN1Dk36H0SVwxALA%3D%3D&trackingId=G9gZDvyeOc4Xt3mhYyv9oA%3D%3D",
-    "posted_at": "9 hours ago",
-    "match_score": "90%",
-    "relevance": "Leadership/Management Tier"
-  },
-  {
-    "job_title": "Customer Experience Executive",
-    "company_name": "Servify",
-    "location": "Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/customer-experience-executive-at-servify-4380443067?position=5&pageNum=0&refId=PdujaFgN1Dk36H0SVwxALA%3D%3D&trackingId=QZ1eEc%2BYGacvLiOqav%2FGeg%3D%3D",
-    "posted_at": "12 hours ago",
-    "match_score": "90%",
-    "relevance": "Customer Operations Alignment"
-  },
-  {
-    "job_title": "Client Operations Support",
-    "company_name": "Fiserv",
-    "location": "Thane, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/client-operations-support-at-fiserv-4456822736?position=6&pageNum=0&refId=PdujaFgN1Dk36H0SVwxALA%3D%3D&trackingId=9f8zeHuHQvEJphlzlvmZ3w%3D%3D",
-    "posted_at": "22 hours ago",
-    "match_score": "90%",
-    "relevance": "Customer Operations Alignment"
-  },
-  {
-    "job_title": "Service Manager - EdTech",
-    "company_name": "Docdort",
-    "location": "Thane, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/service-manager-edtech-at-docdort-4456883969?position=7&pageNum=0&refId=PdujaFgN1Dk36H0SVwxALA%3D%3D&trackingId=tcHYP3RaDaHwfGa%2B0XdmNA%3D%3D",
-    "posted_at": "6 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
-  },
-  {
-    "job_title": "Assistant Manager - Transactional Quality (Passenger Revenue Accounting/ Airline Process/ Proration/ Interline)",
-    "company_name": "WNS",
-    "location": "Mumbai Metropolitan Region",
-    "apply_url": "https://in.linkedin.com/jobs/view/assistant-manager-transactional-quality-passenger-revenue-accounting-airline-process-proration-interline-at-wns-4448186013?position=8&pageNum=0&refId=PdujaFgN1Dk36H0SVwxALA%3D%3D&trackingId=fmuW%2FeylU1dZtgkGeMcQvA%3D%3D",
-    "posted_at": "7 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Quality/Risk Governance"
-  },
-  {
-    "job_title": "Team Leader - Voice",
-    "company_name": "Foundever",
-    "location": "Navi Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/team-leader-voice-at-foundever-4458275800?position=9&pageNum=0&refId=PdujaFgN1Dk36H0SVwxALA%3D%3D&trackingId=A%2F4bEnMu6pNwmNGQ72dwWg%3D%3D",
-    "posted_at": "47 minutes ago",
-    "match_score": "90%",
-    "relevance": "Leadership/Management Tier"
-  },
-  {
-    "job_title": "Technical Support Manager",
-    "company_name": "ASSA ABLOY Group",
-    "location": "Mumbai, Maharashtra, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/technical-support-manager-at-assa-abloy-group-4445849915?position=10&pageNum=0&refId=PdujaFgN1Dk36H0SVwxALA%3D%3D&trackingId=7qF9QFxTWA9HO35kDj696g%3D%3D",
-    "posted_at": "8 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
-  },
-  {
-    "job_title": "Assistant Manager - Quality",
-    "company_name": "DIAGEO India",
-    "location": "Bengaluru South, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/assistant-manager-quality-at-diageo-india-4458237690?position=1&pageNum=0&refId=zKtNJYHmhRSmPRtl2onPcQ%3D%3D&trackingId=DoZUdesPCJBTn4JOOlWbvA%3D%3D",
-    "posted_at": "2 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Quality/Risk Governance"
-  },
-  {
-    "job_title": "Quality Assurance Manager",
-    "company_name": "Born Good",
-    "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/quality-assurance-manager-at-born-good-4455861367?position=2&pageNum=0&refId=zKtNJYHmhRSmPRtl2onPcQ%3D%3D&trackingId=aiTbQWP6a7Auuz7eBRIhOg%3D%3D",
-    "posted_at": "11 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Quality/Risk Governance"
   },
   {
     "job_title": "Quality Analyst (US Process)",
     "company_name": "ITILITE",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/quality-analyst-us-process-at-itilite-4444966508?position=3&pageNum=0&refId=zKtNJYHmhRSmPRtl2onPcQ%3D%3D&trackingId=oLSHWi2bSj9vKKaQbc2lWQ%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/quality-analyst-us-process-at-itilite-4444966508?position=1&pageNum=0&refId=DvNadRiUyaRr%2B3Wm8HaPnA%3D%3D&trackingId=%2Bv6XIHlJtIcE9FD9yYPeVg%3D%3D",
     "posted_at": "11 hours ago",
     "match_score": "85%",
     "relevance": "Quality/Risk Governance"
   },
   {
-    "job_title": "Program/Project Manager 4",
-    "company_name": "Lam Research",
+    "job_title": "Assistant Manager - Quality",
+    "company_name": "DIAGEO India",
+    "location": "Bengaluru South, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/assistant-manager-quality-at-diageo-india-4458237690?position=2&pageNum=0&refId=DvNadRiUyaRr%2B3Wm8HaPnA%3D%3D&trackingId=O%2F%2FTmMIf%2FvdcFTzl5ChQ7A%3D%3D",
+    "posted_at": "2 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Quality/Risk Governance"
+  },
+  {
+    "job_title": "Software QA Team Lead",
+    "company_name": "Mouser Electronics",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/program-project-manager-4-at-lam-research-4456867329?position=4&pageNum=0&refId=zKtNJYHmhRSmPRtl2onPcQ%3D%3D&trackingId=TcuifsMOnvGzADgFalCFiw%3D%3D",
-    "posted_at": "10 hours ago",
-    "match_score": "90%",
-    "relevance": "Leadership/Management Tier"
+    "apply_url": "https://in.linkedin.com/jobs/view/software-qa-team-lead-at-mouser-electronics-4455850313?position=3&pageNum=0&refId=DvNadRiUyaRr%2B3Wm8HaPnA%3D%3D&trackingId=Zdubba93stU2qyACgLQW0Q%3D%3D",
+    "posted_at": "11 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Quality/Risk Governance"
   },
   {
     "job_title": "Sr. Safety Officer",
     "company_name": "Reckitt",
     "location": "Hosur, Tamil Nadu, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/sr-safety-officer-at-reckitt-4458167756?position=5&pageNum=0&refId=zKtNJYHmhRSmPRtl2onPcQ%3D%3D&trackingId=GHaAscTgDV0OOXW9jMEhMQ%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/sr-safety-officer-at-reckitt-4458167756?position=4&pageNum=0&refId=DvNadRiUyaRr%2B3Wm8HaPnA%3D%3D&trackingId=qob46cFGVE%2FacegI0%2BzQ%2FA%3D%3D",
     "posted_at": "11 hours ago",
     "match_score": "75%",
     "relevance": "Direct Customer Operations Match"
   },
   {
-    "job_title": "Quality Analyst II",
-    "company_name": "Teva Pharmaceuticals",
+    "job_title": "Quality Assurance Manager",
+    "company_name": "Born Good",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/quality-analyst-ii-at-teva-pharmaceuticals-4458167337?position=6&pageNum=0&refId=zKtNJYHmhRSmPRtl2onPcQ%3D%3D&trackingId=iNG6cFBwS%2FYPyErxPCYzYg%3D%3D",
-    "posted_at": "13 hours ago",
-    "match_score": "85%",
-    "relevance": "Quality/Risk Governance"
+    "apply_url": "https://in.linkedin.com/jobs/view/quality-assurance-manager-at-born-good-4455861367?position=5&pageNum=0&refId=DvNadRiUyaRr%2B3Wm8HaPnA%3D%3D&trackingId=%2FzBtli02PWf8vX1nKNtgPQ%3D%3D",
+    "posted_at": "11 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Quality/Risk Governance"
   },
   {
-    "job_title": "Lead Specialist, Product Surveillance, Digital",
-    "company_name": "GE HealthCare",
+    "job_title": "Program/Project Manager 4",
+    "company_name": "Lam Research",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/lead-specialist-product-surveillance-digital-at-ge-healthcare-4458278405?position=7&pageNum=0&refId=zKtNJYHmhRSmPRtl2onPcQ%3D%3D&trackingId=7SFIBtmkhaHTw5dRONIZxQ%3D%3D",
-    "posted_at": "32 minutes ago",
+    "apply_url": "https://in.linkedin.com/jobs/view/program-project-manager-4-at-lam-research-4456867329?position=6&pageNum=0&refId=DvNadRiUyaRr%2B3Wm8HaPnA%3D%3D&trackingId=pIGjEmZ8Fc82ZEV7oaLm4Q%3D%3D",
+    "posted_at": "10 hours ago",
     "match_score": "90%",
     "relevance": "Leadership/Management Tier"
   },
   {
-    "job_title": "Data Operations Manager",
-    "company_name": "Origin",
+    "job_title": "Senior Officer - Lending Operations",
+    "company_name": "ANZ",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/data-operations-manager-at-origin-4458223690?position=8&pageNum=0&refId=zKtNJYHmhRSmPRtl2onPcQ%3D%3D&trackingId=hzLgc2v3V9vzuaQ5na4rQg%3D%3D",
-    "posted_at": "5 hours ago",
-    "match_score": "98%",
-    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
-  },
-  {
-    "job_title": "NDT Expert (Level III)",
-    "company_name": "Envision Energy",
-    "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/ndt-expert-level-iii-at-envision-energy-4456870348?position=9&pageNum=0&refId=zKtNJYHmhRSmPRtl2onPcQ%3D%3D&trackingId=G9nKaFlIB2CJJrFL%2BQmbWA%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-officer-lending-operations-at-anz-4458191084?position=7&pageNum=0&refId=DvNadRiUyaRr%2B3Wm8HaPnA%3D%3D&trackingId=PhI72Z1OMP9vHr4uzzf5Pw%3D%3D",
     "posted_at": "9 hours ago",
-    "match_score": "75%",
-    "relevance": "Direct Customer Operations Match"
+    "match_score": "90%",
+    "relevance": "Customer Operations Alignment"
   },
   {
-    "job_title": "Head of Quality Management",
-    "company_name": "Altiostar, A Rakuten Symphony Company",
+    "job_title": "Manager, Quality Automation",
+    "company_name": "Ellucian",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/head-of-quality-management-at-altiostar-a-rakuten-symphony-company-4458165294?position=10&pageNum=0&refId=zKtNJYHmhRSmPRtl2onPcQ%3D%3D&trackingId=algk28OLytQ5KW3Cba4n3A%3D%3D",
-    "posted_at": "13 hours ago",
+    "apply_url": "https://in.linkedin.com/jobs/view/manager-quality-automation-at-ellucian-4448151541?position=8&pageNum=0&refId=DvNadRiUyaRr%2B3Wm8HaPnA%3D%3D&trackingId=PyVGZ4GfNH33VkF30%2FNfHw%3D%3D",
+    "posted_at": "10 hours ago",
     "match_score": "98%",
     "relevance": "Leadership/Management Tier, Quality/Risk Governance"
+  },
+  {
+    "job_title": "Senior Operation Manager",
+    "company_name": "Arnifi",
+    "location": "Bengaluru South, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-operation-manager-at-arnifi-4456852771?position=9&pageNum=0&refId=DvNadRiUyaRr%2B3Wm8HaPnA%3D%3D&trackingId=YWZv8x7dg9lXRzJUsRv%2BHw%3D%3D",
+    "posted_at": "12 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Senior Team Lead, Managed Services Operations",
+    "company_name": "NTT DATA, Inc.",
+    "location": "Bengaluru East, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-team-lead-managed-services-operations-at-ntt-data-inc-4456516174?position=10&pageNum=0&refId=DvNadRiUyaRr%2B3Wm8HaPnA%3D%3D&trackingId=CsYFgEubC4x57L506dpOew%3D%3D",
+    "posted_at": "1 hour ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
   },
   {
     "job_title": "Senior Associate- Customer Care",
     "company_name": "River",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/senior-associate-customer-care-at-river-4455857493?position=1&pageNum=0&refId=9hKs7cYJVlcwecYevSFPGg%3D%3D&trackingId=jdNV40XgmoxXmRA9XvlKmg%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-associate-customer-care-at-river-4455857493?position=1&pageNum=0&refId=OkWRvTR%2Ff0uWDnemAG0bOQ%3D%3D&trackingId=mqJ8l%2Fkb23dfbN02hP4nsQ%3D%3D",
     "posted_at": "10 hours ago",
     "match_score": "90%",
     "relevance": "Customer Operations Alignment"
@@ -462,7 +462,7 @@
     "job_title": "Senior Customer Care Advisor",
     "company_name": "Circle",
     "location": "Greater Bengaluru Area",
-    "apply_url": "https://in.linkedin.com/jobs/view/senior-customer-care-advisor-at-circle-4445876784?position=2&pageNum=0&refId=9hKs7cYJVlcwecYevSFPGg%3D%3D&trackingId=TVtlHThbmFxe%2FSfveLWYyQ%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-customer-care-advisor-at-circle-4445876784?position=2&pageNum=0&refId=OkWRvTR%2Ff0uWDnemAG0bOQ%3D%3D&trackingId=HK8eefYxbzGcdCE0w4PhPA%3D%3D",
     "posted_at": "7 hours ago",
     "match_score": "90%",
     "relevance": "Customer Operations Alignment"
@@ -471,7 +471,7 @@
     "job_title": "Customer Service Assistant Team Lead",
     "company_name": "Mouser Electronics",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/customer-service-assistant-team-lead-at-mouser-electronics-4445872905?position=3&pageNum=0&refId=9hKs7cYJVlcwecYevSFPGg%3D%3D&trackingId=HZHPiw1nZRxsbhOpYYHQbQ%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/customer-service-assistant-team-lead-at-mouser-electronics-4445872905?position=3&pageNum=0&refId=OkWRvTR%2Ff0uWDnemAG0bOQ%3D%3D&trackingId=FbuRMOgV530xCLyOT6QfXg%3D%3D",
     "posted_at": "8 hours ago",
     "match_score": "98%",
     "relevance": "Leadership/Management Tier, Customer Operations Alignment"
@@ -480,7 +480,7 @@
     "job_title": "Senior Team Lead, Managed Services Operations",
     "company_name": "NTT DATA, Inc.",
     "location": "Bengaluru East, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/senior-team-lead-managed-services-operations-at-ntt-data-inc-4456516174?position=4&pageNum=0&refId=9hKs7cYJVlcwecYevSFPGg%3D%3D&trackingId=Zittm8uW%2FQGV1EZlUIYkCw%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-team-lead-managed-services-operations-at-ntt-data-inc-4456516174?position=4&pageNum=0&refId=OkWRvTR%2Ff0uWDnemAG0bOQ%3D%3D&trackingId=%2Bw5RkNDVeqtzn4kRD9fYVw%3D%3D",
     "posted_at": "1 hour ago",
     "match_score": "98%",
     "relevance": "Leadership/Management Tier, Customer Operations Alignment"
@@ -489,8 +489,8 @@
     "job_title": "Assitant Manager - Client Service Technical Support",
     "company_name": "BNP Paribas",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/assitant-manager-client-service-technical-support-at-bnp-paribas-4458215353?position=5&pageNum=0&refId=9hKs7cYJVlcwecYevSFPGg%3D%3D&trackingId=hsAnBf08OYFAeT7b6%2BR1Yg%3D%3D",
-    "posted_at": "5 hours ago",
+    "apply_url": "https://in.linkedin.com/jobs/view/assitant-manager-client-service-technical-support-at-bnp-paribas-4458215353?position=5&pageNum=0&refId=OkWRvTR%2Ff0uWDnemAG0bOQ%3D%3D&trackingId=zWu5DRhNBFx%2BIykEZ1Hpow%3D%3D",
+    "posted_at": "6 hours ago",
     "match_score": "98%",
     "relevance": "Leadership/Management Tier, Customer Operations Alignment"
   },
@@ -498,7 +498,7 @@
     "job_title": "Associate Live Operations Manager",
     "company_name": "Rockstar Games",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/associate-live-operations-manager-at-rockstar-games-4457102474?position=6&pageNum=0&refId=9hKs7cYJVlcwecYevSFPGg%3D%3D&trackingId=C7bYs2BW8sa0OKV%2FGVPSUw%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/associate-live-operations-manager-at-rockstar-games-4457102474?position=6&pageNum=0&refId=OkWRvTR%2Ff0uWDnemAG0bOQ%3D%3D&trackingId=bCKeye6UFajDCfEshGAddw%3D%3D",
     "posted_at": "4 hours ago",
     "match_score": "98%",
     "relevance": "Leadership/Management Tier, Customer Operations Alignment"
@@ -507,7 +507,7 @@
     "job_title": "Team Lead, System & Server",
     "company_name": "NTT DATA, Inc.",
     "location": "Bengaluru East, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/team-lead-system-server-at-ntt-data-inc-4409288241?position=7&pageNum=0&refId=9hKs7cYJVlcwecYevSFPGg%3D%3D&trackingId=%2FR0o51ZrGI0fSWc12ml6jQ%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/team-lead-system-server-at-ntt-data-inc-4409288241?position=7&pageNum=0&refId=OkWRvTR%2Ff0uWDnemAG0bOQ%3D%3D&trackingId=8yFS6F1sV4nBVPM7%2FMD%2Fhw%3D%3D",
     "posted_at": "8 hours ago",
     "match_score": "90%",
     "relevance": "Leadership/Management Tier"
@@ -516,7 +516,7 @@
     "job_title": "Technical Care Specialist",
     "company_name": "Nokia",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/technical-care-specialist-at-nokia-4409685537?position=8&pageNum=0&refId=9hKs7cYJVlcwecYevSFPGg%3D%3D&trackingId=NyK%2B3eNxLCb79uOTUzOvBw%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/technical-care-specialist-at-nokia-4409685537?position=8&pageNum=0&refId=OkWRvTR%2Ff0uWDnemAG0bOQ%3D%3D&trackingId=aXOzEIdHmqUw2YMWpiInyA%3D%3D",
     "posted_at": "7 hours ago",
     "match_score": "75%",
     "relevance": "Direct Customer Operations Match"
@@ -525,7 +525,7 @@
     "job_title": "Quality Analyst (US Process)",
     "company_name": "ITILITE",
     "location": "Bengaluru, Karnataka, India",
-    "apply_url": "https://in.linkedin.com/jobs/view/quality-analyst-us-process-at-itilite-4444966508?position=9&pageNum=0&refId=9hKs7cYJVlcwecYevSFPGg%3D%3D&trackingId=A3qkr3%2B2KBc%2F8MfPvLblrg%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/quality-analyst-us-process-at-itilite-4444966508?position=9&pageNum=0&refId=OkWRvTR%2Ff0uWDnemAG0bOQ%3D%3D&trackingId=RrIfUUWSdtlMIA94jfARHg%3D%3D",
     "posted_at": "11 hours ago",
     "match_score": "85%",
     "relevance": "Quality/Risk Governance"
@@ -534,9 +534,189 @@
     "job_title": "Manager, IT Operations",
     "company_name": "Unity",
     "location": "Greater Bengaluru Area",
-    "apply_url": "https://in.linkedin.com/jobs/view/manager-it-operations-at-unity-4457148268?position=10&pageNum=0&refId=9hKs7cYJVlcwecYevSFPGg%3D%3D&trackingId=KVP9Y%2BUpbLird8FCYp3Fkg%3D%3D",
+    "apply_url": "https://in.linkedin.com/jobs/view/manager-it-operations-at-unity-4457148268?position=10&pageNum=0&refId=OkWRvTR%2Ff0uWDnemAG0bOQ%3D%3D&trackingId=unrB5SYq1tIjj1uaVS28mQ%3D%3D",
     "posted_at": "1 hour ago",
     "match_score": "98%",
     "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Sr. Safety Officer",
+    "company_name": "Reckitt",
+    "location": "Hosur, Tamil Nadu, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/sr-safety-officer-at-reckitt-4458167756?position=1&pageNum=0&refId=jp6YCpt2ETWsY5KBbhUs8A%3D%3D&trackingId=vrwSCv6LMZ6jG%2BmOrH6TxA%3D%3D",
+    "posted_at": "11 hours ago",
+    "match_score": "75%",
+    "relevance": "Direct Customer Operations Match"
+  },
+  {
+    "job_title": "CFA Operations Manager",
+    "company_name": "Hector Beverages",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/cfa-operations-manager-at-hector-beverages-4455874423?position=2&pageNum=0&refId=jp6YCpt2ETWsY5KBbhUs8A%3D%3D&trackingId=ZcwN4BzJc9%2F34uokGjaUtQ%3D%3D",
+    "posted_at": "6 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Team Lead - AMZL",
+    "company_name": "Amazon",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/team-lead-amzl-at-amazon-4458255567?position=3&pageNum=0&refId=jp6YCpt2ETWsY5KBbhUs8A%3D%3D&trackingId=1dW9S7bdAtCEDdKJ4pR2Dg%3D%3D",
+    "posted_at": "1 hour ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Associate Live Operations Manager",
+    "company_name": "Rockstar Games",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/associate-live-operations-manager-at-rockstar-games-4457102474?position=4&pageNum=0&refId=jp6YCpt2ETWsY5KBbhUs8A%3D%3D&trackingId=z03vnnBaSDvptKqVhQtTwg%3D%3D",
+    "posted_at": "4 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Manager Operations - GCC Background",
+    "company_name": "Empower India",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/manager-operations-gcc-background-at-empower-india-4452265341?position=5&pageNum=0&refId=jp6YCpt2ETWsY5KBbhUs8A%3D%3D&trackingId=usyYkpcTVQGpJUgXTJRWKA%3D%3D",
+    "posted_at": "6 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Walkin drive for Any Graduates S&F order management with end to end on logistic at Bangalore on 25 Aug 2026",
+    "company_name": "Infosys BPM",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/walkin-drive-for-any-graduates-s-f-order-management-with-end-to-end-on-logistic-at-bangalore-on-25-aug-2026-at-infosys-bpm-4456888985?position=6&pageNum=0&refId=jp6YCpt2ETWsY5KBbhUs8A%3D%3D&trackingId=pTJDaKo0NmQ%2FSo9RrUNOXQ%3D%3D",
+    "posted_at": "6 hours ago",
+    "match_score": "75%",
+    "relevance": "Direct Customer Operations Match"
+  },
+  {
+    "job_title": "Events Security Operations Manager",
+    "company_name": "Google",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/events-security-operations-manager-at-google-4456896753?position=7&pageNum=0&refId=jp6YCpt2ETWsY5KBbhUs8A%3D%3D&trackingId=VMZ9DmuN9CufTfcbte%2BsjA%3D%3D",
+    "posted_at": "3 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Area Manager (ACKO Drive Service Centre) - Bangalore",
+    "company_name": "Acko",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/area-manager-acko-drive-service-centre-bangalore-at-acko-4456865528?position=8&pageNum=0&refId=jp6YCpt2ETWsY5KBbhUs8A%3D%3D&trackingId=5QN29BTs7lA2dCk14h01cQ%3D%3D",
+    "posted_at": "10 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Assistant Manager- Soft Services- Bangalore",
+    "company_name": "Starcrest India",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/assistant-manager-soft-services-bangalore-at-starcrest-india-4455841774?position=9&pageNum=0&refId=jp6YCpt2ETWsY5KBbhUs8A%3D%3D&trackingId=h191meOiCGd2aUDZN8HkwA%3D%3D",
+    "posted_at": "15 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Senior Officer - Lending Operations",
+    "company_name": "ANZ",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-officer-lending-operations-at-anz-4458191084?position=10&pageNum=0&refId=jp6YCpt2ETWsY5KBbhUs8A%3D%3D&trackingId=87iUmazOo5MIm9sWv870HQ%3D%3D",
+    "posted_at": "9 hours ago",
+    "match_score": "90%",
+    "relevance": "Customer Operations Alignment"
+  },
+  {
+    "job_title": "Team Manager (Gurugram)",
+    "company_name": "Agoda",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/team-manager-gurugram-at-agoda-4458174805?position=1&pageNum=0&refId=%2F9bFfR%2FT7ftglINa1kOQ6g%3D%3D&trackingId=9vfySQYeiFalgSJmk1Pr0g%3D%3D",
+    "posted_at": "10 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Senior Operation Manager",
+    "company_name": "Arnifi",
+    "location": "Bengaluru South, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-operation-manager-at-arnifi-4456852771?position=2&pageNum=0&refId=%2F9bFfR%2FT7ftglINa1kOQ6g%3D%3D&trackingId=%2Bw%2BPeK8AqF9wWi5IDbl7Kg%3D%3D",
+    "posted_at": "12 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Customer Service Assistant Team Lead",
+    "company_name": "Mouser Electronics",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/customer-service-assistant-team-lead-at-mouser-electronics-4445872905?position=3&pageNum=0&refId=%2F9bFfR%2FT7ftglINa1kOQ6g%3D%3D&trackingId=HQNanrGMrZh7wRDIRPCnCw%3D%3D",
+    "posted_at": "8 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Senior Associate- Customer Care",
+    "company_name": "River",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-associate-customer-care-at-river-4455857493?position=4&pageNum=0&refId=%2F9bFfR%2FT7ftglINa1kOQ6g%3D%3D&trackingId=NROYQ9IrBlB3AvKJQazuYw%3D%3D",
+    "posted_at": "10 hours ago",
+    "match_score": "90%",
+    "relevance": "Customer Operations Alignment"
+  },
+  {
+    "job_title": "US Healthcare - People Management - Lead EBA - BF - 15477-39472-2 - JR199777",
+    "company_name": "Carelon Global Solutions India",
+    "location": "Bengaluru South, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/us-healthcare-people-management-lead-eba-bf-15477-39472-2-jr199777-at-carelon-global-solutions-india-4448110012?position=5&pageNum=0&refId=%2F9bFfR%2FT7ftglINa1kOQ6g%3D%3D&trackingId=0rnIVbnx7KT6We9aZMy5sw%3D%3D",
+    "posted_at": "6 hours ago",
+    "match_score": "90%",
+    "relevance": "Leadership/Management Tier"
+  },
+  {
+    "job_title": "Manager - Customer Service Transformation And AI",
+    "company_name": "EY",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/manager-customer-service-transformation-and-ai-at-ey-4434858454?position=6&pageNum=0&refId=%2F9bFfR%2FT7ftglINa1kOQ6g%3D%3D&trackingId=0XzNSk3l40dg4Bgg6Rcu3w%3D%3D",
+    "posted_at": "3 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Area Manager (ACKO Drive Service Centre) - Bangalore",
+    "company_name": "Acko",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/area-manager-acko-drive-service-centre-bangalore-at-acko-4456865528?position=7&pageNum=0&refId=%2F9bFfR%2FT7ftglINa1kOQ6g%3D%3D&trackingId=v5MAoUXpCwo7GMvdWbpf%2Bg%3D%3D",
+    "posted_at": "10 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Senior Team Lead, Managed Services Operations",
+    "company_name": "NTT DATA, Inc.",
+    "location": "Bengaluru East, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-team-lead-managed-services-operations-at-ntt-data-inc-4456516174?position=8&pageNum=0&refId=%2F9bFfR%2FT7ftglINa1kOQ6g%3D%3D&trackingId=lgXNQMGPtiC410UtA30AWQ%3D%3D",
+    "posted_at": "1 hour ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Assitant Manager - Client Service Technical Support",
+    "company_name": "BNP Paribas",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/assitant-manager-client-service-technical-support-at-bnp-paribas-4458215353?position=9&pageNum=0&refId=%2F9bFfR%2FT7ftglINa1kOQ6g%3D%3D&trackingId=iL8ZKmffHUfpsBVwtRc7OQ%3D%3D",
+    "posted_at": "6 hours ago",
+    "match_score": "98%",
+    "relevance": "Leadership/Management Tier, Customer Operations Alignment"
+  },
+  {
+    "job_title": "Senior Officer - Lending Operations",
+    "company_name": "ANZ",
+    "location": "Bengaluru, Karnataka, India",
+    "apply_url": "https://in.linkedin.com/jobs/view/senior-officer-lending-operations-at-anz-4458191084?position=10&pageNum=0&refId=%2F9bFfR%2FT7ftglINa1kOQ6g%3D%3D&trackingId=tou22BQWF9u7WyW%2BQOelhg%3D%3D",
+    "posted_at": "9 hours ago",
+    "match_score": "90%",
+    "relevance": "Customer Operations Alignment"
   }
 ]
