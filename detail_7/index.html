@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>7Theory | 7 Stages of PPF & Ceramic Detailing Protocol Studio</title>
+  
+  <!-- Premium Google Fonts: Syne (Artistic Display), Plus Jakarta Sans, JetBrains Mono (Lab Telemetry), Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Three.js (3D Liquid Glass & Refraction WebGL Engine) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Supabase Official SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#030206',
+              900: '#07050E',
+              850: '#0D0A18',
+              800: '#140F24',
+              700: '#1F1836',
+              600: '#2F264E'
+            },
+            neon: {
+              purple: '#A855F7',
+              violet: '#C084FC',
+              crimson: '#EF4444',
+              amber: '#F59E0B',
+              cyan: '#06B6D4',
+              glow: '#9333EA'
+            }
+          },
+          fontFamily: {
+            brand: ['Syne', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            tech: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root, html, body {
+      background-color: #030206 !important;
+      color: #FFFFFF !important;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 3D LIQUID GLASS REFRACTION & CAUSTIC AURORA BLOBS */
+    .liquid-blob-1 {
+      position: fixed;
+      top: -10%;
+      left: 15%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.18) 0%, rgba(239, 68, 68, 0.08) 45%, transparent 70%);
+      filter: blur(100px);
+      z-index: 0;
+      pointer-events: none;
+      animation: floatBlob 22s ease-in-out infinite alternate;
+    }
+
+    .liquid-blob-2 {
+      position: fixed;
+      bottom: 5%;
+      right: 10%;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.14) 0%, rgba(147, 51, 234, 0.12) 50%, transparent 70%);
+      filter: blur(110px);
+      z-index: 0;
+      pointer-events: none;
+      animation: floatBlob 18s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes floatBlob {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(60px, -40px) scale(1.1); }
+      100% { transform: translate(-40px, 50px) scale(0.95); }
+    }
+
+    /* NOISE TEXTURE GRAIN OVERLAY */
+    .noise-layer {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+      background-size: 24px 24px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* 3D LIQUID FROSTED GLASS CARDS */
+    .liquid-glass-card {
+      background: rgba(13, 10, 24, 0.65) !important;
+      backdrop-filter: blur(28px) saturate(190%) brightness(110%);
+      -webkit-backdrop-filter: blur(28px) saturate(190%) brightness(110%);
+      border: 1.5px solid rgba(192, 132, 252, 0.22);
+      border-radius: 28px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .liquid-glass-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 35px 70px -15px rgba(168, 85, 247, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    }
+
+    /* 3D FLOATING SEAMLESS GLASS STAGE */
+    .liquid-3d-stage {
+      background: rgba(13, 10, 24, 0.45) !important;
+      backdrop-filter: blur(32px) saturate(200%);
+      -webkit-backdrop-filter: blur(32px) saturate(200%);
+      border: 2px solid rgba(168, 85, 247, 0.35);
+      border-radius: 36px;
+      box-shadow: 0 30px 80px -20px rgba(147, 51, 234, 0.3), inset 0 2px 3px rgba(255, 255, 255, 0.2);
+      position: relative;
+      cursor: grab;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .liquid-3d-stage:active {
+      cursor: grabbing;
+    }
+    .liquid-3d-stage:hover {
+      border-color: #C084FC;
+      box-shadow: 0 35px 90px -15px rgba(192, 132, 252, 0.45);
+    }
+
+    /* STAGE PROGRESSION STEPPER INDICATOR */
+    .stage-glow-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 900;
+      background: linear-gradient(135deg, #FFFFFF 0%, #C084FC 50%, #7E22CE 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* BUTTONS */
+    .btn-neon-purple {
+      background: linear-gradient(135deg, #9333EA 0%, #7E22CE 100%) !important;
+      color: #FFFFFF !important;
+      font-weight: 800 !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+      box-shadow: 0 10px 25px -5px rgba(147, 51, 234, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-neon-purple:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 35px -5px rgba(168, 85, 247, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+      background: linear-gradient(135deg, #A855F7 0%, #9333EA 100%) !important;
+    }
+
+    .btn-glass-subtle {
+      background: rgba(255, 255, 255, 0.06) !important;
+      backdrop-filter: blur(16px);
+      border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
+      transition: all 0.25s ease;
+    }
+    .btn-glass-subtle:hover {
+      background: rgba(255, 255, 255, 0.15) !important;
+      border-color: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    /* BEFORE / AFTER INTERACTIVE SLIDER */
+    .ba-slider-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1.5px solid rgba(192, 132, 252, 0.3);
+    }
+    .ba-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      overflow: hidden;
+      border-right: 3px solid #C084FC;
+      box-shadow: 4px 0 15px rgba(192, 132, 252, 0.6);
+    }
+
+    /* MODAL ACTIVE */
+    .modal-active { display: flex !important; }
+
+    /* RETRO POSTER GRUNGE CARD */
+    .retro-poster-card {
+      background: #0D0A18;
+      border: 1.5px solid rgba(192, 132, 252, 0.25);
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+    .retro-poster-card img {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .retro-poster-card:hover img {
+      transform: scale(1.04);
+    }
+
+    /* SCANNER LASER ANIMATION */
+    @keyframes laserScan {
+      0% { top: 0%; opacity: 0.8; }
+      50% { top: 96%; opacity: 1; }
+      100% { top: 0%; opacity: 0.8; }
+    }
+    .scanner-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #C084FC, #EF4444, #C084FC, transparent);
+      box-shadow: 0 0 12px #C084FC, 0 0 24px #EF4444;
+      animation: laserScan 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-obsidian-950 text-white selection:bg-neon-purple selection:text-white">
+
+  <!-- DYNAMIC AURORA LIQUID REFRACTION BLOBS -->
+  <div class="liquid-blob-1"></div>
+  <div class="liquid-blob-2"></div>
+  <div class="noise-layer"></div>
+
+  <!-- STICKY TOP NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-2xl bg-obsidian-950/80 border-b border-purple-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <!-- BRAND LOGO -->
+      <a href="#" class="flex items-baseline space-x-2 group">
+        <span class="text-3xl sm:text-4xl font-black font-brand tracking-tighter text-white group-hover:text-neon-violet transition">
+          7THEORY<span class="text-neon-purple">.</span>
+        </span>
+        <span class="hidden sm:inline-block text-[9px] font-mono font-bold tracking-widest text-purple-400 bg-purple-950/80 px-2 py-0.5 rounded border border-purple-800/50">
+          PPF &amp; CERAMIC PROTOCOL LAB
+        </span>
+      </a>
+
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs font-mono font-bold text-slate-300">
+        <a href="#stages" class="hover:text-neon-violet transition">The 7 Stages</a>
+        <a href="#packages" class="hover:text-neon-violet transition">Theory Packages</a>
+        <a href="#transparency" class="hover:text-neon-violet transition">Live Telemetry</a>
+        <a href="#classifieds" class="hover:text-neon-violet transition">Classifieds</a>
+        <a href="#membership" class="hover:text-neon-violet transition">Membership</a>
+        <a href="#certification" class="hover:text-neon-violet transition">Warranty &amp; QC</a>
+      </nav>
+
+      <!-- CTA BUTTON -->
+      <div class="flex items-center space-x-3">
+        <button onclick="openBookingModal()" class="btn-neon-purple text-xs font-mono font-black px-5 py-2.5 rounded-xl uppercase tracking-wider">
+          Book Your Theory &rarr;
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- FOREGROUND MAIN CONTENT WRAPPER -->
+  <main class="relative z-10">
+
+    <!-- ========================================================================= -->
+    <!-- 1. HERO SECTION: 3D LIQUID GLASS STAGE & AUTOMOTIVE REVEAL               -->
+    <!-- ========================================================================= -->
+    <section class="relative pt-12 pb-20 px-4 sm:px-6 max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- LEFT: HERO HEADLINE & PROTOCOL PROPOSITION -->
+        <div class="lg:col-span-7 text-left">
+          
+          <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-700/50 text-neon-violet text-xs font-mono font-bold mb-6">
+            <span class="w-2 h-2 rounded-full bg-neon-purple animate-pulse"></span>
+            <span>CLINICAL 7-STAGE AUTOMOTIVE RESTORATION</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black font-brand tracking-tight leading-[1.04] mb-6">
+            Engineered Gloss.<br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-300 to-neon-violet">
+              The 7 Stages of PPF &amp; Ceramic.
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 font-normal leading-relaxed mb-8 max-w-xl">
+            Not a standard car wash. A sequential, laboratory-grade paint preservation protocol. From microscopic defect diagnosis to multi-layer thermal ceramic fusion.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center gap-4 mb-10">
+            <button onclick="openBookingModal()" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 btn-neon-purple font-mono font-black text-xs sm:text-sm px-8 py-4 rounded-2xl">
+              <span>INITIALIZE YOUR VEHICLE AUDIT</span>
+              <span>&rarr;</span>
+            </button>
+            <a href="#stages" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 btn-glass-subtle font-mono font-bold text-xs sm:text-sm px-7 py-4 rounded-2xl">
+              <span>EXPLORE THE 7 PROTOCOLS</span>
+            </a>
+          </div>
+
+          <!-- TRUST METRICS BAR -->
+          <div class="grid grid-cols-3 gap-3 font-mono text-xs max-w-lg">
+            <div class="p-3.5 liquid-glass-card">
+              <div class="text-[10px] text-purple-400 font-bold uppercase tracking-wider">OPTICAL HARDNESS</div>
+              <div class="text-base font-black text-white mt-0.5">10H Ceramic Coagulation</div>
+            </div>
+            <div class="p-3.5 liquid-glass-card">
+              <div class="text-[10px] text-purple-400 font-bold uppercase tracking-wider">SELF-HEALING</div>
+              <div class="text-base font-black text-neon-cyan mt-0.5">10-Mil Urethane PPF</div>
+            </div>
+            <div class="p-3.5 liquid-glass-card">
+              <div class="text-[10px] text-purple-400 font-bold uppercase tracking-wider">CERTIFICATION</div>
+              <div class="text-base font-black text-neon-violet mt-0.5">10-Year Global Warranty</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: 3D LIQUID GLASS THREE.JS STAGE (INTERACTIVE ART SCULPTURE) -->
+        <div class="lg:col-span-5 h-[460px] sm:h-[500px] liquid-3d-stage p-6 flex flex-col justify-between">
+          <div class="flex justify-between items-center z-10">
+            <span class="text-[10px] font-mono font-black bg-purple-950 text-neon-violet px-3 py-1 rounded-xl border border-purple-700/50">
+              3D REFRACTION ENGINE
+            </span>
+            <span class="text-[10px] font-mono text-slate-400 bg-obsidian-900/80 px-3 py-1 rounded-xl border border-white/10">
+              🖱️ Drag to Rotate 3D Glass Shell
+            </span>
+          </div>
+
+          <!-- THREE.JS WEBGL CANVAS -->
+          <canvas id="heroCanvas3D" class="w-full h-full absolute inset-0 z-0"></canvas>
+
+          <div class="scanner-line"></div>
+
+          <div class="text-[10px] font-mono text-slate-300 bg-obsidian-950/80 backdrop-blur-md p-3 rounded-xl z-10 text-center border border-purple-900/40">
+            MeshPhysicalMaterial (Transmission: 0.98 • Clearcoat: 1.0 • IOR: 1.54) • 7Theory Monolithic Core
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 2. THE 7 STAGES OF PPF & CERAMIC PROTOCOL (PRIMARY SCROLL JOURNEY)       -->
+    <!-- ========================================================================= -->
+    <section id="stages" class="py-20 px-4 sm:px-6 max-w-7xl mx-auto border-t border-purple-900/30">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-mono font-bold text-neon-violet uppercase tracking-widest bg-purple-950/80 px-4 py-1.5 rounded-full border border-purple-700/50">
+          The Sequential Spine
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black font-brand tracking-tight mt-4 mb-4">
+          The 7 Stages of PPF &amp; Ceramic Protocol
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base font-normal">
+          Every vehicle admitted into 7Theory undergoes an uncompromised 7-stage clinical protocol. No skips, no shortcuts.
+        </p>
+      </div>
+
+      <!-- 7 PROTOCOL PANELS GRID (01 THROUGH 07) -->
+      <div class="space-y-8">
+        
+        <!-- STAGE 01 -->
+        <div class="liquid-glass-card p-6 sm:p-10 relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-4">
+              <span class="stage-glow-number text-6xl sm:text-8xl">01</span>
+              <div class="text-xl sm:text-2xl font-black font-brand mt-2 text-white">DIAGNOSIS</div>
+              <div class="text-xs font-mono text-neon-violet uppercase tracking-wider mt-1">Defect Mapping &amp; Paint Audit</div>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Full vehicle inspection under high-CRI LED swirl-finder lighting. Ultrasonic digital paint depth gauges map clearcoat thickness across every millimeter. Panel-by-panel digital defect logging before touching the finish.
+              </p>
+              <div class="inline-flex items-center space-x-2 text-xs font-mono text-purple-300 bg-purple-950/60 px-3 py-1.5 rounded-lg border border-purple-800/40">
+                <span>🔍 Web Cue: High-Res Defect Scan &amp; Paint Depth Telemetry</span>
+              </div>
+            </div>
+            <div class="lg:col-span-3">
+              <div class="retro-poster-card h-48">
+                <img src="/assets/images/wheel_halftone.jpg" alt="Stage 01 Diagnosis" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-black/80 backdrop-blur-md p-2 rounded-lg text-[10px] font-mono text-neon-violet">
+                  STAGE 01: LED SWIRL SCAN
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 02 -->
+        <div class="liquid-glass-card p-6 sm:p-10 relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-4">
+              <span class="stage-glow-number text-6xl sm:text-8xl">02</span>
+              <div class="text-xl sm:text-2xl font-black font-brand mt-2 text-white">DECONTAMINATION</div>
+              <div class="text-xs font-mono text-neon-violet uppercase tracking-wider mt-1">Chemical Fallout &amp; Clay Treatment</div>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Multi-stage pH-neutral snow foam bath, active iron-dissolving chemical decon to purge embedded brake dust, tar removal solvent bath, and fine grade synthetic clay bar glide to restore glass-smooth virgin clearcoat.
+              </p>
+              <div class="inline-flex items-center space-x-2 text-xs font-mono text-purple-300 bg-purple-950/60 px-3 py-1.5 rounded-lg border border-purple-800/40">
+                <span>🧪 Web Cue: Chemical Iron Dissolution &amp; Clean Slate Texture</span>
+              </div>
+            </div>
+            <div class="lg:col-span-3">
+              <div class="retro-poster-card h-48">
+                <img src="/assets/images/retro_street_car.jpg" alt="Stage 02 Decon" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-black/80 backdrop-blur-md p-2 rounded-lg text-[10px] font-mono text-neon-violet">
+                  STAGE 02: VIRGIN CLEARCOAT
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 03 -->
+        <div class="liquid-glass-card p-6 sm:p-10 relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-4">
+              <span class="stage-glow-number text-6xl sm:text-8xl">03</span>
+              <div class="text-xl sm:text-2xl font-black font-brand mt-2 text-white">CORRECTION</div>
+              <div class="text-xs font-mono text-neon-violet uppercase tracking-wider mt-1">Dual-Action Machine Jewel Polish</div>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Rotary &amp; Random Orbital machine polishing utilizing diminishing abrasive micro-compounds. Leveling out orange peel, eliminating RIDS (random isolated deep scratches), and restoring true optical gloss and deep reflection depth.
+              </p>
+              <div class="inline-flex items-center space-x-2 text-xs font-mono text-purple-300 bg-purple-950/60 px-3 py-1.5 rounded-lg border border-purple-800/40">
+                <span>✨ Web Cue: 50/50 Before-After Mirror Gloss Slider</span>
+              </div>
+            </div>
+            <div class="lg:col-span-3">
+              <div class="retro-poster-card h-48">
+                <img src="/assets/images/porsche_poster.jpg" alt="Stage 03 Correction" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-black/80 backdrop-blur-md p-2 rounded-lg text-[10px] font-mono text-neon-violet">
+                  STAGE 03: 100% GLOSS REFLECTION
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 04 -->
+        <div class="liquid-glass-card p-6 sm:p-10 relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-4">
+              <span class="stage-glow-number text-6xl sm:text-8xl">04</span>
+              <div class="text-xl sm:text-2xl font-black font-brand mt-2 text-white">PRECISION FIT</div>
+              <div class="text-xs font-mono text-neon-violet uppercase tracking-wider mt-1">CAD Digital Pattern Plotting</div>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Panel-specific PPF templates cut via laser-guided Graphtec plotters from proprietary CAD geometric files. Custom wrapped edges eliminate razor blades anywhere near painted surfaces for a bespoke factory appearance.
+              </p>
+              <div class="inline-flex items-center space-x-2 text-xs font-mono text-purple-300 bg-purple-950/60 px-3 py-1.5 rounded-lg border border-purple-800/40">
+                <span>📐 Web Cue: Technical Blueprint Wireframe Overlays</span>
+              </div>
+            </div>
+            <div class="lg:col-span-3">
+              <div class="retro-poster-card h-48">
+                <img src="/assets/images/anime_sports_car.jpg" alt="Stage 04 Precision Fit" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-black/80 backdrop-blur-md p-2 rounded-lg text-[10px] font-mono text-neon-violet">
+                  STAGE 04: CAD PATTERN PLOT
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 05 -->
+        <div class="liquid-glass-card p-6 sm:p-10 relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-4">
+              <span class="stage-glow-number text-6xl sm:text-8xl">05</span>
+              <div class="text-xl sm:text-2xl font-black font-brand mt-2 text-white">APPLICATION</div>
+              <div class="text-xs font-mono text-neon-violet uppercase tracking-wider mt-1">Hydro-Gel Wet Install &amp; Edge Tuck</div>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Purified slip solution wet installation under positive-pressure cleanroom conditions. Specialized squeegee expulsion of micro-bubbles, followed by thermal heat-forming around complex curves and panel recesses.
+              </p>
+              <div class="inline-flex items-center space-x-2 text-xs font-mono text-purple-300 bg-purple-950/60 px-3 py-1.5 rounded-lg border border-purple-800/40">
+                <span>💧 Web Cue: Positive-Pressure Cleanroom Bay Process Loop</span>
+              </div>
+            </div>
+            <div class="lg:col-span-3">
+              <div class="retro-poster-card h-48">
+                <img src="/assets/images/city_night_overlook.jpg" alt="Stage 05 Application" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-black/80 backdrop-blur-md p-2 rounded-lg text-[10px] font-mono text-neon-violet">
+                  STAGE 05: SEAMLESS WRAPPED EDGES
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 06 -->
+        <div class="liquid-glass-card p-6 sm:p-10 relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-4">
+              <span class="stage-glow-number text-6xl sm:text-8xl">06</span>
+              <div class="text-xl sm:text-2xl font-black font-brand mt-2 text-white">CERAMIC LAYERING</div>
+              <div class="text-xs font-mono text-neon-violet uppercase tracking-wider mt-1">Multi-Coat SiO2 / SiC Molecular Bond</div>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Application of multi-layer 9H/10H ceramic coatings over film and exposed surfaces. Controlled infrared short-wave baking intervals ensure maximum molecular cross-linking for extreme hydrophobicity and UV rejection.
+              </p>
+              <div class="inline-flex items-center space-x-2 text-xs font-mono text-purple-300 bg-purple-950/60 px-3 py-1.5 rounded-lg border border-purple-800/40">
+                <span>🛡️ Web Cue: 110° Water-Contact Angle Caustic Beading</span>
+              </div>
+            </div>
+            <div class="lg:col-span-3">
+              <div class="retro-poster-card h-48">
+                <img src="/assets/images/lunar_rally_moon.jpg" alt="Stage 06 Ceramic" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-black/80 backdrop-blur-md p-2 rounded-lg text-[10px] font-mono text-neon-violet">
+                  STAGE 06: MOLECULAR INFRARED CURE
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 07 -->
+        <div class="liquid-glass-card p-6 sm:p-10 relative overflow-hidden border-2 border-neon-violet/50 shadow-[0_0_30px_rgba(168,85,247,0.25)]">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-4">
+              <span class="stage-glow-number text-6xl sm:text-8xl">07</span>
+              <div class="text-xl sm:text-2xl font-black font-brand mt-2 text-white">CERTIFICATION</div>
+              <div class="text-xs font-mono text-neon-violet uppercase tracking-wider mt-1">UV Quality Control &amp; Warranty Handover</div>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Final UV blacklight quality control inspection, paint gloss meter verification, registration on the 7Theory Global Warranty Database, and physical issuance of the 7Theory Certified Aluminum Plaque and Aftercare Kit.
+              </p>
+              <div class="inline-flex items-center space-x-2 text-xs font-mono text-purple-300 bg-purple-950/60 px-3 py-1.5 rounded-lg border border-purple-800/40">
+                <span>🏅 Web Cue: '7 Theory Certified' Digital &amp; Physical Hologram</span>
+              </div>
+            </div>
+            <div class="lg:col-span-3 flex flex-col items-center justify-center p-4 bg-purple-950/40 rounded-2xl border border-purple-700/50 text-center">
+              <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-purple-600 to-neon-violet flex items-center justify-center text-2xl font-black font-brand text-white shadow-lg mb-2">
+                7T
+              </div>
+              <div class="text-xs font-mono font-black text-white">CERTIFIED PROTOCOL</div>
+              <div class="text-[9px] font-mono text-purple-300 mt-0.5">10-YEAR CARFAX LINKED WARRANTY</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. TIERED "THEORY" PACKAGES (STRUCTURAL UP-SELL ARCHITECTURE)             -->
+    <!-- ========================================================================= -->
+    <section id="packages" class="py-20 px-4 sm:px-6 max-w-7xl mx-auto border-t border-purple-900/30">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-mono font-bold text-neon-violet uppercase tracking-widest bg-purple-950/80 px-4 py-1.5 rounded-full border border-purple-700/50">
+          Precision Tiering
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black font-brand tracking-tight mt-4 mb-4">
+          Tiered Theory Packages
+        </h2>
+        <p class="text-slate-300 text-sm font-normal">
+          Engineered to match your driving profile. Every package follows the strict 7Theory protocol sequence.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- TIER 1: THEORY-3 -->
+        <div class="liquid-glass-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest">TIER 01</div>
+            <div class="text-2xl font-black font-brand text-white mt-1">Theory-3</div>
+            <div class="text-sm text-purple-400 font-mono mt-1">Essential High-Impact Armor</div>
+            <div class="text-3xl font-black font-mono text-white mt-6">$1,850 <span class="text-xs text-slate-400 font-normal">CAD</span></div>
+            
+            <ul class="mt-6 space-y-3 text-xs text-slate-300 font-mono">
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Stage 01: LED Inspection &amp; Diagnosis</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Stage 02: Full Chemical Decontamination</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Stage 04: Full Front End Precision PPF (Hood, Bumper, Fenders, Mirrors)</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Stage 07: 5-Year Certified Warranty</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="openBookingModal('Theory-3 ($1,850 CAD)')" class="btn-glass-subtle w-full text-xs font-mono font-black py-3.5 rounded-xl uppercase tracking-wider mt-8">
+            Select Theory-3
+          </button>
+        </div>
+
+        <!-- TIER 2: THEORY-5 -->
+        <div class="liquid-glass-card p-8 flex flex-col justify-between border-2 border-neon-violet shadow-[0_0_40px_rgba(168,85,247,0.35)] relative">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-neon-purple text-white text-[10px] font-mono font-black px-4 py-1 rounded-full uppercase tracking-wider">
+            MOST POPULAR ENTHUSIAST PROTOCOL
+          </div>
+
+          <div>
+            <div class="text-xs font-mono font-bold text-neon-violet uppercase tracking-widest">TIER 02</div>
+            <div class="text-2xl font-black font-brand text-white mt-1">Theory-5</div>
+            <div class="text-sm text-purple-300 font-mono mt-1">Correction + Track Package PPF</div>
+            <div class="text-3xl font-black font-mono text-white mt-6">$3,450 <span class="text-xs text-slate-400 font-normal">CAD</span></div>
+            
+            <ul class="mt-6 space-y-3 text-xs text-slate-200 font-mono">
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Stages 01–02: Diagnosis &amp; Decon</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Stage 03: 2-Step Machine Paint Correction</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Stage 04–05: Track Pack PPF (Front + Rockers + Rear Arches)</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Stage 06: Hydrophobic Wheel &amp; Glass Coating</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Stage 07: 7-Year Registered Certification</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="openBookingModal('Theory-5 ($3,450 CAD)')" class="btn-neon-purple w-full text-xs font-mono font-black py-3.5 rounded-xl uppercase tracking-wider mt-8">
+            Select Theory-5
+          </button>
+        </div>
+
+        <!-- TIER 3: THEORY-7 FULL PROTOCOL -->
+        <div class="liquid-glass-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest">TIER 03</div>
+            <div class="text-2xl font-black font-brand text-white mt-1">Theory-7 (Full Protocol)</div>
+            <div class="text-sm text-purple-400 font-mono mt-1">Bespoke Full Body Wrap &amp; 10H Ceramic</div>
+            <div class="text-3xl font-black font-mono text-white mt-6">$5,950 <span class="text-xs text-slate-400 font-normal">CAD</span></div>
+            
+            <ul class="mt-6 space-y-3 text-xs text-slate-300 font-mono">
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Complete 01–07 Protocol Execution</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Full Body Seamless PPF (All Exterior Panels)</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Dual-Layer 10H Ceramic Coating Over Film</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>Interior Leather &amp; Alcantara Hydrophobic Infusion</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-neon-violet">✓</span>
+                <span>10-Year Global Warranty + Plaque + Annual QC</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="openBookingModal('Theory-7 Full Protocol ($5,950 CAD)')" class="btn-glass-subtle w-full text-xs font-mono font-black py-3.5 rounded-xl uppercase tracking-wider mt-8">
+            Select Theory-7
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. RADICAL TRANSPARENCY: LIVE VEHICLE PROTOCOL TELEMETRY & AUDIT LOGS    -->
+    <!-- ========================================================================= -->
+    <section id="transparency" class="py-20 px-4 sm:px-6 max-w-7xl mx-auto border-t border-purple-900/30">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-mono font-bold text-neon-violet uppercase tracking-widest bg-purple-950/80 px-4 py-1.5 rounded-full border border-purple-700/50">
+            Radical Transparency Vault
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black font-brand tracking-tight mt-4">
+            Live Vehicle Protocol Telemetry
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm mt-1">
+            Every vehicle in our studio is logged in real-time with photo/video proof, paint depth microns, and technician sign-offs.
+          </p>
+        </div>
+
+        <div class="mt-4 md:mt-0 flex items-center space-x-2">
+          <input type="text" id="telemetry-search" placeholder="🔍 Search Plate / VIN..." class="bg-obsidian-900 border border-purple-900/60 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-neon-violet">
+          <button onclick="searchTelemetry()" class="btn-neon-purple text-xs font-mono font-black px-4 py-2.5 rounded-xl">TRACK</button>
+        </div>
+      </div>
+
+      <!-- LIVE LOGS TABLE COMPONENT -->
+      <div class="liquid-glass-card overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs font-mono">
+            <thead>
+              <tr class="bg-purple-950/80 text-neon-violet border-b border-purple-800/40 uppercase font-black">
+                <th class="p-4">Log ID</th>
+                <th class="p-4">Vehicle Model</th>
+                <th class="p-4">Active Stage</th>
+                <th class="p-4">Paint Depth</th>
+                <th class="p-4">Technician</th>
+                <th class="p-4">Status</th>
+                <th class="p-4 text-right">Telemetry</th>
+              </tr>
+            </thead>
+            <tbody id="telemetry-rows">
+              <tr class="border-b border-purple-950/60 hover:bg-purple-950/30 transition">
+                <td class="p-4 text-white font-bold">#7T-911-GT3</td>
+                <td class="p-4 text-slate-200">2026 Porsche 911 GT3 RS</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded bg-purple-950 text-neon-violet border border-purple-800">Stage 06: Ceramic Layering</span></td>
+                <td class="p-4 text-emerald-400 font-bold">142.5 µm (Nominal)</td>
+                <td class="p-4 text-slate-300">Lead Tech #04</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded bg-amber-950/80 text-amber-400 border border-amber-800 text-[10px]">Curing Layer 2</span></td>
+                <td class="p-4 text-right"><button onclick="viewLogModal('2026 Porsche 911 GT3 RS', 'Stage 06: Ceramic Layering', '142.5 µm', 'Layer 2 SiO2 molecular bake completed under IR lamps.')" class="px-3 py-1 bg-purple-900/60 hover:bg-neon-purple text-white rounded-lg text-[11px] font-bold">View Telemetry</button></td>
+              </tr>
+              <tr class="border-b border-purple-950/60 hover:bg-purple-950/30 transition">
+                <td class="p-4 text-white font-bold">#7T-BMW-M3</td>
+                <td class="p-4 text-slate-200">2025 BMW M3 CS (Isle of Man Green)</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded bg-purple-950 text-neon-violet border border-purple-800">Stage 04: Precision Fit</span></td>
+                <td class="p-4 text-emerald-400 font-bold">138.0 µm (Corrected)</td>
+                <td class="p-4 text-slate-300">Plotter Master #01</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded bg-cyan-950/80 text-cyan-400 border border-cyan-800 text-[10px]">CAD Cut In Progress</span></td>
+                <td class="p-4 text-right"><button onclick="viewLogModal('2025 BMW M3 CS', 'Stage 04: Precision Fit', '138.0 µm', 'Custom CAD wrap edges plotted for front fenders and carbon splitter.')" class="px-3 py-1 bg-purple-900/60 hover:bg-neon-purple text-white rounded-lg text-[11px] font-bold">View Telemetry</button></td>
+              </tr>
+              <tr class="border-b border-purple-950/60 hover:bg-purple-950/30 transition">
+                <td class="p-4 text-white font-bold">#7T-AUDI-R8</td>
+                <td class="p-4 text-slate-200">2024 Audi R8 V10 Performance</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded bg-purple-950 text-neon-violet border border-purple-800">Stage 07: Certification</span></td>
+                <td class="p-4 text-emerald-400 font-bold">155.0 µm (Full Protected)</td>
+                <td class="p-4 text-slate-300">QC Director</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-400 border border-emerald-800 text-[10px]">QC Passed • Plaque Issued</span></td>
+                <td class="p-4 text-right"><button onclick="viewLogModal('2024 Audi R8 V10', 'Stage 07: Certification', '155.0 µm', 'Final UV Blacklight audit passed 100%. Plaque #7T-08492 assigned.')" class="px-3 py-1 bg-purple-900/60 hover:bg-neon-purple text-white rounded-lg text-[11px] font-bold">View Telemetry</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. BESPOKE CLASSIFIEDS & PROTECTED VEHICLE SHOWCASE                      -->
+    <!-- ========================================================================= -->
+    <section id="classifieds" class="py-20 px-4 sm:px-6 max-w-7xl mx-auto border-t border-purple-900/30">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-mono font-bold text-neon-violet uppercase tracking-widest bg-purple-950/80 px-4 py-1.5 rounded-full border border-purple-700/50">
+          7Theory Curated Showroom
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black font-brand tracking-tight mt-4 mb-4">
+          Classifieds: 7Theory Certified Vehicles
+        </h2>
+        <p class="text-slate-300 text-sm font-normal">
+          Browse verified, zero-defect collector &amp; track cars protected under the 7Theory full protocol.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- CAR 1 -->
+        <div class="liquid-glass-card overflow-hidden group">
+          <div class="h-60 overflow-hidden relative">
+            <img src="/assets/images/porsche_poster.jpg" alt="Porsche 911 Turbo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute top-3 right-3 bg-neon-purple text-white font-mono font-black text-[10px] px-3 py-1 rounded-full uppercase shadow">
+              THEORY-7 PROTECTED
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="text-lg font-black font-brand text-white">1989 Porsche 911 Turbo (930)</h3>
+              <span class="text-lg font-black font-mono text-neon-violet">$189,000 CAD</span>
+            </div>
+            <p class="text-slate-400 text-xs font-mono leading-relaxed mb-4">
+              Guards Red • Complete 7Theory Full Body PPF Wrap + 10H Double Ceramic • Zero Swirls • Certificate #7T-930-01.
+            </p>
+            <button onclick="openBookingModal('Inquire on 1989 Porsche 911 Turbo ($189k CAD)')" class="btn-neon-purple w-full text-xs font-mono font-black py-2.5 rounded-xl uppercase">
+              Inquire on Vehicle &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- CAR 2 -->
+        <div class="liquid-glass-card overflow-hidden group">
+          <div class="h-60 overflow-hidden relative">
+            <img src="/assets/images/city_night_overlook.jpg" alt="DeLorean DMC-12" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute top-3 right-3 bg-neon-purple text-white font-mono font-black text-[10px] px-3 py-1 rounded-full uppercase shadow">
+              CERAMIC FUSED
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="text-lg font-black font-brand text-white">1981 DeLorean DMC-12</h3>
+              <span class="text-lg font-black font-mono text-neon-violet">$85,000 CAD</span>
+            </div>
+            <p class="text-slate-400 text-xs font-mono leading-relaxed mb-4">
+              Brushed Stainless Steel • Stage 02 Chemical Iron Decon + Metal Ceramic Matrix • Full Log History.
+            </p>
+            <button onclick="openBookingModal('Inquire on 1981 DeLorean DMC-12 ($85k CAD)')" class="btn-neon-purple w-full text-xs font-mono font-black py-2.5 rounded-xl uppercase">
+              Inquire on Vehicle &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- CAR 3 -->
+        <div class="liquid-glass-card overflow-hidden group">
+          <div class="h-60 overflow-hidden relative">
+            <img src="/assets/images/retro_street_car.jpg" alt="BMW M3 E30" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute top-3 right-3 bg-neon-purple text-white font-mono font-black text-[10px] px-3 py-1 rounded-full uppercase shadow">
+              FULL PROTOCOL
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="text-lg font-black font-brand text-white">1990 BMW M3 (E30) Sport Evolution</h3>
+              <span class="text-lg font-black font-mono text-neon-violet">$145,000 CAD</span>
+            </div>
+            <p class="text-slate-400 text-xs font-mono leading-relaxed mb-4">
+              Alpine White • 2-Stage Paint Correction + Track Pack PPF + Hydrophobic Glass Infusion • Certified.
+            </p>
+            <button onclick="openBookingModal('Inquire on 1990 BMW M3 E30 ($145k CAD)')" class="btn-neon-purple w-full text-xs font-mono font-black py-2.5 rounded-xl uppercase">
+              Inquire on Vehicle &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. MEMBERSHIP & ANNUAL CERAMIC RECURRING SUBSCRIPTION VAULT              -->
+    <!-- ========================================================================= -->
+    <section id="membership" class="py-20 px-4 sm:px-6 max-w-7xl mx-auto border-t border-purple-900/30">
+      
+      <div class="liquid-glass-card p-8 sm:p-14 relative overflow-hidden bg-gradient-to-br from-purple-950/40 via-obsidian-900 to-purple-950/30 border-2 border-purple-600/40">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-8">
+            <span class="text-xs font-mono font-bold text-neon-cyan uppercase tracking-widest bg-cyan-950/80 px-3 py-1 rounded-full border border-cyan-800">
+              RECURRING CARE PROTOCOL
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-black font-brand tracking-tight mt-4 text-white">
+              7Theory Apex Membership
+            </h2>
+            <p class="text-slate-300 text-sm leading-relaxed mt-4 max-w-2xl font-mono">
+              Protect your multi-thousand dollar investment perpetually. Members receive quarterly pH decontamination washes, annual hydrophobic ceramic booster top-ups, bi-annual PPF edge re-inspections, and priority cleanroom bay access.
+            </p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6 text-xs font-mono text-slate-200">
+              <div>• 4x Annual Decon Washes</div>
+              <div>• 1x 10H Ceramic Top-Up</div>
+              <div>• Free PPF Edge QC &amp; Fixes</div>
+              <div>• VIP Event Bay Storage</div>
+              <div>• Transferable Warranty</div>
+              <div>• 15% Off Custom Work</div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 bg-obsidian-950/80 border border-purple-800/50 rounded-2xl p-6 text-center flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-mono text-purple-300 uppercase">MONTHLY SUBSCRIPTION</div>
+              <div class="text-4xl font-black font-mono text-white mt-2">$79 <span class="text-xs text-slate-400">/ month</span></div>
+              <div class="text-[11px] font-mono text-slate-400 mt-1">or $850 CAD billed annually</div>
+            </div>
+
+            <button onclick="openBookingModal('Apex Annual Membership ($79/mo)')" class="btn-neon-purple w-full text-xs font-mono font-black py-3.5 rounded-xl uppercase tracking-wider mt-6">
+              Join Apex Protocol &rarr;
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. GLOBAL BOOKING CTA & CUSTOMER PROTOCOL ADMISSION FORM                 -->
+    <!-- ========================================================================= -->
+    <section id="booking" class="py-20 px-4 sm:px-6 max-w-7xl mx-auto border-t border-purple-900/30 text-center">
+      
+      <div class="max-w-4xl mx-auto liquid-glass-card p-8 sm:p-14">
+        
+        <span class="text-xs font-mono font-bold text-neon-violet uppercase tracking-widest bg-purple-950/80 px-4 py-1.5 rounded-full border border-purple-700/50">
+          Admission Protocol
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black font-brand tracking-tight mt-4 mb-4 text-white">
+          Reserve Your 7Theory Cleanroom Bay
+        </h2>
+        <p class="text-slate-300 text-sm font-mono mb-8 max-w-xl mx-auto">
+          Due to strict cure time parameters, our studio accepts a maximum of 4 vehicles per week. Complete the form below to lock your diagnostic slot.
+        </p>
+
+        <form id="main-booking-form" onsubmit="handleFormSubmit(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left font-mono text-xs">
+          
+          <div>
+            <label class="block text-slate-300 mb-1 font-bold">Client Full Name *</label>
+            <input type="text" id="cust-name" required placeholder="e.g. Alexander Vance" class="w-full bg-obsidian-900 border border-purple-900/60 rounded-xl p-3 text-white focus:outline-none focus:border-neon-violet">
+          </div>
+
+          <div>
+            <label class="block text-slate-300 mb-1 font-bold">Direct Phone Number (WhatsApp) *</label>
+            <input type="tel" id="cust-phone" required placeholder="+1 (416) 555-0192" class="w-full bg-obsidian-900 border border-purple-900/60 rounded-xl p-3 text-white focus:outline-none focus:border-neon-violet">
+          </div>
+
+          <div>
+            <label class="block text-slate-300 mb-1 font-bold">Vehicle Year, Make &amp; Model *</label>
+            <input type="text" id="cust-vehicle" required placeholder="e.g. 2026 Porsche 911 GT3 RS" class="w-full bg-obsidian-900 border border-purple-900/60 rounded-xl p-3 text-white focus:outline-none focus:border-neon-violet">
+          </div>
+
+          <div>
+            <label class="block text-slate-300 mb-1 font-bold">Target Theory Package *</label>
+            <select id="cust-tier" class="w-full bg-obsidian-900 border border-purple-900/60 rounded-xl p-3 text-white focus:outline-none focus:border-neon-violet">
+              <option value="Theory-7 Full Protocol ($5,950 CAD)">Theory-7 (Full 7-Stage Protocol)</option>
+              <option value="Theory-5 Track Package ($3,450 CAD)">Theory-5 (Correction + Track PPF)</option>
+              <option value="Theory-3 Essential Armor ($1,850 CAD)">Theory-3 (Front End PPF)</option>
+              <option value="Custom Bespoke Protocol">Custom Bespoke Formulation</option>
+            </select>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label class="block text-slate-300 mb-1 font-bold">Specific Paint Condition Notes / Requests</label>
+            <textarea id="cust-notes" rows="3" placeholder="Describe swirl severity, matte finish, track use, or custom wrapped edge preferences..." class="w-full bg-obsidian-900 border border-purple-900/60 rounded-xl p-3 text-white focus:outline-none focus:border-neon-violet"></textarea>
+          </div>
+
+          <div class="sm:col-span-2 mt-4">
+            <button type="submit" class="btn-neon-purple w-full py-4 rounded-xl text-sm font-black uppercase tracking-wider">
+              Submit Protocol Admission Request &rarr;
+            </button>
+          </div>
+
+        </form>
+
+        <div id="booking-success" class="hidden mt-6 p-4 bg-emerald-950/80 border border-emerald-600 rounded-xl text-emerald-300 font-mono text-xs text-center">
+          ✓ Admission Request Logged Successfully! A 7Theory Master Technician will contact you via WhatsApp to finalize diagnostic scheduling.
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER                                                                    -->
+  <!-- ========================================================================= -->
+  <footer class="bg-obsidian-950 border-t border-purple-900/40 py-12 px-4 sm:px-6 relative z-10 font-mono text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div>
+        <span class="text-xl font-black font-brand text-white">7THEORY<span class="text-neon-purple">.</span></span>
+        <div class="text-[10px] text-slate-500 mt-1">7 Stages of Paint Protection Film &amp; Multi-Layer Ceramic Infusion</div>
+      </div>
+
+      <div class="flex items-center space-x-6 text-slate-400">
+        <a href="#stages" class="hover:text-neon-violet transition">Protocols</a>
+        <a href="#packages" class="hover:text-neon-violet transition">Tiers</a>
+        <a href="#classifieds" class="hover:text-neon-violet transition">Classifieds</a>
+        <a href="#membership" class="hover:text-neon-violet transition">Apex Club</a>
+        <a href="https://wa.me/" target="_blank" class="hover:text-emerald-400 transition">WhatsApp Desk</a>
+      </div>
+
+      <div class="text-[10px] text-slate-600">
+        &copy; 2026 7Theory Protocol Studio. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL: TELEMETRY VIEW MODAL -->
+  <div id="telemetry-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+    <div class="liquid-glass-card max-w-lg w-full p-6 relative">
+      <button onclick="closeModal('telemetry-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white font-mono text-xl">&times;</button>
+      <div class="text-xs font-mono text-neon-violet uppercase font-bold">PROTOCOL TELEMETRY AUDIT</div>
+      <h3 id="modal-veh-title" class="text-lg font-black font-brand text-white mt-1">Vehicle</h3>
+      <div id="modal-veh-stage" class="text-xs font-mono text-purple-300 mt-1">Stage</div>
+      <div class="my-4 p-4 bg-obsidian-950 rounded-xl border border-purple-900/60 font-mono text-xs space-y-2">
+        <div><strong>Paint Depth:</strong> <span id="modal-veh-depth" class="text-emerald-400"></span></div>
+        <div><strong>Inspection Log:</strong> <span id="modal-veh-log" class="text-slate-300"></span></div>
+      </div>
+      <button onclick="closeModal('telemetry-modal')" class="btn-neon-purple w-full py-2.5 rounded-xl text-xs font-mono font-black uppercase">Close Audit</button>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT: 3D THREE.JS GLASS CYLINDER/PRISM ENGINE & SUPABASE LOGIC -->
+  <script>
+    // 1. SUPABASE CLIENT
+    const SUPABASE_URL = "https://dsxnkiuhjtkngeoijviw.supabase.co";
+    const SUPABASE_ANON_KEY = "sb_publishable_HIe2mPGwJTQM3hR4tQfIqQ_5mKzH3Mr";
+    let sb = null;
+    try {
+      if (window.supabase) sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    } catch(e) { console.log('Notice:', e); }
+
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('cust-name').value;
+      const phone = document.getElementById('cust-phone').value;
+      const vehicle = document.getElementById('cust-vehicle').value;
+      const tier = document.getElementById('cust-tier').value;
+      const notes = document.getElementById('cust-notes').value;
+
+      if (sb) {
+        try {
+          await sb.from('theory_bookings').insert([{
+            customer_name: name,
+            phone_number: phone,
+            vehicle_make_model: vehicle,
+            selected_tier: tier,
+            custom_notes: notes
+          }]);
+        } catch(err) { console.log('Supabase sync note:', err); }
+      }
+
+      document.getElementById('booking-success').classList.remove('hidden');
+      document.getElementById('main-booking-form').reset();
+    }
+
+    function openBookingModal(tierVal) {
+      if (tierVal) {
+        const select = document.getElementById('cust-tier');
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].text.includes(tierVal) || select.options[i].value.includes(tierVal)) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function viewLogModal(title, stage, depth, log) {
+      document.getElementById('modal-veh-title').innerText = title;
+      document.getElementById('modal-veh-stage').innerText = stage;
+      document.getElementById('modal-veh-depth').innerText = depth;
+      document.getElementById('modal-veh-log').innerText = log;
+      document.getElementById('telemetry-modal').classList.add('modal-active');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('modal-active');
+    }
+
+    // 2. THREE.JS 3D LIQUID GLASS VEHICLE MONOLITH & OPTICAL PRISM
+    let scene, camera, renderer, crystalGroup, isDragging = false, prevMouse = { x: 0, y: 0 };
+
+    function init3DHero() {
+      const container = document.querySelector('.liquid-3d-stage');
+      const canvas = document.getElementById('heroCanvas3D');
+      if (!container || !canvas) return;
+
+      const w = container.clientWidth;
+      const h = container.clientHeight;
+
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
+      camera.position.z = 11;
+
+      renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+      renderer.setSize(w, h);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      // LIGHTING RIG: PURPLE, CRIMSON, NEON CYAN
+      const amb = new THREE.AmbientLight(0xffffff, 1.5);
+      scene.add(amb);
+
+      const ptPurple = new THREE.PointLight(0xA855F7, 4.0, 25);
+      ptPurple.position.set(-6, 8, 6);
+      scene.add(ptPurple);
+
+      const ptCyan = new THREE.PointLight(0x06B6D4, 3.5, 25);
+      ptCyan.position.set(6, -6, 6);
+      scene.add(ptCyan);
+
+      const ptCrimson = new THREE.PointLight(0xEF4444, 2.5, 25);
+      ptCrimson.position.set(0, 6, -4);
+      scene.add(ptCrimson);
+
+      crystalGroup = new THREE.Group();
+
+      // OPTICAL LIQUID GLASS MATERIAL
+      const glassMat = new THREE.MeshPhysicalMaterial({
+        color: 0xE9D5FF,
+        metalness: 0.1,
+        roughness: 0.03,
+        transmission: 0.98,
+        thickness: 3.2,
+        ior: 1.54,
+        reflectivity: 0.95,
+        clearcoat: 1.0,
+        clearcoatRoughness: 0.05,
+        transparent: true,
+        opacity: 0.92
+      });
+
+      const coreVioletMat = new THREE.MeshStandardMaterial({
+        color: 0x9333EA,
+        metalness: 0.85,
+        roughness: 0.2,
+        emissive: 0x581C87,
+        emissiveIntensity: 0.6
+      });
+
+      // 1. OUTER FACETED LIQUID GLASS PRISM (7-SIDED CYLINDER / HEPTAGON)
+      const heptagonGeo = new THREE.CylinderGeometry(2.2, 2.2, 3.8, 7);
+      const heptagonMesh = new THREE.Mesh(heptagonGeo, glassMat);
+      crystalGroup.add(heptagonMesh);
+
+      // 2. INNER GLOWING MONOLITH CORE
+      const coreGeo = new THREE.OctahedronGeometry(1.2, 0);
+      const coreMesh = new THREE.Mesh(coreGeo, coreVioletMat);
+      crystalGroup.add(coreMesh);
+
+      // 3. ORBITAL 7-POINT LASER GYROSCOPE RINGS
+      const ringGeo1 = new THREE.TorusGeometry(3.0, 0.04, 16, 100);
+      const ringMat = new THREE.MeshBasicMaterial({ color: 0xC084FC, transparent: true, opacity: 0.6 });
+      const ring1 = new THREE.Mesh(ringGeo1, ringMat);
+      ring1.rotation.x = Math.PI * 0.35;
+      crystalGroup.add(ring1);
+
+      const ringGeo2 = new THREE.TorusGeometry(3.4, 0.03, 16, 100);
+      const ringMat2 = new THREE.MeshBasicMaterial({ color: 0x06B6D4, transparent: true, opacity: 0.5 });
+      const ring2 = new THREE.Mesh(ringGeo2, ringMat2);
+      ring2.rotation.y = Math.PI * 0.45;
+      crystalGroup.add(ring2);
+
+      scene.add(crystalGroup);
+
+      // MOUSE DRAG ROTATION
+      container.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        prevMouse = { x: e.clientX, y: e.clientY };
+      });
+      window.addEventListener('mouseup', () => { isDragging = false; });
+      container.addEventListener('mousemove', (e) => {
+        if (isDragging && crystalGroup) {
+          const dx = e.clientX - prevMouse.x;
+          const dy = e.clientY - prevMouse.y;
+          crystalGroup.rotation.y += dx * 0.01;
+          crystalGroup.rotation.x += dy * 0.01;
+          prevMouse = { x: e.clientX, y: e.clientY };
+        }
+      });
+
+      // TOUCH SUPPORT
+      container.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          isDragging = true;
+          prevMouse = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        }
+      });
+      container.addEventListener('touchmove', (e) => {
+        if (isDragging && crystalGroup && e.touches.length === 1) {
+          const dx = e.touches[0].clientX - prevMouse.x;
+          const dy = e.touches[0].clientY - prevMouse.y;
+          crystalGroup.rotation.y += dx * 0.01;
+          crystalGroup.rotation.x += dy * 0.01;
+          prevMouse = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        }
+      });
+      window.addEventListener('touchend', () => { isDragging = false; });
+
+      window.addEventListener('resize', () => {
+        const nw = container.clientWidth;
+        const nh = container.clientHeight;
+        camera.aspect = nw / nh;
+        camera.updateProjectionMatrix();
+        renderer.setSize(nw, nh);
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        const t = Date.now() * 0.0012;
+        if (!isDragging && crystalGroup) {
+          crystalGroup.rotation.y = t * 0.45;
+          crystalGroup.rotation.x = Math.sin(t * 0.6) * 0.2;
+          crystalGroup.position.y = Math.sin(t * 1.2) * 0.25;
+        }
+        if (coreMesh) {
+          coreMesh.rotation.y = -t * 0.8;
+          coreMesh.rotation.z = t * 0.5;
+        }
+        renderer.render(scene, camera);
+      }
+      animate();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      init3DHero();
+    });
+  </script>
+</body>
+</html>
