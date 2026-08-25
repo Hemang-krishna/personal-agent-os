@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>7Theory | 7 Stages of PPF & Ceramic Detailing Protocol Studio</title>
   
-  <!-- Premium Google Fonts: Syne (Artistic Display), Plus Jakarta Sans, JetBrains Mono (Lab Telemetry), Space Grotesk -->
+  <!-- Premium Typography: Syne (Artistic Display), Plus Jakarta Sans, JetBrains Mono, Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
   
-  <!-- Three.js (3D Liquid Glass & Refraction WebGL Engine) -->
+  <!-- Three.js (Real-Time WebGL 3D Liquid Glass & Caustic Refraction Engine) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <!-- Supabase Official SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -67,7 +67,7 @@
       left: 15%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(168, 85, 247, 0.18) 0%, rgba(239, 68, 68, 0.08) 45%, transparent 70%);
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.22) 0%, rgba(239, 68, 68, 0.10) 45%, transparent 70%);
       filter: blur(100px);
       z-index: 0;
       pointer-events: none;
@@ -80,7 +80,7 @@
       right: 10%;
       width: 550px;
       height: 550px;
-      background: radial-gradient(circle, rgba(6, 182, 212, 0.14) 0%, rgba(147, 51, 234, 0.12) 50%, transparent 70%);
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.16) 0%, rgba(147, 51, 234, 0.14) 50%, transparent 70%);
       filter: blur(110px);
       z-index: 0;
       pointer-events: none;
@@ -97,7 +97,7 @@
     .noise-layer {
       position: fixed;
       inset: 0;
-      background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+      background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0);
       background-size: 24px 24px;
       z-index: 1;
       pointer-events: none;
@@ -108,15 +108,15 @@
       background: rgba(13, 10, 24, 0.65) !important;
       backdrop-filter: blur(28px) saturate(190%) brightness(110%);
       -webkit-backdrop-filter: blur(28px) saturate(190%) brightness(110%);
-      border: 1.5px solid rgba(192, 132, 252, 0.22);
+      border: 1.5px solid rgba(192, 132, 252, 0.25);
       border-radius: 28px;
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.15);
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .liquid-glass-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(168, 85, 247, 0.6);
-      box-shadow: 0 35px 70px -15px rgba(168, 85, 247, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+      border-color: rgba(168, 85, 247, 0.65);
+      box-shadow: 0 35px 70px -15px rgba(168, 85, 247, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.3);
     }
 
     /* 3D FLOATING SEAMLESS GLASS STAGE */
@@ -124,9 +124,9 @@
       background: rgba(13, 10, 24, 0.45) !important;
       backdrop-filter: blur(32px) saturate(200%);
       -webkit-backdrop-filter: blur(32px) saturate(200%);
-      border: 2px solid rgba(168, 85, 247, 0.35);
+      border: 2px solid rgba(168, 85, 247, 0.4);
       border-radius: 36px;
-      box-shadow: 0 30px 80px -20px rgba(147, 51, 234, 0.3), inset 0 2px 3px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 30px 80px -20px rgba(147, 51, 234, 0.35), inset 0 2px 3px rgba(255, 255, 255, 0.2);
       position: relative;
       cursor: grab;
       overflow: hidden;
@@ -137,7 +137,7 @@
     }
     .liquid-3d-stage:hover {
       border-color: #C084FC;
-      box-shadow: 0 35px 90px -15px rgba(192, 132, 252, 0.45);
+      box-shadow: 0 35px 90px -15px rgba(192, 132, 252, 0.5);
     }
 
     /* STAGE PROGRESSION STEPPER INDICATOR */
@@ -177,27 +177,6 @@
       border-color: rgba(255, 255, 255, 0.4) !important;
     }
 
-    /* BEFORE / AFTER INTERACTIVE SLIDER */
-    .ba-slider-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      border: 1.5px solid rgba(192, 132, 252, 0.3);
-    }
-    .ba-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 50%;
-      overflow: hidden;
-      border-right: 3px solid #C084FC;
-      box-shadow: 4px 0 15px rgba(192, 132, 252, 0.6);
-    }
-
-    /* MODAL ACTIVE */
-    .modal-active { display: flex !important; }
-
     /* RETRO POSTER GRUNGE CARD */
     .retro-poster-card {
       background: #0D0A18;
@@ -229,6 +208,9 @@
       animation: laserScan 4s ease-in-out infinite;
       pointer-events: none;
     }
+
+    /* MODAL ACTIVE */
+    .modal-active { display: flex !important; }
   </style>
 </head>
 <body class="bg-obsidian-950 text-white selection:bg-neon-purple selection:text-white">
@@ -979,7 +961,7 @@
   <!-- ========================================================================= -->
   <!-- FOOTER                                                                    -->
   <!-- ========================================================================= -->
-  <footer class="bg-obsidian-950 border-t border-purple-900/40 py-12 px-4 sm:px-6 relative z-10 font-mono text-xs text-slate-400">
+  <footer id="certification" class="bg-obsidian-950 border-t border-purple-900/40 py-12 px-4 sm:px-6 relative z-10 font-mono text-xs text-slate-400">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
       
       <div>
@@ -996,7 +978,7 @@
       </div>
 
       <div class="text-[10px] text-slate-600">
-        &copy; 2026 7Theory Protocol Studio. All rights reserved.
+        &copy; 2026 7Theory Protocol Studio. All rights reserved. Zero QNT dependencies.
       </div>
 
     </div>
@@ -1017,9 +999,9 @@
     </div>
   </div>
 
-  <!-- JAVASCRIPT: 3D THREE.JS GLASS CYLINDER/PRISM ENGINE & SUPABASE LOGIC -->
+  <!-- JAVASCRIPT: 3D THREE.JS GLASS PRISM ENGINE & SUPABASE LOGIC -->
   <script>
-    // 1. SUPABASE CLIENT
+    // 1. SUPABASE CLIENT FOR 7THEORY (SEPARATE DATABASE)
     const SUPABASE_URL = "https://dsxnkiuhjtkngeoijviw.supabase.co";
     const SUPABASE_ANON_KEY = "sb_publishable_HIe2mPGwJTQM3hR4tQfIqQ_5mKzH3Mr";
     let sb = null;
